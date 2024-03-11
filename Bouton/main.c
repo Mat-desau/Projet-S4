@@ -25,7 +25,7 @@
 
 // Since the flag is changed within an interrupt, we need the keyword volatile.
 
-int Last_count[5]={0, 0, 0, 0, 0};
+int Last_count[5] = {0, 0, 0, 0, 0};
 extern int calcule_module();// ajout de l'assembleur babylone
 void FCT_Boutons(int * BTN_Valeurs[5]);
 
@@ -59,19 +59,25 @@ void main() {
         LCD_WriteIntAtPos(BTN_Valeurs[4], 2, 1, 11, 0);
     }
 }
-void FCT_Boutons(int * BTN_Valeurs[5]){
-    for(int i = 0;i<5;i++){
+void FCT_Boutons(int *BTN_Valeurs[5])
+{
+    int i = 0;
+    
+    for(i = 0; i < 5; i++){
         if(BTN_GetValue(i)){
-            if(Last_count[i]<=50){
+            if(Last_count[i]<=50)
+            {
                BTN_Valeurs[i]=1;
             }
-            else{
+            else
+            {
                 Last_count[i]++;
             }
         }
-        else{
-            Last_count[i]=0;
-            BTN_Valeurs[i]=0;
+        else
+        {
+            Last_count[i] = 0;
+            BTN_Valeurs[i] = 0;
         }
     }
 }
