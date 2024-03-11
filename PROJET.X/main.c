@@ -19,6 +19,7 @@
 #include "acl.h"
 #include "i2c.h"
 #include "btn.h"
+#include "ssd.h"
 #include "swt.h"
 #include "led.h"
 #include "pmods.h"
