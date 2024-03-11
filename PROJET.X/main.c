@@ -31,12 +31,15 @@ int count = 0;
 unsigned int seconde = 0 ;
 int Mode_Oiseau = 0;
 int Valeur_Threshold = 0;
-int Valeur_Lumiere = 53;
+int Valeur_Lumiere = 0;
 
 //Fonctions
-void FCT_Mode_Fonctionnement();
-void FCT_Afficher_Threshold();
-void FCT_Toute_Affichage_LCD();
+void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void);
+void initialize_timer_interrupt(void);
+void FCT_Mode_Fonctionnement();     //Mode sur LCD
+void FCT_Afficher_Threshold();      //Threshold sur LCD
+void FCT_Toute_Affichage_LCD();     //Clear et affichage des informations sur le LCD
+void FCT_Affichage_Lumiere();       //Affichage sur 7 segments
 
 
 #define BAUD_RATE 9600
@@ -51,13 +54,45 @@ void main()
     
     LCD_CLEAR();
 
+    initialize_timer_interrupt();
+    
     macro_enable_interrupts();
     
     // Main loop
     while(1) 
     {
-        FCT_Toute_Affichage_LCD();
+        if(Flag_1m)                 
+        {
+            FCT_Toute_Affichage_LCD();
+            Flag_1m = 0;
+        } 
     }
+}
+
+void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void)
+{
+   IFS0bits.T1IF = 0;     //    clear interrupt flag
+   count++;
+   if(count >= 1000)
+   {
+       ++seconde; 
+       Flag_1m = 1;
+       count = 0;
+   }
+}
+
+void initialize_timer_interrupt(void) {
+  T1CONbits.TCKPS = 3;                //    256 prescaler value
+  T1CONbits.TGATE = 0;                //    not gated input (the default)
+  T1CONbits.TCS = 0;                  //    PCBLK input (the default)
+  PR1 = (int)(((float)(TMR_TIME * PB_FRQ) / 256) + 0.5);   //set period register, generates one interrupt every 1 ms
+                                      //    48 kHz * 1 ms / 256 = 188
+  TMR1 = 0;                           //    initialize count to 0
+  IPC1bits.T1IP = 2;                  //    INT step 4: priority
+  IPC1bits.T1IS = 0;                  //    subpriority
+  IFS0bits.T1IF = 0;                  //    clear interrupt flag
+  IEC0bits.T1IE = 1;                  //    enable interrupt
+  T1CONbits.ON = 1;                   //    turn on Timer5
 }
 
 void FCT_Mode_Fonctionnement() 
@@ -105,6 +140,7 @@ void FCT_Mode_Fonctionnement()
        Mode_Oiseau = 7;
     }
     
+    //Pour debug du mode oiseau dependant des switch allumer
     //char message[20];
     //sprintf(message, "%d", Mode_Oiseau);
     
@@ -118,11 +154,17 @@ void FCT_Toute_Affichage_LCD()
     
     FCT_Mode_Fonctionnement();
     FCT_Afficher_Threshold(); 
+    
+    
+}
+
+void FCT_Affichage_Lumiere()
+{
     int Valeur1, Valeur2, Valeur3;
     Valeur1 = Valeur_Lumiere/100;
     Valeur2 = (Valeur_Lumiere-(Valeur1*100))/10;
     Valeur3 = (Valeur_Lumiere-(Valeur1*100)-(Valeur2*10))/1;
-    SSD_WriteDigits(Valeur3, Valeur2, Valeur1, 0, 0, 0, 0, 0);
+    SSD_WriteDigits(Valeur3, Valeur2, Valeur1, 0, 0, 0, 0, 0);   
 }
 
 void FCT_Afficher_Threshold() 
