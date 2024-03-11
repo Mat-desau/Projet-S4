@@ -32,6 +32,9 @@ int count = 0;
 int Mode_Oiseau = 0;
 int Valeur_Threshold = 0;
 int Valeur_Lumiere = 0;
+int BTN_Valeurs[5]; //U L C R D
+int Last_count[5] = {0, 0, 0, 0, 0};
+
 
 //Fonctions
 void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void);
@@ -40,6 +43,7 @@ void FCT_Mode_Fonctionnement();     //Mode sur LCD
 void FCT_Afficher_Threshold();      //Threshold sur LCD
 void FCT_Toute_Affichage_LCD();     //Clear et affichage des informations sur le LCD
 void FCT_Affichage_Lumiere();       //Affichage sur 7 segments
+void FCT_Boutons();                 //Obtenir les valeurs de bouttons
 
 
 #define BAUD_RATE 9600
@@ -58,9 +62,13 @@ void main()
     
     macro_enable_interrupts();
     
+    
+    
     // Main loop
     while(1) 
     {
+        FCT_Boutons();      //Lecture des boutons
+        
         if(Flag_1m)                 
         {
             FCT_Toute_Affichage_LCD();
@@ -76,6 +84,11 @@ void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void)
    if(count >= 750)
    {
        count = 0;
+       Last_count[0] = 0;
+       Last_count[1] = 0;
+       Last_count[2] = 0;
+       Last_count[3] = 0;
+       Last_count[4] = 0;
        Flag_1m = 1;
    }
 }
@@ -174,4 +187,29 @@ void FCT_Afficher_Threshold()
     sprintf(VALEUR, "%d", Valeur_Threshold);
     LCD_WriteStringAtPos("VAL:", 1, 0);
     LCD_WriteStringAtPos(VALEUR, 1, 4);
+}
+
+void FCT_Boutons()
+{
+    int i = 0;
+    
+    for(i = 0; i < 5; i++)
+    {
+        if(BTN_GetValue(i))
+        {
+            if(Last_count[i] <= 50)
+            {
+               BTN_Valeurs[i] = 1;
+            }
+            else
+            {
+                Last_count[i]++;
+            }
+        }
+        else
+        {
+            Last_count[i] = 0;
+            BTN_Valeurs[i] = 0;
+        }
+    }
 }
