@@ -1,12 +1,9 @@
 /* ************************************************************************** */
 /** Descriptive File Name
-
   @Company
     Digilent
-
   @File Name
     ssd.c
-
   @Description
         This file groups the functions that implement the SSD library.
         This library deals with seven segment display modules.
@@ -14,7 +11,6 @@
         periodically each digit is refreshed, while the other are disabled (Timer1 is used to generate an interrupt).
         The library provides functions for setting the information to be displayed.
         Include the file in the project, together with config.h, when this library is needed.	
-
   @Author
     Cristian Fatu 
     cristian.fatu@digilent.ro
@@ -29,6 +25,7 @@
 #include <sys/attribs.h>
 #include "config.h"
 #include "ssd.h"
+#include "system/command/sys_command.h"
 
 
 /* ************************************************************************** */
@@ -76,12 +73,13 @@ unsigned char digits[4];
 **      This happens faster than the human eye can notice.
 **          
 */
-void __ISR(_TIMER_1_VECTOR, IPL7AUTO) Timer1ISR(void) 
+void __ISR(_TIMER_4_VECTOR, IPL1AUTO) Timer4ISR(void) 
 {  
     static unsigned char idxCurrDigit = 0;
     unsigned char currDigit, idx;
 
-    idx = (idxCurrDigit++) & 3;
+    idx = (idxCurrDigit++) & 0x3;
+    //SYS_PRINT("%1x ", idx);
     currDigit = digits[idx];
 //     1. deactivate all digits (anodes)
     lat_SSD_AN1 = 1; // deactivate digit 1;
@@ -114,9 +112,11 @@ void __ISR(_TIMER_1_VECTOR, IPL7AUTO) Timer1ISR(void)
             break;    
         case 3:
             lat_SSD_AN3 = 0; // activate digit 3;   
+            //SYS_CONSOLE_MESSAGE("In 3\r\n");
             break; 
     }    
-    IFS0bits.T1IF = 0;       // clear interrupt flag
+             //SYS_PRINT("%04x %04x %04x %04x %04x %04x\n\r", PORTA, TRISA, ANSELA, PORTB, TRISB, ANSELB);
+    IFS0bits.T4IF = 0;       // clear interrupt flag
 }
 
 /* ------------------------------------------------------------ */
@@ -136,19 +136,23 @@ void __ISR(_TIMER_1_VECTOR, IPL7AUTO) Timer1ISR(void)
 **      This is a low-level function called by SSD_Init(), so user should avoid calling it directly. 
 **          
 */
-void SSD_Timer1Setup()
+void SSD_Timer4Setup()
 {
-  PR1 = (int)(((float)(TMR_TIME * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
-  TMR1 = 0;                           //    initialize count to 0
-  T1CONbits.TCKPS = 2;                //    1:64 prescale value
-  T1CONbits.TGATE = 0;                //    not gated input (the default)
-  T1CONbits.TCS = 0;                  //    PCBLK input (the default)
-  T1CONbits.ON = 1;                   //    turn on Timer1
-  IPC1bits.T1IP = 7;                  //    priority
-  IPC1bits.T1IS = 3;                  //    subpriority
-  IFS0bits.T1IF = 0;                  //    clear interrupt flag
-  IEC0bits.T1IE = 1;                  //    enable interrupt
-  macro_enable_interrupts();          //    enable interrupts at CPU
+  //macro_disable_interrupts();          
+  //T4CONbits.ON = 0;                   //    turn off Timer1
+  PR4 = (int)(((float)(TMR_TIME * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
+  TMR4 = 0;                           //    initialize count to 0
+  //T4CONbits.ON = 1;                   //    turn on Timer1
+  T4CONbits.TCKPS = 7;                //    1:64 prescale value
+  T4CONbits.TGATE = 0;                //    not gated input (the default)
+  T4CONbits.TCS = 0;                  //    PCBLK input (the default)
+  T4CONbits.T32 = 0;                   //    turn on Timer1
+  T4CONbits.ON = 1;                   //    turn on Timer1
+  IPC4bits.T4IP = 1;                  //    priority
+  IPC4bits.T4IS = 0;                  //    subpriority
+  IFS0bits.T4IF = 0;                  //    clear interrupt flag
+  IEC0bits.T4IE = 1;                  //    enable interrupt 
+  //macro_enable_interrupts();          //    enable interrupts at CPU */
 }
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -175,7 +179,7 @@ void SSD_Timer1Setup()
 void SSD_Init()
 {
     SSD_ConfigurePins();
-    SSD_Timer1Setup();  
+    SSD_Timer4Setup();  
 }
 
 /* ------------------------------------------------------------ */
@@ -213,6 +217,8 @@ void SSD_ConfigurePins()
     // disable analog (set pins as digital))    
     ansel_SSD_AN0 = 0;
     ansel_SSD_AN1 = 0;
+    ANSELAbits.ANSA9 = 0;
+    ANSELAbits.ANSA10 = 0;
     
     PMCONbits.ON = 0;   // turn PM off
 }
@@ -322,6 +328,7 @@ void SSD_WriteDigits(unsigned char d1, unsigned char d2, unsigned char d3, unsig
     {
         digits[3] |= 0x80;
     }    
+    //SYS_PRINT("%1x %1x %1x %1x \n\r", digits[3], digits[2], digits[1], digits[0]);
   T1CONbits.ON = 1;                   //  turn on Timer1
 }
 

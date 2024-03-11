@@ -29,7 +29,6 @@
 // Variables globales
 static volatile int Flag_1m = 0;
 int count = 0;
-unsigned int seconde = 0 ;
 int Mode_Oiseau = 0;
 int Valeur_Threshold = 0;
 int Valeur_Lumiere = 0;
@@ -53,7 +52,7 @@ void main()
     SWT_Init();
     SSD_Init();
     
-    LCD_CLEAR();
+    //LCD_CLEAR();
 
     initialize_timer_interrupt();
     
@@ -74,11 +73,10 @@ void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void)
 {
    IFS0bits.T1IF = 0;     //    clear interrupt flag
    count++;
-   if(count >= 1000)
+   if(count >= 750)
    {
-       ++seconde; 
-       Flag_1m = 1;
        count = 0;
+       Flag_1m = 1;
    }
 }
 
@@ -122,22 +120,22 @@ void FCT_Mode_Fonctionnement()
     }
     else if(SWT_GetValue(0) && SWT_GetValue(1) && !SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("MULTIPLE", 0, 5);  
+       LCD_WriteStringAtPos("BRUANT+COQ", 0, 5);  
        Mode_Oiseau = 4;
     }
     else if(SWT_GetValue(0) && !SWT_GetValue(1) && SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("MULTIPLE", 0, 5);  
+       LCD_WriteStringAtPos("BRUANT+HUART", 0, 5);  
        Mode_Oiseau = 5;
     }
     else if(!SWT_GetValue(0) && SWT_GetValue(1) && SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("MULTIPLE", 0, 5);
+       LCD_WriteStringAtPos("HUART+COQ", 0, 5);
        Mode_Oiseau = 6;
     }
     else if(SWT_GetValue(0) && SWT_GetValue(1) && SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("MULTIPLE", 0, 5); 
+       LCD_WriteStringAtPos("BRU+COQ+HUA", 0, 5); 
        Mode_Oiseau = 7;
     }
     
@@ -155,8 +153,7 @@ void FCT_Toute_Affichage_LCD()
     
     FCT_Mode_Fonctionnement();
     FCT_Afficher_Threshold(); 
-    
-    
+    FCT_Affichage_Lumiere(); 
 }
 
 void FCT_Affichage_Lumiere()
@@ -165,7 +162,10 @@ void FCT_Affichage_Lumiere()
     Valeur1 = Valeur_Lumiere/100;
     Valeur2 = (Valeur_Lumiere-(Valeur1*100))/10;
     Valeur3 = (Valeur_Lumiere-(Valeur1*100)-(Valeur2*10))/1;
-    SSD_WriteDigits(Valeur3, Valeur2, Valeur1, 0, 0, 0, 0, 0);   
+    
+    SSD_WriteDigits(Valeur3, Valeur2, Valeur1, 0, 0, 0, 0, 0);
+    //SSD_WriteDigits(0, 0, 0, 0, 0, 0, 0, 0);
+    //SSD_WriteDigitsGrouped(Valeur_Lumiere, 0x1); 
 }
 
 void FCT_Afficher_Threshold() 

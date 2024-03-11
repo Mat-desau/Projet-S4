@@ -1,12 +1,9 @@
 /* ************************************************************************** */
 /** Descriptive File Name
-
   @Company
     Digilent
-
   @File Name
     ssd.h
-
   @Description
     This file groups the declarations of the functions that implement
         the SSD library (defined in ssd.c).
@@ -38,7 +35,7 @@ unsigned char SSD_GetDigitSegments(unsigned char d);
 
 // private functions
 void SSD_ConfigurePins();
-void SSD_Timer1Setup();
+void SSD_Timer4Setup();
 
 
     /* Provide C++ Compatibility */
