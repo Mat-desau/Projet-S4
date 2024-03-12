@@ -29,7 +29,7 @@ static volatile int Flag_5min = 0;      //Flag de 5 min
 int count5min = 0;                      //Compteur de 5 minutes
 int count = 0;                          //Compteur
 int Mode_Oiseau = 0;                    //Mode des oiseau 0 = aucucn, 1 = bruant, 2 = COQ, 3 = Huart, 4 = Bruant+Coq, 5 = Bruant+Huard, 6 = Coq+Huart, 7 = Bruant+Coq+Huard
-int Valeur_Threshold = 50;              //Valeur du threshold afficher sur LCD ligne 2
+unsigned int Valeur_Threshold = 50;      //Valeur du threshold afficher sur LCD ligne 2
 int Valeur_Lumiere = 0;                 //Valeur de la lumiere lu par la cellule photolumineuse
 int BTN_Valeurs[5]; //U L C R D         //Valeurs de bouttons 1 = peser, 0 = pas peser (debounce inclu dans la fonction)
 int Last_count[5] = {0, 0, 0, 0, 0};    //Pour les debounce des boutons
@@ -44,12 +44,14 @@ void FCT_Toute_Affichage_LCD();         //Clear et affichage des informations su
 void FCT_Affichage_Lumiere();           //Affichage sur 7 segments
 void FCT_Boutons();                     //Obtenir les valeurs de bouttons
 void FCT_Lecture_Threshold();           //Lecture des boutons pour ajuster la valeur du threshold
-int FCT_Compteur_5Minutes(int Activer);           //Compteur de 5 minutes
+int FCT_Compteur_5Minutes(int Activer); //Compteur de 5 minutes
 
 
 #define BAUD_RATE 9600
 #define TMR_TIME    0.001               // x us for each tick
 #define RECEIVE_BUFFER_LEN  cchRxMax
+
+
 
 void main() 
 {
@@ -248,7 +250,7 @@ void FCT_Boutons()
     {
         if(BTN_GetValue(i))
         {
-            if(count - Last_count[i] > 100)
+            if(count - Last_count[i] > 150)
             {
                BTN_Valeurs[i] = 1;
             }
@@ -275,7 +277,7 @@ void FCT_Lecture_Threshold()
     
     if(BTN_Valeurs[4])              //Lecture du bouton DOWN pour diminuer
     {
-        Valeur_Threshold--;
+        Valeur_Threshold--;   
     }
     
     if(Valeur_Threshold >= 100)     //Maximum a 100
