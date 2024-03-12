@@ -16,19 +16,17 @@
 #include "config.h"
 #include "config_bits.h"
 #include "lcd.h"
-#include "acl.h"
-#include "i2c.h"
 #include "btn.h"
 #include "ssd.h"
 #include "swt.h"
 #include "led.h"
 #include "pmods.h"
-#include "spiflash.h"
-#include "uart.h"
 
 // Variables globales
 static volatile int Flag_1s = 0;        //Flag de 1sec
 static volatile int Flag_1m = 0;        //Flag de 1ms
+static volatile int Flag_5min = 0;      //Flag de 5 min
+int count5min = 0;                      //Compteur de 5 minutes
 int count = 0;                          //Compteur
 int Mode_Oiseau = 0;                    //Mode des oiseau 0 = aucucn, 1 = bruant, 2 = COQ, 3 = Huart, 4 = Bruant+Coq, 5 = Bruant+Huard, 6 = Coq+Huart, 7 = Bruant+Coq+Huard
 int Valeur_Threshold = 50;              //Valeur du threshold afficher sur LCD ligne 2
@@ -46,6 +44,7 @@ void FCT_Toute_Affichage_LCD();         //Clear et affichage des informations su
 void FCT_Affichage_Lumiere();           //Affichage sur 7 segments
 void FCT_Boutons();                     //Obtenir les valeurs de bouttons
 void FCT_Lecture_Threshold();           //Lecture des boutons pour ajuster la valeur du threshold
+int FCT_Compteur_5Minutes(int Activer);           //Compteur de 5 minutes
 
 
 #define BAUD_RATE 9600
@@ -58,20 +57,20 @@ void main()
     SWT_Init();
     SSD_Init();
     BTN_Init();
-    
-    //LCD_CLEAR();
+    LED_Init();
 
     initialize_timer_interrupt();
     
     macro_enable_interrupts();
-    
-    
     
     // Main loop
     while(1) 
     {
         FCT_Boutons();                  //Lecture des boutons
         FCT_Lecture_Threshold();        //Fonction pour ajuster le threshold
+        
+        //Ici on peut mettre FCT_Comparer_Lumiere la sortie Mode_Lumiere de 1 sera mit quand 
+        //Ici on mets la fermeture du rideau en fonction de Mode_Lumiere
         
         if(Flag_1s)                 
         {
@@ -89,11 +88,18 @@ void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void)
    if(count >= 750)
    {
        count = 0;
-       Last_count[0] = 0;
+       
+       if(Flag_5min)                //Compteur de 5 minutes
+       {
+           count5min++;
+       }
+       
+       Last_count[0] = 0;           //Reset des Last_counts
        Last_count[1] = 0;
        Last_count[2] = 0;
        Last_count[3] = 0;
        Last_count[4] = 0;
+       
        Flag_1s = 1;                   //Flag 1 sec
    }
 }
@@ -118,42 +124,82 @@ void FCT_Mode_Fonctionnement()
     
     if(!SWT_GetValue(0) && !SWT_GetValue(1) && !SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("AUCUN", 0, 5); 
+       LCD_WriteStringAtPos("AUCUN", 0, 5);
+       
+       LED_SetValue(0, 0);
+       LED_SetValue(1, 0);
+       LED_SetValue(2, 0);
+       
        Mode_Oiseau = 0;
     }
     else if(SWT_GetValue(0) && !SWT_GetValue(1) && !SWT_GetValue(2))
     {
        LCD_WriteStringAtPos("BRUANT", 0, 5);
+       
+       LED_SetValue(0, 1);
+       LED_SetValue(1, 0);
+       LED_SetValue(2, 0);
+       
        Mode_Oiseau = 1;
     }
     else if(!SWT_GetValue(0) && SWT_GetValue(1) && !SWT_GetValue(2))
     {
        LCD_WriteStringAtPos("COQ", 0, 5); 
+       
+       LED_SetValue(0, 0);
+       LED_SetValue(1, 1);
+       LED_SetValue(2, 0);
+       
        Mode_Oiseau = 2;
     }
     else if(!SWT_GetValue(0) && !SWT_GetValue(1) && SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("HUARD", 0, 5); 
+       LCD_WriteStringAtPos("HUARD", 0, 5);
+       
+       LED_SetValue(0, 0);
+       LED_SetValue(1, 0);
+       LED_SetValue(2, 1);
+       
        Mode_Oiseau = 3;
     }
     else if(SWT_GetValue(0) && SWT_GetValue(1) && !SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("BRUANT+COQ", 0, 5);  
+       LCD_WriteStringAtPos("BRUANT+COQ", 0, 5);
+       
+       LED_SetValue(0, 1);
+       LED_SetValue(1, 1);
+       LED_SetValue(2, 0);
+       
        Mode_Oiseau = 4;
     }
     else if(SWT_GetValue(0) && !SWT_GetValue(1) && SWT_GetValue(2))
     {
-       LCD_WriteStringAtPos("BRUANT+HUART", 0, 5);  
+       LCD_WriteStringAtPos("BRUANT+HUART", 0, 5);
+       
+       LED_SetValue(0, 1);
+       LED_SetValue(1, 0);
+       LED_SetValue(2, 1);
+       
        Mode_Oiseau = 5;
     }
     else if(!SWT_GetValue(0) && SWT_GetValue(1) && SWT_GetValue(2))
     {
        LCD_WriteStringAtPos("HUART+COQ", 0, 5);
+       
+       LED_SetValue(0, 0);
+       LED_SetValue(1, 1);
+       LED_SetValue(2, 1);
+       
        Mode_Oiseau = 6;
     }
     else if(SWT_GetValue(0) && SWT_GetValue(1) && SWT_GetValue(2))
     {
        LCD_WriteStringAtPos("BRU+COQ+HUA", 0, 5); 
+       
+       LED_SetValue(0, 1);
+       LED_SetValue(1, 1);
+       LED_SetValue(2, 1);
+       
        Mode_Oiseau = 7;
     }
     
@@ -242,4 +288,25 @@ void FCT_Lecture_Threshold()
         Valeur_Threshold = 0;
     }
  
+}
+
+int FCT_Compteur_5Minutes(int Activer)
+{
+    if(Activer)                     //Si activer demarrer le compteur
+    {
+        Flag_5min = 1;
+    }
+    else
+    {
+        Flag_5min = 0;              //Si pas activer mettre à 0
+        count5min = 0;              //Count5min remis a 0
+    }
+    if(count5min >= 400)            //Si par dessus 400 c'est bon pour return 1
+    {
+        return 1;
+    }
+    else                            //si pas en haut de 400 c'est un retour de 0
+    {
+        return 0;
+    }
 }

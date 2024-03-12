@@ -8,13 +8,9 @@
       <itemPath>config_bits.h</itemPath>
       <itemPath>led.h</itemPath>
       <itemPath>pmods.h</itemPath>
-      <itemPath>acl.h</itemPath>
       <itemPath>adc.h</itemPath>
       <itemPath>btn.h</itemPath>
-      <itemPath>i2c.h</itemPath>
-      <itemPath>spiflash.h</itemPath>
       <itemPath>swt.h</itemPath>
-      <itemPath>uart.h</itemPath>
       <itemPath>../../S4_APP4/Basys/src/lcd.h</itemPath>
       <itemPath>../../S4_APP4/Basys/src/ssd.h</itemPath>
     </logicalFolder>
@@ -27,13 +23,9 @@
                    projectFiles="true">
       <itemPath>led.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>acl.c</itemPath>
       <itemPath>adc.c</itemPath>
       <itemPath>btn.c</itemPath>
-      <itemPath>i2c.c</itemPath>
-      <itemPath>spiflash.c</itemPath>
       <itemPath>swt.c</itemPath>
-      <itemPath>uart.c</itemPath>
       <itemPath>../../S4_APP4/Basys/src/lcd.c</itemPath>
       <itemPath>../../S4_APP4/Basys/src/ssd.c</itemPath>
     </logicalFolder>

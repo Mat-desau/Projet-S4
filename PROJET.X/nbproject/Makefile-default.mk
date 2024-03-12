@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=led.c main.c acl.c adc.c btn.c i2c.c spiflash.c swt.c uart.c ../../S4_APP4/Basys/src/lcd.c ../../S4_APP4/Basys/src/ssd.c
+SOURCEFILES_QUOTED_IF_SPACED=led.c main.c adc.c btn.c swt.c ../../S4_APP4/Basys/src/lcd.c ../../S4_APP4/Basys/src/ssd.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/acl.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/spiflash.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/_ext/1554021829/lcd.o ${OBJECTDIR}/_ext/1554021829/ssd.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/led.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/acl.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/btn.o.d ${OBJECTDIR}/i2c.o.d ${OBJECTDIR}/spiflash.o.d ${OBJECTDIR}/swt.o.d ${OBJECTDIR}/uart.o.d ${OBJECTDIR}/_ext/1554021829/lcd.o.d ${OBJECTDIR}/_ext/1554021829/ssd.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/_ext/1554021829/lcd.o ${OBJECTDIR}/_ext/1554021829/ssd.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/led.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/btn.o.d ${OBJECTDIR}/swt.o.d ${OBJECTDIR}/_ext/1554021829/lcd.o.d ${OBJECTDIR}/_ext/1554021829/ssd.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/acl.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/spiflash.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/_ext/1554021829/lcd.o ${OBJECTDIR}/_ext/1554021829/ssd.o
+OBJECTFILES=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/_ext/1554021829/lcd.o ${OBJECTDIR}/_ext/1554021829/ssd.o
 
 # Source Files
-SOURCEFILES=led.c main.c acl.c adc.c btn.c i2c.c spiflash.c swt.c uart.c ../../S4_APP4/Basys/src/lcd.c ../../S4_APP4/Basys/src/ssd.c
+SOURCEFILES=led.c main.c adc.c btn.c swt.c ../../S4_APP4/Basys/src/lcd.c ../../S4_APP4/Basys/src/ssd.c
 
 
 
@@ -119,12 +119,6 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/8d74f59b2f8d69d95671
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/acl.o: acl.c  .generated_files/flags/default/581906c5e87a20be27c445a29266c473ee4095c .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/acl.o.d 
-	@${RM} ${OBJECTDIR}/acl.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/acl.o.d" -o ${OBJECTDIR}/acl.o acl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
 ${OBJECTDIR}/adc.o: adc.c  .generated_files/flags/default/2d5d98727d047ac7af63daf44d4966725e472102 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc.o.d 
@@ -137,29 +131,11 @@ ${OBJECTDIR}/btn.o: btn.c  .generated_files/flags/default/b175d24ec4ccd8d3ce21e2
 	@${RM} ${OBJECTDIR}/btn.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/btn.o.d" -o ${OBJECTDIR}/btn.o btn.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/i2c.o: i2c.c  .generated_files/flags/default/9dbe0829a37e0d6b07bde9352320f305e87775ee .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/i2c.o.d 
-	@${RM} ${OBJECTDIR}/i2c.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/i2c.o.d" -o ${OBJECTDIR}/i2c.o i2c.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/spiflash.o: spiflash.c  .generated_files/flags/default/d77835512500b7c86ce804538f748c3bf66dc397 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/spiflash.o.d 
-	@${RM} ${OBJECTDIR}/spiflash.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/spiflash.o.d" -o ${OBJECTDIR}/spiflash.o spiflash.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
 ${OBJECTDIR}/swt.o: swt.c  .generated_files/flags/default/640498dad03e66abb83f05a3e3acd83a90fe1fe3 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/swt.o.d 
 	@${RM} ${OBJECTDIR}/swt.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/swt.o.d" -o ${OBJECTDIR}/swt.o swt.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/uart.o: uart.c  .generated_files/flags/default/dacf972bad9d3c36054054945dd7bb45754f4760 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/uart.o.d 
-	@${RM} ${OBJECTDIR}/uart.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/uart.o.d" -o ${OBJECTDIR}/uart.o uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 ${OBJECTDIR}/_ext/1554021829/lcd.o: ../../S4_APP4/Basys/src/lcd.c  .generated_files/flags/default/fb39c5383cab81eab4db0abb0c0b154cdd82a688 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
 	@${MKDIR} "${OBJECTDIR}/_ext/1554021829" 
@@ -186,12 +162,6 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/d74a3c1a269f24199209
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/acl.o: acl.c  .generated_files/flags/default/a4efe30c74bbc52ed216cc79dcfbca61870bbe14 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/acl.o.d 
-	@${RM} ${OBJECTDIR}/acl.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/acl.o.d" -o ${OBJECTDIR}/acl.o acl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
 ${OBJECTDIR}/adc.o: adc.c  .generated_files/flags/default/449e088c70dbe33f147736b64f86e348136ec598 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc.o.d 
@@ -204,29 +174,11 @@ ${OBJECTDIR}/btn.o: btn.c  .generated_files/flags/default/a496205b78858b86f4b4f3
 	@${RM} ${OBJECTDIR}/btn.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/btn.o.d" -o ${OBJECTDIR}/btn.o btn.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/i2c.o: i2c.c  .generated_files/flags/default/5c672edf6712e20e8199151b4ada3d101a81150b .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/i2c.o.d 
-	@${RM} ${OBJECTDIR}/i2c.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/i2c.o.d" -o ${OBJECTDIR}/i2c.o i2c.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/spiflash.o: spiflash.c  .generated_files/flags/default/2458004fcef56358378addbb383e7fd492201cc8 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/spiflash.o.d 
-	@${RM} ${OBJECTDIR}/spiflash.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/spiflash.o.d" -o ${OBJECTDIR}/spiflash.o spiflash.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
 ${OBJECTDIR}/swt.o: swt.c  .generated_files/flags/default/da621532d89e7693f1b63cf5ef5ee4e175efcb9b .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/swt.o.d 
 	@${RM} ${OBJECTDIR}/swt.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/swt.o.d" -o ${OBJECTDIR}/swt.o swt.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/uart.o: uart.c  .generated_files/flags/default/e9454d0506de3ec773e25f9e5db79afac31e4582 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/uart.o.d 
-	@${RM} ${OBJECTDIR}/uart.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/uart.o.d" -o ${OBJECTDIR}/uart.o uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 ${OBJECTDIR}/_ext/1554021829/lcd.o: ../../S4_APP4/Basys/src/lcd.c  .generated_files/flags/default/2868f641395f57b6b32a84826876e6985cebec4f .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
 	@${MKDIR} "${OBJECTDIR}/_ext/1554021829" 
