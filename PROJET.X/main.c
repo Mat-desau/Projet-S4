@@ -27,27 +27,29 @@
 #include "uart.h"
 
 // Variables globales
-static volatile int Flag_1m = 0;
-int count = 0;
-int Mode_Oiseau = 0;
-int Valeur_Threshold = 0;
-int Valeur_Lumiere = 0;
-int BTN_Valeurs[5]; //U L C R D
-int Last_count[5] = {0, 0, 0, 0, 0};
+static volatile int Flag_1s = 0;        //Flag de 1sec
+static volatile int Flag_1m = 0;        //Flag de 1ms
+int count = 0;                          //Compteur
+int Mode_Oiseau = 0;                    //Mode des oiseau 0 = aucucn, 1 = bruant, 2 = COQ, 3 = Huart, 4 = Bruant+Coq, 5 = Bruant+Huard, 6 = Coq+Huart, 7 = Bruant+Coq+Huard
+int Valeur_Threshold = 50;              //Valeur du threshold afficher sur LCD ligne 2
+int Valeur_Lumiere = 0;                 //Valeur de la lumiere lu par la cellule photolumineuse
+int BTN_Valeurs[5]; //U L C R D         //Valeurs de bouttons 1 = peser, 0 = pas peser (debounce inclu dans la fonction)
+int Last_count[5] = {0, 0, 0, 0, 0};    //Pour les debounce des boutons
 
 
 //Fonctions
 void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void);
 void initialize_timer_interrupt(void);
-void FCT_Mode_Fonctionnement();     //Mode sur LCD
-void FCT_Afficher_Threshold();      //Threshold sur LCD
-void FCT_Toute_Affichage_LCD();     //Clear et affichage des informations sur le LCD
-void FCT_Affichage_Lumiere();       //Affichage sur 7 segments
-void FCT_Boutons();                 //Obtenir les valeurs de bouttons
+void FCT_Mode_Fonctionnement();         //Mode sur LCD
+void FCT_Afficher_Threshold();          //Threshold sur LCD
+void FCT_Toute_Affichage_LCD();         //Clear et affichage des informations sur le LCD
+void FCT_Affichage_Lumiere();           //Affichage sur 7 segments
+void FCT_Boutons();                     //Obtenir les valeurs de bouttons
+void FCT_Lecture_Threshold();           //Lecture des boutons pour ajuster la valeur du threshold
 
 
 #define BAUD_RATE 9600
-#define TMR_TIME    0.001             // x us for each tick
+#define TMR_TIME    0.001               // x us for each tick
 #define RECEIVE_BUFFER_LEN  cchRxMax
 
 void main() 
@@ -55,6 +57,7 @@ void main()
     LCD_Init();
     SWT_Init();
     SSD_Init();
+    BTN_Init();
     
     //LCD_CLEAR();
 
@@ -67,20 +70,22 @@ void main()
     // Main loop
     while(1) 
     {
-        FCT_Boutons();      //Lecture des boutons
+        FCT_Boutons();                  //Lecture des boutons
+        FCT_Lecture_Threshold();        //Fonction pour ajuster le threshold
         
-        if(Flag_1m)                 
+        if(Flag_1s)                 
         {
             FCT_Toute_Affichage_LCD();
-            Flag_1m = 0;
+            Flag_1s = 0;
         } 
     }
 }
 
 void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void)
 {
-   IFS0bits.T1IF = 0;     //    clear interrupt flag
+   IFS0bits.T1IF = 0;               //clear interrupt flag
    count++;
+   Flag_1m = 1;                     //Flag 1 ms
    if(count >= 750)
    {
        count = 0;
@@ -89,7 +94,7 @@ void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void)
        Last_count[2] = 0;
        Last_count[3] = 0;
        Last_count[4] = 0;
-       Flag_1m = 1;
+       Flag_1s = 1;                   //Flag 1 sec
    }
 }
 
@@ -161,8 +166,8 @@ void FCT_Mode_Fonctionnement()
 
 void FCT_Toute_Affichage_LCD()
 {
-    LCD_WriteStringAtPos("                ", 1, 0);
-    LCD_WriteStringAtPos("                ", 0, 0);
+    LCD_WriteStringAtPos("                ", 1, 0);     //Clear ecran ligne 1
+    LCD_WriteStringAtPos("                ", 0, 0);     //Clear ecran ligne 2
     
     FCT_Mode_Fonctionnement();
     FCT_Afficher_Threshold(); 
@@ -197,14 +202,15 @@ void FCT_Boutons()
     {
         if(BTN_GetValue(i))
         {
-            if(Last_count[i] <= 50)
+            if(count - Last_count[i] > 100)
             {
                BTN_Valeurs[i] = 1;
             }
             else
-            {
-                Last_count[i]++;
+            {  
+                BTN_Valeurs[i] = 0;  
             }
+            Last_count[i] = count;
         }
         else
         {
@@ -212,4 +218,28 @@ void FCT_Boutons()
             BTN_Valeurs[i] = 0;
         }
     }
+}
+
+void FCT_Lecture_Threshold()
+{
+    if(BTN_Valeurs[0])              //Lecture du bouton UP pour augementer
+    {
+        Valeur_Threshold++;
+    }
+    
+    if(BTN_Valeurs[4])              //Lecture du bouton DOWN pour diminuer
+    {
+        Valeur_Threshold--;
+    }
+    
+    if(Valeur_Threshold >= 100)     //Maximum a 100
+    {
+        Valeur_Threshold = 100;
+    }
+    
+    if(Valeur_Threshold <= 0)       //Minimum a 0
+    {
+        Valeur_Threshold = 0;
+    }
+ 
 }
