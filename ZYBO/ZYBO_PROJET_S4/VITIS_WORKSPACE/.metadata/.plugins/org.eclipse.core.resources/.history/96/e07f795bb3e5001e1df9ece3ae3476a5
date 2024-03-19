@@ -1,0 +1,18 @@
+#ifndef GESTIONAUDIO_H
+#define GESTIONAUDIO_H
+
+#include "xparameters.h"
+#include "xi2srx.h"
+#include "xil_printf.h"
+
+
+
+
+
+void initAudio(){
+	Xil_out32(XPAR_I2S_RECEIVER_0_BASEADDR, 0xFFFFFFFF);
+
+}
+
+
+#endif

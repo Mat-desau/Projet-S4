@@ -1,0 +1,6 @@
+#include <xiic.h>
+
+
+void initCodec(){
+
+}

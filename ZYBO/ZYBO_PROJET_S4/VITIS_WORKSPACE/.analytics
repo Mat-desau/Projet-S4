@@ -35,3 +35,99 @@ timestamp=[2024-03-18 20:13:17], mode=BUILD, duration=0:00:00.403, duration_ms=4
 timestamp=[2024-03-18 20:13:18], mode=BUILD, duration=0:00:00.107, duration_ms=107, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
 timestamp=[2024-03-18 20:13:22], mode=BUILD, duration=0:00:00.225, duration_ms=225, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
 timestamp=[2024-03-18 20:19:54], mode=BUILD, duration=0:00:00.410, duration_ms=410, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:00:15], mode=BUILD, duration=0:00:01.708, duration_ms=1708, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:00:55], mode=BUILD, duration=0:00:00.486, duration_ms=486, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:02:44], mode=BUILD, duration=0:00:00.486, duration_ms=486, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:13:02], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:13:03], mode=BUILD, duration=0:00:00.104, duration_ms=104, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:13:09], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:13:10], mode=BUILD, duration=0:00:00.114, duration_ms=114, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:13:28], mode=BUILD, duration=0:00:00.170, duration_ms=170, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:13:28], mode=BUILD, duration=0:00:00.095, duration_ms=95, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:13:40], mode=BUILD, duration=0:00:00.167, duration_ms=167, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:14:40], mode=BUILD, duration=0:00:00.166, duration_ms=166, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:14:40], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:14:50], mode=BUILD, duration=0:00:00.164, duration_ms=164, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:14:50], mode=BUILD, duration=0:00:00.097, duration_ms=97, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:14:52], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:14:52], mode=BUILD, duration=0:00:00.095, duration_ms=95, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:14:54], mode=BUILD, duration=0:00:00.162, duration_ms=162, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:15:03], mode=BUILD, duration=0:00:00.604, duration_ms=604, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:29:11], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:29:30], mode=BUILD, duration=0:00:00.159, duration_ms=159, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:29:30], mode=BUILD, duration=0:00:00.097, duration_ms=97, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:29:33], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:30:36], mode=BUILD, duration=0:00:00.472, duration_ms=472, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:31:21], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:33:57], mode=BUILD, duration=0:00:00.483, duration_ms=483, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:35:14], mode=BUILD, duration=0:00:00.566, duration_ms=566, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:36:31], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=true}
+timestamp=[2024-03-18 23:36:31], mode=BUILD, duration=0:00:00.106, duration_ms=106, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-18 23:36:35], mode=PLATFORM_GENERATION, duration=0:00:03.740, duration_ms=3740, data={name=design_1_wrapper}
+timestamp=[2024-03-18 23:36:43], mode=PLATFORM_GENERATION, duration=0:00:07.912, duration_ms=7912, data={name=design_1_wrapper}
+timestamp=[2024-03-18 23:36:44], mode=BUILD, duration=0:00:00.600, duration_ms=600, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:36:44], mode=BUILD, duration=0:00:00.113, duration_ms=113, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:36:48], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:37:56], mode=BUILD, duration=0:00:00.473, duration_ms=473, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:38:05], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-18 23:38:05], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:38:05], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:38:10], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:40:10], mode=BUILD, duration=0:00:00.660, duration_ms=660, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:43:12], mode=BUILD, duration=0:00:00.165, duration_ms=165, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:43:27], mode=BUILD, duration=0:00:00.479, duration_ms=479, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:43:41], mode=BUILD, duration=0:00:00.481, duration_ms=481, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:57:28], mode=BUILD, duration=0:00:00.167, duration_ms=167, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:57:40], mode=BUILD, duration=0:00:00.368, duration_ms=368, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:57:58], mode=BUILD, duration=0:00:00.353, duration_ms=353, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:58:23], mode=BUILD, duration=0:00:00.170, duration_ms=170, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:58:36], mode=BUILD, duration=0:00:00.653, duration_ms=653, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:58:48], mode=BUILD, duration=0:00:00.473, duration_ms=473, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:59:05], mode=BUILD, duration=0:00:00.471, duration_ms=471, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-18 23:59:47], mode=BUILD, duration=0:00:00.482, duration_ms=482, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:00:27], mode=BUILD, duration=0:00:00.482, duration_ms=482, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:01:19], mode=BUILD, duration=0:00:00.596, duration_ms=596, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:01:45], mode=BUILD, duration=0:00:00.469, duration_ms=469, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:02:39], mode=BUILD, duration=0:00:00.478, duration_ms=478, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:06:30], mode=BUILD, duration=0:00:00.471, duration_ms=471, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:06:49], mode=BUILD, duration=0:00:00.472, duration_ms=472, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:27:06], mode=PLATFORM_GENERATION, duration=0:00:03.145, duration_ms=3145, data={name=design_1_wrapper}
+timestamp=[2024-03-19 00:27:16], mode=PLATFORM_GENERATION, duration=0:00:08.046, duration_ms=8046, data={name=design_1_wrapper}
+timestamp=[2024-03-19 00:27:18], mode=BUILD, duration=0:00:00.103, duration_ms=103, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 00:27:23], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:02:21], mode=PLATFORM_GENERATION, duration=0:00:03.126, duration_ms=3126, data={name=design_1_wrapper}
+timestamp=[2024-03-19 01:02:31], mode=PLATFORM_GENERATION, duration=0:00:09.407, duration_ms=9407, data={name=design_1_wrapper}
+timestamp=[2024-03-19 01:38:56], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:39:00], mode=BUILD, duration=0:00:00.102, duration_ms=102, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:41:39], mode=BUILD, duration=0:00:00.242, duration_ms=242, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:42:01], mode=BUILD, duration=0:00:01.090, duration_ms=1090, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:43:34], mode=BUILD, duration=0:00:00.473, duration_ms=473, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:44:14], mode=BUILD, duration=0:00:00.472, duration_ms=472, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:55:24], mode=PLATFORM_GENERATION, duration=0:00:03.434, duration_ms=3434, data={name=design_1_wrapper}
+timestamp=[2024-03-19 01:55:36], mode=PLATFORM_GENERATION, duration=0:00:08.342, duration_ms=8342, data={name=design_1_wrapper}
+timestamp=[2024-03-19 01:55:40], mode=BUILD, duration=0:00:00.598, duration_ms=598, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 01:55:44], mode=BUILD, duration=0:00:00.107, duration_ms=107, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:08:28], mode=BUILD, duration=0:00:00.666, duration_ms=666, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:10:02], mode=BUILD, duration=0:00:00.476, duration_ms=476, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:12:38], mode=BUILD, duration=0:00:00.532, duration_ms=532, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:13:35], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:16:02], mode=BUILD, duration=0:00:00.482, duration_ms=482, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:17:43], mode=BUILD, duration=0:00:00.168, duration_ms=168, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:17:56], mode=BUILD, duration=0:00:00.470, duration_ms=470, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:25:17], mode=BUILD, duration=0:00:00.537, duration_ms=537, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:52:15], mode=BUILD, duration=0:00:00.543, duration_ms=543, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=true}
+timestamp=[2024-03-19 02:52:15], mode=BUILD, duration=0:00:00.105, duration_ms=105, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-19 02:52:19], mode=PLATFORM_GENERATION, duration=0:00:03.177, duration_ms=3177, data={name=design_1_wrapper}
+timestamp=[2024-03-19 02:52:27], mode=PLATFORM_GENERATION, duration=0:00:08.670, duration_ms=8670, data={name=design_1_wrapper}
+timestamp=[2024-03-19 02:52:30], mode=BUILD, duration=0:00:00.903, duration_ms=903, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 02:52:35], mode=BUILD, duration=0:00:00.098, duration_ms=98, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 03:11:52], mode=BUILD, duration=0:00:00.366, duration_ms=366, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 03:12:02], mode=BUILD, duration=0:00:00.596, duration_ms=596, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 03:18:30], mode=BUILD, duration=0:00:00.607, duration_ms=607, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 03:40:34], mode=BUILD, duration=0:00:00.395, duration_ms=395, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=true}
+timestamp=[2024-03-19 03:40:34], mode=BUILD, duration=0:00:00.104, duration_ms=104, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=true}
+timestamp=[2024-03-19 03:40:37], mode=PLATFORM_GENERATION, duration=0:00:03.263, duration_ms=3263, data={name=design_1_wrapper}
+timestamp=[2024-03-19 03:40:46], mode=PLATFORM_GENERATION, duration=0:00:08.161, duration_ms=8161, data={name=design_1_wrapper}
+timestamp=[2024-03-19 03:40:49], mode=BUILD, duration=0:00:00.906, duration_ms=906, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 03:40:53], mode=BUILD, duration=0:00:00.098, duration_ms=98, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-19 03:43:13], mode=BUILD, duration=0:00:00.546, duration_ms=546, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}

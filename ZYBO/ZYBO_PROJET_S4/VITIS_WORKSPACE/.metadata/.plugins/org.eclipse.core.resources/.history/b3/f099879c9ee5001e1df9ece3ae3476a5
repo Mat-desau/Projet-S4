@@ -1,0 +1,12 @@
+#pragma once
+#define ADRESSE_CODEC_SSM2603 0b
+
+
+#include <xiic.h>
+
+
+
+
+
+void initCodec();
+

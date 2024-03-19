@@ -1,0 +1,16 @@
+#ifndef INITCODEC_H
+#define INITCODEC_H 1
+#include <xiic.h>
+
+
+#define ADRESSE_CODEC_SSM2603 0b0011010
+
+
+
+
+extern char donnees[12][2];
+
+
+void initCodec();
+
+#endif

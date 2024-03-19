@@ -60,6 +60,15 @@ set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { ac_rec
 #set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 } [get_ports { sda }]; #IO_L23P_T3_34 Sch=ac_sda
 #set_property IOSTANDARD I2C [get_ports sda]
  
+
+
+
+set_property -dict { PACKAGE_PIN N18   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_scl_io }];#IO_L13P_T2_MRCC_34 Sch=ac_scl
+set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_sda_io }]; #IO_L23P_T3_34 Sch=ac_sda 
+
+#set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_scl_io }];#IO_L4P_T0_34 Sch=je[1]	
+#set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_sda_io }]; #IO_L18N_T2_34 Sch=je[2] 
+ 
  
 ##Additional Ethernet signals
 #set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33  PULLUP true    } [get_ports { eth_int_pu_b }]; #IO_L6P_T0_35 Sch=eth_int_pu_b
@@ -154,8 +163,7 @@ set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { ac_rec
  
  
  
-set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_scl_io }];#IO_L4P_T0_34 Sch=je[1]	
-set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_sda_io }]; #IO_L18N_T2_34 Sch=je[2] 
+
 ##Pmod Header JE                                                                                                                  
 #set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { je[0] }]; #IO_L4P_T0_34 Sch=je[1]						 
 #set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { je[1] }]; #IO_L18N_T2_34 Sch=je[2]                     

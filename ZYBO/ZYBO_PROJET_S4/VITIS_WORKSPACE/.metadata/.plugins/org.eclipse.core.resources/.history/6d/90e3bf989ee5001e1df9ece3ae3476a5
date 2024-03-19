@@ -1,0 +1,10 @@
+#pragma once
+
+#include <xiic.h>
+
+
+
+
+
+void initCodec();
+

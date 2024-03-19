@@ -1,16 +1,21 @@
-20:19:54 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
+03:43:13 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
 make all 
+'Building file: ../src/gestionAudio.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gestionAudio.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gestionAudio.d" -MT"src/gestionAudio.o" -o "src/gestionAudio.o" "../src/gestionAudio.c"
+'Finished building: ../src/gestionAudio.c'
+' '
 'Building target: ZYBO_PROJET_S4.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/gestionAudio.o ./src/initCodec.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ZYBO_PROJET_S4.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   6480	    328	   3104	   9912	   26b8	ZYBO_PROJET_S4.elf
+   7180	    348	   3112	  10640	   2990	ZYBO_PROJET_S4.elf
 'Finished building: ZYBO_PROJET_S4.elf.size'
 ' '
 
-20:19:54 Build Finished (took 404ms)
+03:43:13 Build Finished (took 540ms)
 
