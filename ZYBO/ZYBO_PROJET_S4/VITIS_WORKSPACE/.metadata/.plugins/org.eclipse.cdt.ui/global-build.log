@@ -1,0 +1,15 @@
+Nothing to build in platform 'design_1_wrapper'
+
+20:19:54 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
+make all 
+'Building target: ZYBO_PROJET_S4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ZYBO_PROJET_S4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6480	    328	   3104	   9912	   26b8	ZYBO_PROJET_S4.elf
+'Finished building: ZYBO_PROJET_S4.elf.size'
+' '
