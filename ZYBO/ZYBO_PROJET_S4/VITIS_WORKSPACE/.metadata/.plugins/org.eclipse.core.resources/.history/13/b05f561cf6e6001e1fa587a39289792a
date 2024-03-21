@@ -1,0 +1,45 @@
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "sleep.h"
+#include <xiic.h>
+#include "initCodec.h"
+#include "gestionAudio.h"
+#define IIC_BASE_ADDRESS	XPAR_IIC_0_BASEADDR
+
+
+u8 buffer_test[2] = {0x88,0x88};
+
+
+void init(){
+	xil_printf("Init OK\n");
+	initAudio();
+	sleep(2);
+	initCodec();
+	sleep(2);
+
+
+
+
+}
+
+
+
+int main(){
+	sleep(3);
+	init();
+
+	while(1){
+		xil_printf("A");
+		sleep(1);
+		xil_printf("B");
+
+
+
+
+
+
+
+	}
+
+
+}

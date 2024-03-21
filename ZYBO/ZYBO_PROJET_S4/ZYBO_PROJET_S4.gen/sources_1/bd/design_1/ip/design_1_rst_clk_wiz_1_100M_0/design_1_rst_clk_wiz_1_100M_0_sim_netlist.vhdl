@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Mon Feb 19 21:56:02 2024
+-- Date        : Wed Mar 20 17:15:17 2024
 -- Host        : LAPTOP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top design_1_rst_clk_wiz_1_100M_0 -prefix
 --               design_1_rst_clk_wiz_1_100M_0_ design_1_rst_clk_wiz_1_100M_0_sim_netlist.vhdl

@@ -20,7 +20,7 @@ void initCodec(){
 		donnesInversees[1] = *(char*)(donnees+i);
 
 		XIic_Send(IIC_BASE_ADDRESS, ADRESSE_CODEC_SSM2603, donnesInversees, 2,XIIC_STOP);
-		usleep(7);
+		usleep(7000);
 	}
 
 

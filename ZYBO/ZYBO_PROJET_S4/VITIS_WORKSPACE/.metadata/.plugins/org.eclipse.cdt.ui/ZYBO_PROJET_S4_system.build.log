@@ -1,6 +1,6 @@
-03:40:53 **** Build of configuration Debug for project ZYBO_PROJET_S4_system ****
+22:07:42 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-03:40:53 Build Finished (took 94ms)
+22:07:42 Build Finished (took 95ms)
 

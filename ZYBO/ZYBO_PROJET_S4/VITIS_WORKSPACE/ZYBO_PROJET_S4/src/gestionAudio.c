@@ -12,34 +12,33 @@
 void initAudio(){
 
 	int val = Xil_In32((XPAR_I2S_RECEIVER_0_BASEADDR + 0x20));
-		val &=0xFFFFFF00;
-		val |= 0x00000010;
-		Xil_Out32((XPAR_I2S_RECEIVER_0_BASEADDR + 0x20), val); // Rate
+	val &=0xFFFFFF00;
+	val |= 0x00000004;
+	Xil_Out32((XPAR_I2S_RECEIVER_0_BASEADDR + 0x20), val); // Rate
 
 
+	val = Xil_In32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x20));
+	val &=0xFFFFFF00;
+	val |= 0x00000004;
+	Xil_Out32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x20), val); // Rate
 
-	 val = Xil_In32((XPAR_I2S_RECEIVER_0_BASEADDR + 0x08));
+	sleep(1);
+
+	val = Xil_In32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x08));
+	val &= 0xFFFFFFF0;
+	val |= 0x00000001;
+	Xil_Out32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x08), val); // Rate
+
+	sleep(1);
+
+
+	val = Xil_In32((XPAR_I2S_RECEIVER_0_BASEADDR + 0x08));
+	val &= 0xFFFFFFF0;
 	val |= 0x00000001;
 	Xil_Out32((XPAR_I2S_RECEIVER_0_BASEADDR + 0x08), val); // Activer le core
 
 
 
-
-
-
-
-	val = Xil_In32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x20));
-	val &=0xFFFFFF00;
-	val |= 0x00000010;
-	Xil_Out32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x20), val); // Rate
-
-	//Xil_Out32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x09), 0x00000001); // Toujours valide
-
-	sleep(1);
-
-	val = Xil_In32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x08));
-	val |= 0x00000001;
-	Xil_Out32((XPAR_I2S_TRANSMITTER_0_BASEADDR + 0x08), val); // Activer le core
 
 
 

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Tue Mar 19 03:34:31 2024
+-- Date        : Wed Mar 20 21:22:33 2024
 -- Host        : LAPTOP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_i2s_transmitter_0_0/design_1_i2s_transmitter_0_0_stub.vhdl
@@ -43,9 +43,7 @@ entity design_1_i2s_transmitter_0_0 is
     s_axis_aud_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axis_aud_tid : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axis_aud_tvalid : in STD_LOGIC;
-    s_axis_aud_tready : out STD_LOGIC;
-    fifo_wrdata_count : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    fifo_rdata_count : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    s_axis_aud_tready : out STD_LOGIC
   );
 
 end design_1_i2s_transmitter_0_0;
@@ -54,7 +52,7 @@ architecture stub of design_1_i2s_transmitter_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "s_axi_ctrl_aclk,s_axi_ctrl_aresetn,aud_mclk,aud_mrst,s_axis_aud_aclk,s_axis_aud_aresetn,s_axi_ctrl_awvalid,s_axi_ctrl_awready,s_axi_ctrl_awaddr[7:0],s_axi_ctrl_wvalid,s_axi_ctrl_wready,s_axi_ctrl_wdata[31:0],s_axi_ctrl_bvalid,s_axi_ctrl_bready,s_axi_ctrl_bresp[1:0],s_axi_ctrl_arvalid,s_axi_ctrl_arready,s_axi_ctrl_araddr[7:0],s_axi_ctrl_rvalid,s_axi_ctrl_rready,s_axi_ctrl_rdata[31:0],s_axi_ctrl_rresp[1:0],irq,lrclk_in,sclk_in,sdata_0_out,s_axis_aud_tdata[31:0],s_axis_aud_tid[2:0],s_axis_aud_tvalid,s_axis_aud_tready,fifo_wrdata_count[15:0],fifo_rdata_count[15:0]";
+attribute black_box_pad_pin of stub : architecture is "s_axi_ctrl_aclk,s_axi_ctrl_aresetn,aud_mclk,aud_mrst,s_axis_aud_aclk,s_axis_aud_aresetn,s_axi_ctrl_awvalid,s_axi_ctrl_awready,s_axi_ctrl_awaddr[7:0],s_axi_ctrl_wvalid,s_axi_ctrl_wready,s_axi_ctrl_wdata[31:0],s_axi_ctrl_bvalid,s_axi_ctrl_bready,s_axi_ctrl_bresp[1:0],s_axi_ctrl_arvalid,s_axi_ctrl_arready,s_axi_ctrl_araddr[7:0],s_axi_ctrl_rvalid,s_axi_ctrl_rready,s_axi_ctrl_rdata[31:0],s_axi_ctrl_rresp[1:0],irq,lrclk_in,sclk_in,sdata_0_out,s_axis_aud_tdata[31:0],s_axis_aud_tid[2:0],s_axis_aud_tvalid,s_axis_aud_tready";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "i2s_transmitter_v1_0_4,Vivado 2020.2";
 begin

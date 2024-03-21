@@ -23,3 +23,7 @@ set_property src_info {type:XDC file:1 line:66 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN N18   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_scl_io }];#IO_L13P_T2_MRCC_34 Sch=ac_scl
 set_property src_info {type:XDC file:1 line:67 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 PULLUP true} [get_ports { iic_sda_io }]; #IO_L23P_T3_34 Sch=ac_sda
+set_property src_info {type:XDC file:1 line:143 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33     } [get_ports { uart_txd }];  	## i.e rxd on Pmod UART side
+set_property src_info {type:XDC file:1 line:144 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33     } [get_ports { uart_rxd }];      ## i.e txd on Pmod UART side

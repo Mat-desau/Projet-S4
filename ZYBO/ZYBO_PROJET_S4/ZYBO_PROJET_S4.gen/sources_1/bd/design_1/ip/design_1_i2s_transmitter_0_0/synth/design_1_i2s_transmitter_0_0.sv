@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "i2s_transmitter_v1_0_4,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_i2s_transmitter_0_0,i2s_transmitter_v1_0_4,{}" *)
-(* CORE_GENERATION_INFO = "design_1_i2s_transmitter_0_0,i2s_transmitter_v1_0_4,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=i2s_transmitter,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_IS_MASTER=0,C_NUM_CHANNELS=1,C_DWIDTH=24,C_32BIT_LR=0,C_DEPTH=64}" *)
+(* CORE_GENERATION_INFO = "design_1_i2s_transmitter_0_0,i2s_transmitter_v1_0_4,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=i2s_transmitter,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_IS_MASTER=0,C_NUM_CHANNELS=1,C_DWIDTH=24,C_32BIT_LR=0,C_DEPTH=128}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_i2s_transmitter_0_0 (
   s_axi_ctrl_aclk,
@@ -84,9 +84,7 @@ module design_1_i2s_transmitter_0_0 (
   s_axis_aud_tdata,
   s_axis_aud_tid,
   s_axis_aud_tvalid,
-  s_axis_aud_tready,
-  fifo_wrdata_count,
-  fifo_rdata_count
+  s_axis_aud_tready
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_ctrl_aclk, ASSOCIATED_BUSIF s_axi_ctrl, ASSOCIATED_RESET s_axi_ctrl_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *)
@@ -156,15 +154,13 @@ input wire s_axis_aud_tvalid;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aud, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 3, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_aud TREADY" *)
 output wire s_axis_aud_tready;
-output wire [15 : 0] fifo_wrdata_count;
-output wire [15 : 0] fifo_rdata_count;
 
   i2s_transmitter_v1_0_4 #(
     .C_IS_MASTER(0),
     .C_NUM_CHANNELS(1),
     .C_DWIDTH(24),
     .C_32BIT_LR(0),
-    .C_DEPTH(64)
+    .C_DEPTH(128)
   ) inst (
     .s_axi_ctrl_aclk(s_axi_ctrl_aclk),
     .s_axi_ctrl_aresetn(s_axi_ctrl_aresetn),
@@ -201,7 +197,7 @@ output wire [15 : 0] fifo_rdata_count;
     .s_axis_aud_tid(s_axis_aud_tid),
     .s_axis_aud_tvalid(s_axis_aud_tvalid),
     .s_axis_aud_tready(s_axis_aud_tready),
-    .fifo_wrdata_count(fifo_wrdata_count),
-    .fifo_rdata_count(fifo_rdata_count)
+    .fifo_wrdata_count(),
+    .fifo_rdata_count()
   );
 endmodule

@@ -138,6 +138,10 @@ set_property -dict { PACKAGE_PIN N17   IOSTANDARD LVCMOS33 PULLUP true} [get_por
 #set_property -dict { PACKAGE_PIN V6    IOSTANDARD LVCMOS33     } [get_ports { jb[6] }]; #IO_L22P_T3_13 Sch=jb_p[4]             
 #set_property -dict { PACKAGE_PIN W6    IOSTANDARD LVCMOS33     } [get_ports { jb[7] }]; #IO_L22N_T3_13 Sch=jb_n[4]             
                                                                                                                                  
+ 
+##Pmod UART on Header JC                                
+set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33     } [get_ports { uart_txd }];  	## i.e rxd on Pmod UART side 		 
+set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33     } [get_ports { uart_rxd }];      ## i.e txd on Pmod UART side  
                                                                                                                                  
 ##Pmod Header JC                                                                                                                  
 #set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33     } [get_ports { jc[0] }]; #IO_L10P_T1_34 Sch=jc_p[1]   			 
