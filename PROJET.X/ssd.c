@@ -25,7 +25,6 @@
 #include <sys/attribs.h>
 #include "config.h"
 #include "ssd.h"
-#include "system/command/sys_command.h"
 
 
 /* ************************************************************************** */
