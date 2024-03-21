@@ -303,6 +303,7 @@ int FCT_Compteur_5Minutes(int Activer)
         Flag_5min = 0;              //Si pas activer mettre à 0
         count5min = 0;              //Count5min remis a 0
     }
+    
     if(count5min >= 400)            //Si par dessus 400 c'est bon pour return 1
     {
         return 1;
