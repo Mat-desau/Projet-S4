@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Mar 21 09:09:36 2024
+# Process ID: 23408
+# Current directory: D:/Code_D_trous/SuperMegaFinal_update/S4e_Depart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22720 D:\Code_D_trous\SuperMegaFinal_update\S4e_Depart\S4e_Depart.xpr
+# Log file: D:/Code_D_trous/SuperMegaFinal_update/S4e_Depart/vivado.log
+# Journal file: D:/Code_D_trous/SuperMegaFinal_update/S4e_Depart\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Code_D_trous/SuperMegaFinal_update/S4e_Depart/S4e_Depart.xpr
+update_compile_order -fileset sources_1
