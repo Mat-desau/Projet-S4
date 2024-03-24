@@ -7,7 +7,6 @@ vhdl xil_defaultlib  \
 "../../../bd/design_1/ip/design_1_microblaze_0_axi_intc_0/sim/design_1_microblaze_0_axi_intc_0.vhd" \
 "../../../bd/design_1/ip/design_1_mdm_1_0/sim/design_1_mdm_1_0.vhd" \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/sim/design_1_rst_clk_wiz_1_100M_0.vhd" \
-"../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_iic_0_0/sim/design_1_axi_iic_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_rst_clk_wiz_1_100M_1/sim/design_1_rst_clk_wiz_1_100M_1.vhd" \
 "../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" \
@@ -15,6 +14,10 @@ vhdl xil_defaultlib  \
 "../../../bd/design_1/ip/design_1_axi_fifo_mm_s_0_0/sim/design_1_axi_fifo_mm_s_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_fifo_mm_s_1_0/sim/design_1_axi_fifo_mm_s_1_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_uartlite_0_0/sim/design_1_axi_uartlite_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_ila_1_0/sim/design_1_ila_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_ila_2_0/sim/design_1_ila_2_0.vhd" \
+"../../../bd/design_1/ip/design_1_ILA_SORTIE_MONO_0/sim/design_1_ILA_SORTIE_MONO_0.vhd" \
+"../../../bd/design_1/ip/design_1_monoAudio_0_0/sim/design_1_monoAudio_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 nosort

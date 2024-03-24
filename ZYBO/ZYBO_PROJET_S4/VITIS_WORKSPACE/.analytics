@@ -233,3 +233,28 @@ timestamp=[2024-03-20 22:36:21], mode=BUILD, duration=0:00:00.237, duration_ms=2
 timestamp=[2024-03-20 22:37:59], mode=BUILD, duration=0:00:00.725, duration_ms=725, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
 timestamp=[2024-03-20 22:40:03], mode=BUILD, duration=0:00:00.721, duration_ms=721, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
 timestamp=[2024-03-20 22:40:39], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-21 09:38:15], mode=WORKBENCH_START, duration=0:00:08.073, duration_ms=8073, data={}
+timestamp=[2024-03-21 09:38:16], mode=WORKBENCH_UI_INIT, duration=0:00:00.517, duration_ms=517, data={editors_count=14, platform_editors_count=6, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,ZYBO_PROJET_S4,ZYBO_PROJET_S4_system,design_1_wrapper}
+timestamp=[2024-03-21 09:38:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.083, duration_ms=83, data={}
+timestamp=[2024-03-21 09:44:32], mode=PLATFORM_GENERATION, duration=0:00:01.680, duration_ms=1680, data={name=design_1_wrapper}
+timestamp=[2024-03-21 09:45:11], mode=BUILD, duration=0:00:02.257, duration_ms=2257, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-21 09:45:15], mode=BUILD, duration=0:00:00.107, duration_ms=107, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-21 09:53:37], mode=PLATFORM_GENERATION, duration=0:00:01.571, duration_ms=1571, data={name=design_1_wrapper}
+timestamp=[2024-03-21 09:53:50], mode=BUILD, duration=0:00:00.103, duration_ms=103, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-21 11:01:59], mode=PLATFORM_GENERATION, duration=0:00:01.568, duration_ms=1568, data={name=design_1_wrapper}
+timestamp=[2024-03-21 11:02:26], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-21 11:02:30], mode=BUILD, duration=0:00:00.107, duration_ms=107, data={name=ZYBO_PROJET_S4_system, configuration=Debug, clean_build=false}
+timestamp=[2024-03-23 18:38:52], mode=WORKBENCH_START, duration=0:00:08.272, duration_ms=8272, data={}
+timestamp=[2024-03-23 18:38:53], mode=WORKBENCH_UI_INIT, duration=0:00:00.581, duration_ms=581, data={editors_count=14, platform_editors_count=6, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,ZYBO_PROJET_S4,ZYBO_PROJET_S4_system,design_1_wrapper}
+timestamp=[2024-03-23 18:38:53], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.079, duration_ms=79, data={}
+timestamp=[2024-03-23 18:39:42], mode=PLATFORM_GENERATION, duration=0:00:01.676, duration_ms=1676, data={name=design_1_wrapper}
+timestamp=[2024-03-23 19:11:21], mode=PLATFORM_GENERATION, duration=0:00:01.563, duration_ms=1563, data={name=design_1_wrapper}
+timestamp=[2024-03-23 19:46:33], mode=PLATFORM_GENERATION, duration=0:00:01.598, duration_ms=1598, data={name=design_1_wrapper}
+timestamp=[2024-03-23 20:35:08], mode=PLATFORM_GENERATION, duration=0:00:01.599, duration_ms=1599, data={name=design_1_wrapper}
+timestamp=[2024-03-23 20:35:13], mode=BUILD, duration=0:00:00.305, duration_ms=305, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-23 21:02:29], mode=PLATFORM_GENERATION, duration=0:00:01.560, duration_ms=1560, data={name=design_1_wrapper}
+timestamp=[2024-03-23 21:20:16], mode=PLATFORM_GENERATION, duration=0:00:01.595, duration_ms=1595, data={name=design_1_wrapper}
+timestamp=[2024-03-23 21:47:13], mode=PLATFORM_GENERATION, duration=0:00:01.591, duration_ms=1591, data={name=design_1_wrapper}
+timestamp=[2024-03-23 22:07:43], mode=PLATFORM_GENERATION, duration=0:00:01.606, duration_ms=1606, data={name=design_1_wrapper}
+timestamp=[2024-03-23 22:26:32], mode=BUILD, duration=0:00:01.819, duration_ms=1819, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}
+timestamp=[2024-03-23 22:27:36], mode=BUILD, duration=0:00:00.474, duration_ms=474, data={name=ZYBO_PROJET_S4, configuration=Debug, clean_build=false}

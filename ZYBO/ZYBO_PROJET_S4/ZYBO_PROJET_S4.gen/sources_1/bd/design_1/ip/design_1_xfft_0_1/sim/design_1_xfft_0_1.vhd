@@ -225,7 +225,7 @@ BEGIN
       C_HAS_XK_INDEX => 1,
       C_DATA_MEM_TYPE => 1,
       C_TWIDDLE_MEM_TYPE => 1,
-      C_BRAM_STAGES => 0,
+      C_BRAM_STAGES => 1,
       C_REORDER_MEM_TYPE => 1,
       C_USE_HYBRID_RAM => 0,
       C_OPTIMIZE_GOAL => 0,

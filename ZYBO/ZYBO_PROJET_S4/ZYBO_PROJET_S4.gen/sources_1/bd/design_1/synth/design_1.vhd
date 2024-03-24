@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Wed Mar 20 21:52:38 2024
+--Date        : Sat Mar 23 22:20:40 2024
 --Host        : LAPTOP running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -3100,7 +3100,7 @@ entity design_1 is
     uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=39,numReposBlks=27,numNonXlnxBlks=0,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=2,da_clkrst_cnt=3,da_mb_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=40,numReposBlks=28,numNonXlnxBlks=0,numHierBlks=12,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=9,da_board_cnt=2,da_clkrst_cnt=3,da_mb_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -3289,15 +3289,6 @@ architecture STRUCTURE of design_1 is
     m_axis_aud_tready : in STD_LOGIC
   );
   end component design_1_i2s_receiver_0_0;
-  component design_1_ila_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_ila_0_0;
   component design_1_xlconstant_0_1 is
   port (
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
@@ -3478,20 +3469,6 @@ architecture STRUCTURE of design_1 is
     axi_str_rxd_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component design_1_axi_fifo_mm_s_1_0;
-  component design_1_axis_subset_converter_0_0 is
-  port (
-    aclk : in STD_LOGIC;
-    aresetn : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_tid : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_tid : out STD_LOGIC_VECTOR ( 2 downto 0 )
-  );
-  end component design_1_axis_subset_converter_0_0;
   component design_1_axi_uartlite_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -3580,6 +3557,47 @@ architecture STRUCTURE of design_1 is
     m_axis_tid : out STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   end component design_1_axis_broadcaster_0_0;
+  component design_1_ila_2_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_ila_2_0;
+  component design_1_ILA_SORTIE_MONO_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  end component design_1_ILA_SORTIE_MONO_0;
+  component design_1_monoAudio_0_0 is
+  port (
+    M_AXIS_DATA : inout STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXIS_DATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_READY : out STD_LOGIC;
+    M_READY : in STD_LOGIC;
+    S_VALID : in STD_LOGIC;
+    M_VALID : out STD_LOGIC;
+    clk : in STD_LOGIC;
+    aresetn : in STD_LOGIC;
+    s_axis_aud_tid : in STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  end component design_1_monoAudio_0_0;
   signal axi_fifo_mm_s_0_AXI_STR_TXD_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_fifo_mm_s_0_AXI_STR_TXD_TREADY : STD_LOGIC;
   signal axi_fifo_mm_s_0_AXI_STR_TXD_TVALID : STD_LOGIC;
@@ -3600,9 +3618,6 @@ architecture STRUCTURE of design_1 is
   signal axis_broadcaster_0_M01_AXIS_TID : STD_LOGIC_VECTOR ( 5 downto 3 );
   signal axis_broadcaster_0_M01_AXIS_TREADY : STD_LOGIC;
   signal axis_broadcaster_0_M01_AXIS_TVALID : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal axis_subset_converter_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal axis_subset_converter_0_M_AXIS_TREADY : STD_LOGIC;
-  signal axis_subset_converter_0_M_AXIS_TVALID : STD_LOGIC;
   signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
   signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
@@ -3805,6 +3820,9 @@ architecture STRUCTURE of design_1 is
   signal microblaze_0_mdm_axi_WREADY : STD_LOGIC;
   signal microblaze_0_mdm_axi_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal microblaze_0_mdm_axi_WVALID : STD_LOGIC;
+  signal monoAudio_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal monoAudio_0_M_AXIS_TREADY : STD_LOGIC;
+  signal monoAudio_0_M_AXIS_TVALID : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -3846,7 +3864,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_iic_0_iic2intc_irpt_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_iic_0_gpo_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_uartlite_0_interrupt_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_subset_converter_0_m_axis_tid_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_i2s_receiver_0_irq_UNCONNECTED : STD_LOGIC;
   signal NLW_i2s_transmitter_0_irq_UNCONNECTED : STD_LOGIC;
   signal NLW_mdm_1_Interrupt_UNCONNECTED : STD_LOGIC;
@@ -3910,8 +3927,8 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of sysclk : signal is "xilinx.com:signal:clock:1.0 CLK.SYSCLK CLK";
   attribute X_INTERFACE_PARAMETER of sysclk : signal is "XIL_INTERFACENAME CLK.SYSCLK, CLK_DOMAIN design_1_sysclk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
-  attribute X_INTERFACE_INFO of uart_rxd : signal is "xilinx.com:interface:uart:1.0 uart ";
-  attribute X_INTERFACE_INFO of uart_txd : signal is "xilinx.com:interface:uart:1.0 uart ";
+  attribute X_INTERFACE_INFO of uart_rxd : signal is "xilinx.com:interface:uart:1.0 uart RxD";
+  attribute X_INTERFACE_INFO of uart_txd : signal is "xilinx.com:interface:uart:1.0 uart TxD";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -3938,6 +3955,45 @@ begin
   reset_1 <= reset;
   sdata_0_in_0_1 <= ac_recdat;
   uart_txd <= axi_uartlite_0_UART_TxD;
+ILA_ENTREE_MONO: component design_1_ILA_SORTIE_MONO_0
+     port map (
+      clk => microblaze_0_Clk,
+      probe0(0) => axis_broadcaster_0_M00_AXIS_TREADY,
+      probe1(31 downto 0) => axis_broadcaster_0_M00_AXIS_TDATA(31 downto 0),
+      probe2(3 downto 0) => B"1111",
+      probe3(0) => axis_broadcaster_0_M00_AXIS_TVALID(0),
+      probe4(0) => '0',
+      probe5(0) => '0',
+      probe6(3 downto 0) => B"1111",
+      probe7(0) => '0',
+      probe8(2 downto 0) => axis_broadcaster_0_M00_AXIS_TID(2 downto 0)
+    );
+ILA_SORTIE_FFT: component design_1_ila_1_0
+     port map (
+      clk => microblaze_0_Clk,
+      probe0(0) => axis_subset_converter_1_M_AXIS_TREADY,
+      probe1(31 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(31 downto 0),
+      probe2(3 downto 0) => B"1111",
+      probe3(0) => axis_subset_converter_1_M_AXIS_TVALID,
+      probe4(0) => axis_subset_converter_1_M_AXIS_TLAST,
+      probe5(7 downto 0) => axis_subset_converter_1_M_AXIS_TUSER(7 downto 0),
+      probe6(3 downto 0) => B"1111",
+      probe7(0) => '0',
+      probe8(0) => '0'
+    );
+ILA_SORTIE_MONO: component design_1_ila_2_0
+     port map (
+      clk => microblaze_0_Clk,
+      probe0(0) => monoAudio_0_M_AXIS_TREADY,
+      probe1(31 downto 0) => monoAudio_0_M_AXIS_TDATA(31 downto 0),
+      probe2(3 downto 0) => B"1111",
+      probe3(0) => monoAudio_0_M_AXIS_TVALID,
+      probe4(0) => '0',
+      probe5(0) => '0',
+      probe6(3 downto 0) => B"1111",
+      probe7(0) => '0',
+      probe8(0) => '0'
+    );
 axi_fifo_mm_s_0: component design_1_axi_fifo_mm_s_0_0
      port map (
       axi_str_txc_tdata(31 downto 0) => NLW_axi_fifo_mm_s_0_axi_str_txc_tdata_UNCONNECTED(31 downto 0),
@@ -4071,19 +4127,6 @@ axis_broadcaster_0: component design_1_axis_broadcaster_0_0
       s_axis_tready => i2s_receiver_0_m_axis_aud_TREADY,
       s_axis_tvalid => i2s_receiver_0_m_axis_aud_TVALID
     );
-axis_subset_converter_0: component design_1_axis_subset_converter_0_0
-     port map (
-      aclk => microblaze_0_Clk,
-      aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
-      m_axis_tdata(31 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(31 downto 0),
-      m_axis_tid(2 downto 0) => NLW_axis_subset_converter_0_m_axis_tid_UNCONNECTED(2 downto 0),
-      m_axis_tready => axis_subset_converter_0_M_AXIS_TREADY,
-      m_axis_tvalid => axis_subset_converter_0_M_AXIS_TVALID,
-      s_axis_tdata(31 downto 0) => axis_broadcaster_0_M00_AXIS_TDATA(31 downto 0),
-      s_axis_tid(2 downto 0) => axis_broadcaster_0_M00_AXIS_TID(2 downto 0),
-      s_axis_tready => axis_broadcaster_0_M00_AXIS_TREADY,
-      s_axis_tvalid => axis_broadcaster_0_M00_AXIS_TVALID(0)
-    );
 clk_wiz_1: component design_1_clk_wiz_1_0
      port map (
       clk_in1 => clk_in1_0_1,
@@ -4157,27 +4200,6 @@ i2s_transmitter_0: component design_1_i2s_transmitter_0_0
       s_axis_aud_tvalid => axis_broadcaster_0_M01_AXIS_TVALID(1),
       sclk_in => i2s_receiver_0_sclk_out,
       sdata_0_out => i2s_transmitter_0_sdata_0_out
-    );
-ila_0: component design_1_ila_0_0
-     port map (
-      clk => microblaze_0_Clk,
-      probe0(0) => i2s_transmitter_0_sdata_0_out,
-      probe1(0) => sdata_0_in_0_1,
-      probe2(0) => i2s_receiver_0_lrclk_out,
-      probe3(0) => axi_fifo_mm_s_1_interrupt
-    );
-ila_1: component design_1_ila_1_0
-     port map (
-      clk => microblaze_0_Clk,
-      probe0(0) => axis_subset_converter_1_M_AXIS_TREADY,
-      probe1(31 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(31 downto 0),
-      probe2(3 downto 0) => B"1111",
-      probe3(0) => axis_subset_converter_1_M_AXIS_TVALID,
-      probe4(0) => axis_subset_converter_1_M_AXIS_TLAST,
-      probe5(7 downto 0) => axis_subset_converter_1_M_AXIS_TUSER(7 downto 0),
-      probe6(3 downto 0) => B"1111",
-      probe7(0) => '0',
-      probe8(0) => '0'
     );
 mdm_1: component design_1_mdm_1_0
      port map (
@@ -4554,6 +4576,18 @@ microblaze_0_xlconcat: component design_1_microblaze_0_xlconcat_0
       In1(0) => '0',
       dout(1 downto 0) => microblaze_0_intr(1 downto 0)
     );
+monoAudio_0: component design_1_monoAudio_0_0
+     port map (
+      M_AXIS_DATA(31 downto 0) => monoAudio_0_M_AXIS_TDATA(31 downto 0),
+      M_READY => monoAudio_0_M_AXIS_TREADY,
+      M_VALID => monoAudio_0_M_AXIS_TVALID,
+      S_AXIS_DATA(31 downto 0) => axis_broadcaster_0_M00_AXIS_TDATA(31 downto 0),
+      S_READY => axis_broadcaster_0_M00_AXIS_TREADY,
+      S_VALID => axis_broadcaster_0_M00_AXIS_TVALID(0),
+      aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      clk => microblaze_0_Clk,
+      s_axis_aud_tid(2 downto 0) => axis_broadcaster_0_M00_AXIS_TID(2 downto 0)
+    );
 processing_system7_0: component design_1_processing_system7_0_0
      port map (
       DDR_Addr(14 downto 0) => DDR_addr(14 downto 0),
@@ -4639,10 +4673,10 @@ xfft_0: component design_1_xfft_0_1
       s_axis_config_tdata(15 downto 0) => axi_fifo_mm_s_0_AXI_STR_TXD_TDATA(15 downto 0),
       s_axis_config_tready => axi_fifo_mm_s_0_AXI_STR_TXD_TREADY,
       s_axis_config_tvalid => axi_fifo_mm_s_0_AXI_STR_TXD_TVALID,
-      s_axis_data_tdata(31 downto 0) => axis_subset_converter_0_M_AXIS_TDATA(31 downto 0),
+      s_axis_data_tdata(31 downto 0) => B"00000000000000000000000000000000",
       s_axis_data_tlast => '0',
-      s_axis_data_tready => axis_subset_converter_0_M_AXIS_TREADY,
-      s_axis_data_tvalid => axis_subset_converter_0_M_AXIS_TVALID
+      s_axis_data_tready => monoAudio_0_M_AXIS_TREADY,
+      s_axis_data_tvalid => monoAudio_0_M_AXIS_TVALID
     );
 xlconstant_1: component design_1_xlconstant_0_1
      port map (

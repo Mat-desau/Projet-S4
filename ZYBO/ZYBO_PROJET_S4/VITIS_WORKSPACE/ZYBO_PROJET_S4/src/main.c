@@ -43,8 +43,7 @@ int main(){
 		//xil_printf("%d",bytes);
 
 		if(flagDonnes){
-			u32 *premierInt = BufferMain;
-			*premierInt = 0xFFFFFFFF;
+			u32 *premierInt = (u32 *)(BufferMain);
 			XUartLite_Send(&UartLite, BufferMain , 128*4);
 			flagDonnes = 0;
 

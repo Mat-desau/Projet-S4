@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ZYBO_PROJET_S4.srcs/sources_1/new/monoAudio.vhd" \
+"../../../../ZYBO_PROJET_S4.srcs/sim_1/new/simul_mono.vhd" \
+
+# Do not sort compile order
+nosort

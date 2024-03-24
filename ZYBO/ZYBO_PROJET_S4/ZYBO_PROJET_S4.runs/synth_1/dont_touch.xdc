@@ -48,9 +48,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rs
 # IP: bd/design_1/ip/design_1_i2s_receiver_0_0/design_1_i2s_receiver_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_i2s_receiver_0_0 || ORIG_REF_NAME==design_1_i2s_receiver_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_xlconstant_0_1/design_1_xlconstant_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_1 || ORIG_REF_NAME==design_1_xlconstant_0_1} -quiet] -quiet
 
@@ -75,9 +72,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_axi_fifo_mm_s_1_0/design_1_axi_fifo_mm_s_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_fifo_mm_s_1_0 || ORIG_REF_NAME==design_1_axi_fifo_mm_s_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axis_subset_converter_0_0 || ORIG_REF_NAME==design_1_axis_subset_converter_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_uartlite_0_0 || ORIG_REF_NAME==design_1_axi_uartlite_0_0} -quiet] -quiet
 
@@ -89,5 +83,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_i2
 
 # IP: bd/design_1/ip/design_1_axis_broadcaster_0_0/design_1_axis_broadcaster_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axis_broadcaster_0_0 || ORIG_REF_NAME==design_1_axis_broadcaster_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ila_2_0/design_1_ila_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ila_2_0 || ORIG_REF_NAME==design_1_ila_2_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_ILA_SORTIE_MONO_0/design_1_ILA_SORTIE_MONO_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ILA_SORTIE_MONO_0 || ORIG_REF_NAME==design_1_ILA_SORTIE_MONO_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_monoAudio_0_0/design_1_monoAudio_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_monoAudio_0_0 || ORIG_REF_NAME==design_1_monoAudio_0_0} -quiet] -quiet
 
 # XDC: c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/design_1_ooc.xdc
