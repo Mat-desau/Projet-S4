@@ -44,7 +44,7 @@ int main(){
 
 		if(flagDonnes){
 			u32 *premierInt = (u32 *)(BufferMain);
-			XUartLite_Send(&UartLite, BufferMain , 128*4);
+			XUartLite_Send(&UartLite, BufferMain , MAX_FFT_LEN*4);
 			flagDonnes = 0;
 
 		}

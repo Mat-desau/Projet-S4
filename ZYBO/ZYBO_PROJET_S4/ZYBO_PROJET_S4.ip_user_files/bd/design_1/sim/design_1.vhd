@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Mar 25 13:59:37 2024
+--Date        : Mon Mar 25 15:45:52 2024
 --Host        : LAPTOP running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -3386,7 +3386,7 @@ architecture STRUCTURE of design_1 is
   component design_1_xfft_0_1 is
   port (
     aclk : in STD_LOGIC;
-    s_axis_config_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    s_axis_config_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axis_config_tvalid : in STD_LOGIC;
     s_axis_config_tready : out STD_LOGIC;
     s_axis_data_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3394,10 +3394,13 @@ architecture STRUCTURE of design_1 is
     s_axis_data_tready : out STD_LOGIC;
     s_axis_data_tlast : in STD_LOGIC;
     m_axis_data_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_data_tuser : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_data_tuser : out STD_LOGIC_VECTOR ( 23 downto 0 );
     m_axis_data_tvalid : out STD_LOGIC;
     m_axis_data_tready : in STD_LOGIC;
     m_axis_data_tlast : out STD_LOGIC;
+    m_axis_status_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_status_tvalid : out STD_LOGIC;
+    m_axis_status_tready : in STD_LOGIC;
     event_frame_started : out STD_LOGIC;
     event_tlast_unexpected : out STD_LOGIC;
     event_tlast_missing : out STD_LOGIC;
@@ -3579,7 +3582,7 @@ architecture STRUCTURE of design_1 is
     probe2 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 23 downto 0 );
     probe6 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
@@ -3624,7 +3627,7 @@ architecture STRUCTURE of design_1 is
   signal axis_subset_converter_1_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axis_subset_converter_1_M_AXIS_TLAST : STD_LOGIC;
   signal axis_subset_converter_1_M_AXIS_TREADY : STD_LOGIC;
-  signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal axis_subset_converter_1_M_AXIS_TUSER : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal axis_subset_converter_1_M_AXIS_TVALID : STD_LOGIC;
   signal clk_in1_0_1 : STD_LOGIC;
   signal clk_wiz_1_clk_out2 : STD_LOGIC;
@@ -3894,6 +3897,8 @@ architecture STRUCTURE of design_1 is
   signal NLW_xfft_0_event_status_channel_halt_UNCONNECTED : STD_LOGIC;
   signal NLW_xfft_0_event_tlast_missing_UNCONNECTED : STD_LOGIC;
   signal NLW_xfft_0_event_tlast_unexpected_UNCONNECTED : STD_LOGIC;
+  signal NLW_xfft_0_m_axis_status_tvalid_UNCONNECTED : STD_LOGIC;
+  signal NLW_xfft_0_m_axis_status_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute BMM_INFO_PROCESSOR : string;
   attribute BMM_INFO_PROCESSOR of microblaze_0 : label is "microblaze-le > design_1 microblaze_0_local_memory/dlmb_bram_if_cntlr";
   attribute KEEP_HIERARCHY : string;
@@ -3976,7 +3981,7 @@ ILA_SORTIE_FFT: component design_1_ila_0_0
       probe2(3 downto 0) => B"1111",
       probe3(0) => axis_subset_converter_1_M_AXIS_TVALID,
       probe4(0) => axis_subset_converter_1_M_AXIS_TLAST,
-      probe5(7 downto 0) => axis_subset_converter_1_M_AXIS_TUSER(7 downto 0),
+      probe5(23 downto 0) => axis_subset_converter_1_M_AXIS_TUSER(23 downto 0),
       probe6(3 downto 0) => B"1111",
       probe7(0) => '0',
       probe8(0) => '0'
@@ -4668,9 +4673,12 @@ xfft_0: component design_1_xfft_0_1
       m_axis_data_tdata(31 downto 0) => axis_subset_converter_1_M_AXIS_TDATA(31 downto 0),
       m_axis_data_tlast => axis_subset_converter_1_M_AXIS_TLAST,
       m_axis_data_tready => axis_subset_converter_1_M_AXIS_TREADY,
-      m_axis_data_tuser(7 downto 0) => axis_subset_converter_1_M_AXIS_TUSER(7 downto 0),
+      m_axis_data_tuser(23 downto 0) => axis_subset_converter_1_M_AXIS_TUSER(23 downto 0),
       m_axis_data_tvalid => axis_subset_converter_1_M_AXIS_TVALID,
-      s_axis_config_tdata(15 downto 0) => axi_fifo_mm_s_0_AXI_STR_TXD_TDATA(15 downto 0),
+      m_axis_status_tdata(7 downto 0) => NLW_xfft_0_m_axis_status_tdata_UNCONNECTED(7 downto 0),
+      m_axis_status_tready => '1',
+      m_axis_status_tvalid => NLW_xfft_0_m_axis_status_tvalid_UNCONNECTED,
+      s_axis_config_tdata(7 downto 0) => axi_fifo_mm_s_0_AXI_STR_TXD_TDATA(7 downto 0),
       s_axis_config_tready => axi_fifo_mm_s_0_AXI_STR_TXD_TREADY,
       s_axis_config_tvalid => axi_fifo_mm_s_0_AXI_STR_TXD_TVALID,
       s_axis_data_tdata(31 downto 0) => Conn_TDATA(31 downto 0),

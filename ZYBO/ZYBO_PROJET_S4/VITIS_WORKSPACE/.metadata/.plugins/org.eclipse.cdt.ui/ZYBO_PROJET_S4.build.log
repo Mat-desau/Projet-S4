@@ -1,4 +1,4 @@
-13:17:30 **** Build of configuration Debug for project ZYBO_PROJET_S4 ****
+14:42:42 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
 make all 
 'Building file: ../src/FIFO_FFT_driver.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -26,34 +26,6 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/fft.o" -IC:/Users/cbowlieu/gi
       |      ^~~~~~
 'Finished building: ../src/fft.c'
 ' '
-'Building file: ../src/gestionAudio.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gestionAudio.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gestionAudio.d" -MT"src/gestionAudio.o" -o "src/gestionAudio.o" "../src/gestionAudio.c"
-'Finished building: ../src/gestionAudio.c'
-' '
-'Building file: ../src/initCodec.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initCodec.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/initCodec.d" -MT"src/initCodec.o" -o "src/initCodec.o" "../src/initCodec.c"
-In file included from ../src/initCodec.c:2:
-C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xbasic_types.h:98:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
-   98 | #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-      |  ^~~~~~~
-C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xbasic_types.h:99:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
-   99 | #warning  Please refer the Standalone BSP UG647 for further details
-      |  ^~~~~~~
-../src/initCodec.c: In function 'initCodec':
-../src/initCodec.c:22:54: warning: pointer targets in passing argument 3 of 'XIic_Send' differ in signedness [-Wpointer-sign]
-   22 |   XIic_Send(IIC_BASE_ADDRESS, ADRESSE_CODEC_SSM2603, donnesInversees, 2,XIIC_STOP);
-      |                                                      ^~~~~~~~~~~~~~~
-      |                                                      |
-      |                                                      char *
-In file included from C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xiic.h:302,
-                 from ../src/initCodec.c:1:
-C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xiic_l.h:553:10: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
-  553 |      u8 *BufferPtr, unsigned ByteCount, u8 Option);
-      |      ~~~~^~~~~~~~~
-'Finished building: ../src/initCodec.c'
-' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
@@ -67,7 +39,7 @@ C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_
       |  ^~~~~~~
 ../src/main.c: In function 'main':
 ../src/main.c:47:30: warning: passing argument 2 of 'XUartLite_Send' from incompatible pointer type [-Wincompatible-pointer-types]
-   47 |    XUartLite_Send(&UartLite, BufferMain , 128*4);
+   47 |    XUartLite_Send(&UartLite, BufferMain , MAX_FFT_LEN*4);
       |                              ^~~~~~~~~~
       |                              |
       |                              u32 * {aka long unsigned int *}
@@ -81,15 +53,6 @@ C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_
       |         ^~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
-'Building file: ../src/uart.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -o "src/uart.o" "../src/uart.c"
-../src/uart.c: In function 'uartInit':
-../src/uart.c:13:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
-   13 |  int Status;
-      |      ^~~~~~
-'Finished building: ../src/uart.c'
-' '
 'Building target: ZYBO_PROJET_S4.elf'
 'Invoking: MicroBlaze gcc linker'
 mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/FIFO_FFT_driver.o ./src/fft.o ./src/gestionAudio.o ./src/initCodec.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -98,9 +61,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZY
 'Invoking: MicroBlaze Print Size'
 mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  16112	    416	   4600	  21128	   5288	ZYBO_PROJET_S4.elf
+  16112	    416	  11768	  28296	   6e88	ZYBO_PROJET_S4.elf
 'Finished building: ZYBO_PROJET_S4.elf.size'
 ' '
 
-13:17:32 Build Finished (took 1s.734ms)
+14:42:44 Build Finished (took 1s.527ms)
 

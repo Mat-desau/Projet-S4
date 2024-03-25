@@ -304,9 +304,9 @@ proc create_root_design { parentCell } {
   # Create instance: axi_fifo_mm_s_1, and set properties
   set axi_fifo_mm_s_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.2 axi_fifo_mm_s_1 ]
   set_property -dict [ list \
-   CONFIG.C_RX_FIFO_DEPTH {512} \
+   CONFIG.C_RX_FIFO_DEPTH {2048} \
    CONFIG.C_RX_FIFO_PE_THRESHOLD {5} \
-   CONFIG.C_RX_FIFO_PF_THRESHOLD {128} \
+   CONFIG.C_RX_FIFO_PF_THRESHOLD {1024} \
    CONFIG.C_USE_TX_CTRL {0} \
    CONFIG.C_USE_TX_DATA {0} \
  ] $axi_fifo_mm_s_1
@@ -903,11 +903,13 @@ proc create_root_design { parentCell } {
    CONFIG.input_width {16} \
    CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0} \
    CONFIG.output_ordering {natural_order} \
+   CONFIG.ovflo {false} \
    CONFIG.phase_factor_width {16} \
    CONFIG.rounding_modes {convergent_rounding} \
    CONFIG.run_time_configurable_transform_length {false} \
+   CONFIG.scaling_options {block_floating_point} \
    CONFIG.target_clock_frequency {100} \
-   CONFIG.transform_length {128} \
+   CONFIG.transform_length {1024} \
    CONFIG.xk_index {true} \
  ] $xfft_0
 
