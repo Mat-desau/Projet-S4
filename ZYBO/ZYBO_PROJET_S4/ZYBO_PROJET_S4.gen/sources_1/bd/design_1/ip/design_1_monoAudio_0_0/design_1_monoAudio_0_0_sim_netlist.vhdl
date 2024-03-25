@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Sat Mar 23 22:21:48 2024
+-- Date        : Mon Mar 25 14:00:12 2024
 -- Host        : LAPTOP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_monoAudio_0_0/design_1_monoAudio_0_0_sim_netlist.vhdl
@@ -16,9 +16,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_monoAudio_0_0_monoAudio is
   port (
-    M_AXIS_DATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_READY : out STD_LOGIC;
+    M_AXIS_DATA : out STD_LOGIC_VECTOR ( 15 downto 0 );
     M_VALID : out STD_LOGIC;
+    S_READY : out STD_LOGIC;
     S_AXIS_DATA : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_axis_aud_tid : in STD_LOGIC_VECTOR ( 2 downto 0 );
     aresetn : in STD_LOGIC;
@@ -31,55 +31,43 @@ entity design_1_monoAudio_0_0_monoAudio is
 end design_1_monoAudio_0_0_monoAudio;
 
 architecture STRUCTURE of design_1_monoAudio_0_0_monoAudio is
-  signal \^s_ready\ : STD_LOGIC;
+  signal \M_AXIS_DATA_reg[15]_i_1_n_0\ : STD_LOGIC;
   signal d_etat : STD_LOGIC;
   signal d_etat_i_1_n_0 : STD_LOGIC;
   signal d_first_pass_x1 : STD_LOGIC;
   signal d_first_pass_x12 : STD_LOGIC;
   signal d_first_pass_x1_i_1_n_0 : STD_LOGIC;
   attribute XILINX_LEGACY_PRIM : string;
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[0]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[10]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[11]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[12]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[13]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[14]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[15]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[16]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[17]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[18]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[19]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[1]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[20]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[21]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[22]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[23]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[24]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[25]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[26]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[27]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[28]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[29]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[2]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[30]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[31]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[3]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[4]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[5]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[6]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[7]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[8]\ : label is "LDC";
-  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[9]\ : label is "LDC";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[0]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[10]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[11]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[12]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[13]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[14]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[15]\ : label is "LD";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \M_AXIS_DATA_reg[15]_i_1\ : label is "soft_lutpair0";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[1]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[2]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[3]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[4]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[5]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[6]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[7]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[8]\ : label is "LD";
+  attribute XILINX_LEGACY_PRIM of \M_AXIS_DATA_reg[9]\ : label is "LD";
+  attribute SOFT_HLUTNM of M_VALID_INST_0 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of S_READY_INST_0 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of d_first_pass_x1_i_1 : label is "soft_lutpair1";
 begin
-  S_READY <= \^s_ready\;
 \M_AXIS_DATA_reg[0]\: unisim.vcomponents.LDCE
     generic map(
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(0),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(0)
     );
@@ -88,9 +76,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(10),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(10)
     );
@@ -99,9 +87,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(11),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(11)
     );
@@ -110,9 +98,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(12),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(12)
     );
@@ -121,9 +109,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(13),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(13)
     );
@@ -132,9 +120,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(14),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(14)
     );
@@ -143,218 +131,51 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(15),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(15)
     );
-\M_AXIS_DATA_reg[16]\: unisim.vcomponents.LDCE
+\M_AXIS_DATA_reg[15]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => '0'
+      INIT => X"8"
     )
         port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(16)
-    );
-\M_AXIS_DATA_reg[17]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(17)
-    );
-\M_AXIS_DATA_reg[18]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(18)
-    );
-\M_AXIS_DATA_reg[19]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(19)
+      I0 => d_etat,
+      I1 => d_first_pass_x1,
+      O => \M_AXIS_DATA_reg[15]_i_1_n_0\
     );
 \M_AXIS_DATA_reg[1]\: unisim.vcomponents.LDCE
     generic map(
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(1),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(1)
-    );
-\M_AXIS_DATA_reg[20]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(20)
-    );
-\M_AXIS_DATA_reg[21]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(21)
-    );
-\M_AXIS_DATA_reg[22]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(22)
-    );
-\M_AXIS_DATA_reg[23]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(23)
-    );
-\M_AXIS_DATA_reg[24]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(24)
-    );
-\M_AXIS_DATA_reg[25]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(25)
-    );
-\M_AXIS_DATA_reg[26]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(26)
-    );
-\M_AXIS_DATA_reg[27]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(27)
-    );
-\M_AXIS_DATA_reg[28]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(28)
-    );
-\M_AXIS_DATA_reg[29]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(29)
     );
 \M_AXIS_DATA_reg[2]\: unisim.vcomponents.LDCE
     generic map(
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(2),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(2)
-    );
-\M_AXIS_DATA_reg[30]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(30)
-    );
-\M_AXIS_DATA_reg[31]\: unisim.vcomponents.LDCE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      CLR => \^s_ready\,
-      D => '0',
-      G => d_first_pass_x1,
-      GE => '1',
-      Q => M_AXIS_DATA(31)
     );
 \M_AXIS_DATA_reg[3]\: unisim.vcomponents.LDCE
     generic map(
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(3),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(3)
     );
@@ -363,9 +184,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(4),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(4)
     );
@@ -374,9 +195,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(5),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(5)
     );
@@ -385,9 +206,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(6),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(6)
     );
@@ -396,9 +217,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(7),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(7)
     );
@@ -407,9 +228,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(8),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(8)
     );
@@ -418,9 +239,9 @@ begin
       INIT => '0'
     )
         port map (
-      CLR => \^s_ready\,
+      CLR => '0',
       D => S_AXIS_DATA(9),
-      G => d_first_pass_x1,
+      G => \M_AXIS_DATA_reg[15]_i_1_n_0\,
       GE => '1',
       Q => M_AXIS_DATA(9)
     );
@@ -441,7 +262,7 @@ S_READY_INST_0: unisim.vcomponents.LUT1
     )
         port map (
       I0 => d_etat,
-      O => \^s_ready\
+      O => S_READY
     );
 d_etat_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -520,6 +341,8 @@ entity design_1_monoAudio_0_0 is
 end design_1_monoAudio_0_0;
 
 architecture STRUCTURE of design_1_monoAudio_0_0 is
+  signal \<const0>\ : STD_LOGIC;
+  signal \^m_axis_data\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute x_interface_info : string;
   attribute x_interface_info of M_READY : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
   attribute x_interface_info of M_VALID : signal is "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
@@ -536,9 +359,29 @@ architecture STRUCTURE of design_1_monoAudio_0_0 is
   attribute x_interface_parameter of S_AXIS_DATA : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 3, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute x_interface_info of s_axis_aud_tid : signal is "xilinx.com:interface:axis:1.0 S_AXIS TID";
 begin
+  M_AXIS_DATA(31) <= \<const0>\;
+  M_AXIS_DATA(30) <= \<const0>\;
+  M_AXIS_DATA(29) <= \<const0>\;
+  M_AXIS_DATA(28) <= \<const0>\;
+  M_AXIS_DATA(27) <= \<const0>\;
+  M_AXIS_DATA(26) <= \<const0>\;
+  M_AXIS_DATA(25) <= \<const0>\;
+  M_AXIS_DATA(24) <= \<const0>\;
+  M_AXIS_DATA(23) <= \<const0>\;
+  M_AXIS_DATA(22) <= \<const0>\;
+  M_AXIS_DATA(21) <= \<const0>\;
+  M_AXIS_DATA(20) <= \<const0>\;
+  M_AXIS_DATA(19) <= \<const0>\;
+  M_AXIS_DATA(18) <= \<const0>\;
+  M_AXIS_DATA(17) <= \<const0>\;
+  M_AXIS_DATA(16) <= \<const0>\;
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
+    );
 U0: entity work.design_1_monoAudio_0_0_monoAudio
      port map (
-      M_AXIS_DATA(31 downto 0) => M_AXIS_DATA(31 downto 0),
+      M_AXIS_DATA(15 downto 0) => M_AXIS_DATA(15 downto 0),
       M_READY => M_READY,
       M_VALID => M_VALID,
       S_AXIS_DATA(15 downto 0) => S_AXIS_DATA(27 downto 12),

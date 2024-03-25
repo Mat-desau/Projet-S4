@@ -1,91 +1,92 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.717936",
-   "Default View_TopLeft":"3126,-2775",
+   "Default View_ScaleFactor":"0.729965",
+   "Default View_TopLeft":"1595,-2819",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port iic -pg 1 -lvl 13 -x 5020 -y -1280 -defaultsOSRD
-preplace port DDR -pg 1 -lvl 13 -x 5020 -y -810 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 13 -x 5020 -y -790 -defaultsOSRD
-preplace port uart -pg 1 -lvl 13 -x 5020 -y -2550 -defaultsOSRD
+preplace port iic -pg 1 -lvl 13 -x 5000 -y -1280 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 13 -x 5000 -y -810 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 13 -x 5000 -y -790 -defaultsOSRD
+preplace port uart -pg 1 -lvl 13 -x 5000 -y -2550 -defaultsOSRD
 preplace port sysclk -pg 1 -lvl 0 -x -270 -y -270 -defaultsOSRD
 preplace port reset -pg 1 -lvl 0 -x -270 -y -290 -defaultsOSRD
 preplace port ac_recdat -pg 1 -lvl 0 -x -270 -y -930 -defaultsOSRD
-preplace port ac_reclrc -pg 1 -lvl 13 -x 5020 -y -990 -defaultsOSRD
-preplace port ac_bclk -pg 1 -lvl 13 -x 5020 -y -970 -defaultsOSRD
-preplace port ac_mclk -pg 1 -lvl 13 -x 5020 -y -830 -defaultsOSRD
+preplace port ac_reclrc -pg 1 -lvl 13 -x 5000 -y -990 -defaultsOSRD
+preplace port ac_bclk -pg 1 -lvl 13 -x 5000 -y -970 -defaultsOSRD
+preplace port ac_mclk -pg 1 -lvl 13 -x 5000 -y -830 -defaultsOSRD
 preplace port swt0 -pg 1 -lvl 0 -x -270 -y -1010 -defaultsOSRD
-preplace port ac_pblrc -pg 1 -lvl 13 -x 5020 -y -1900 -defaultsOSRD
-preplace port ac_pbdat -pg 1 -lvl 13 -x 5020 -y -1830 -defaultsOSRD
-preplace portBus ac_muten -pg 1 -lvl 13 -x 5020 -y -1070 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 2 -x 900 -y -50 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 7 -x 3180 -y -160 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 8 -x 3560 -y -360 -defaultsOSRD
-preplace inst microblaze_0_axi_intc -pg 1 -lvl 12 -x 4860 -y -130 -defaultsOSRD
-preplace inst microblaze_0_xlconcat -pg 1 -lvl 11 -x 4610 -y -120 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 10 -x 4310 -y -170 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 2 -x 900 -y -700 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 900 -y -350 -defaultsOSRD
+preplace port ac_pblrc -pg 1 -lvl 13 -x 5000 -y -1900 -defaultsOSRD
+preplace port ac_pbdat -pg 1 -lvl 13 -x 5000 -y -1830 -defaultsOSRD
+preplace portBus ac_muten -pg 1 -lvl 13 -x 5000 -y -1070 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 2 -x 890 -y -50 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 7 -x 3120 -y -60 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 8 -x 3530 -y -360 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 12 -x 4840 -y -130 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 11 -x 4580 -y -120 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 10 -x 4280 -y -170 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 2 -x 890 -y -700 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 890 -y -350 -defaultsOSRD
 preplace inst i2s_receiver_0 -pg 1 -lvl 3 -x 1400 -y -1910 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 8 -x 3560 -y -1070 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 10 -x 4310 -y -1260 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 400 -y -680 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M1 -pg 1 -lvl 2 -x 900 -y -1010 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 900 -y -1680 -defaultsOSRD
-preplace inst xfft_0 -pg 1 -lvl 7 -x 3180 -y -2130 -defaultsOSRD
-preplace inst axi_fifo_mm_s_0 -pg 1 -lvl 6 -x 2740 -y -2200 -defaultsOSRD
-preplace inst axi_fifo_mm_s_1 -pg 1 -lvl 9 -x 3940 -y -2320 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 11 -x 4610 -y -2540 -defaultsOSRD
-preplace inst i2s_transmitter_0 -pg 1 -lvl 7 -x 3180 -y -1840 -defaultsOSRD
-preplace inst axis_broadcaster_0 -pg 1 -lvl 4 -x 1880 -y -2220 -defaultsOSRD
-preplace inst ILA_SORTIE_MONO -pg 1 -lvl 6 -x 2740 -y -2660 -defaultsOSRD
-preplace inst ILA_ENTREE_MONO -pg 1 -lvl 5 -x 2400 -y -2740 -defaultsOSRD
-preplace inst monoAudio_0 -pg 1 -lvl 5 -x 2400 -y -2370 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 8 -x 3530 -y -1070 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 10 -x 4280 -y -1260 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 390 -y -680 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M1 -pg 1 -lvl 2 -x 890 -y -1010 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 890 -y -1680 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 7 -x 3120 -y -2080 -defaultsOSRD
+preplace inst axi_fifo_mm_s_0 -pg 1 -lvl 6 -x 2620 -y -2330 -defaultsOSRD
+preplace inst axi_fifo_mm_s_1 -pg 1 -lvl 9 -x 3910 -y -2320 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 11 -x 4580 -y -2540 -defaultsOSRD
+preplace inst i2s_transmitter_0 -pg 1 -lvl 7 -x 3120 -y -1740 -defaultsOSRD
+preplace inst axis_broadcaster_0 -pg 1 -lvl 4 -x 1870 -y -2190 -defaultsOSRD
+preplace inst ILA_SORTIE_MONO -pg 1 -lvl 6 -x 2620 -y -2660 -defaultsOSRD
+preplace inst ILA_ENTREE_MONO -pg 1 -lvl 5 -x 2220 -y -2740 -defaultsOSRD
+preplace inst ILA_SORTIE_FFT -pg 1 -lvl 8 -x 3530 -y -2530 -defaultsOSRD
+preplace inst monoAudio_0 -pg 1 -lvl 5 -x 2220 -y -2550 -defaultsOSRD
 preplace netloc microblaze_0_intr 1 11 1 NJ -120
-preplace netloc microblaze_0_Clk 1 1 11 630 -610 1150 -2220 1560 -2370 2040 -2650 2530 -2310 2920 -1030 3370 -1130 3760 -1130 4140 -1340 4490 -1340 4720
-preplace netloc clk_wiz_1_locked 1 1 2 620 -620 1140J
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 5 N -370 N -370 N -370 N -370 2900
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 10 1180 -2140 1560 -2140 2040 -2180 2530 -2100 2910 -1350 3360 -1350 3770 -1350 4120 -1350 4500J -1350 4740
-preplace netloc mdm_1_debug_sys_rst 1 1 10 610 70 N 70 N 70 N 70 N 70 N 70 N 70 N 70 N 70 4460
-preplace netloc clk_in1_0_1 1 0 2 -250 -580 610
-preplace netloc clk_wiz_1_clk_out2 1 1 12 620 -1110 1160 -1770 N -1770 N -1770 N -1770 2930 -1370 N -1370 N -1370 N -1370 N -1370 N -1370 4990
-preplace netloc sdata_0_in_0_1 1 0 3 NJ -930 550 -1840 NJ
-preplace netloc i2s_receiver_0_lrclk_out 1 3 10 N -1900 N -1900 N -1900 2950 -1990 NJ -1990 NJ -1990 4120 -1900 NJ -1900 NJ -1900 5000J
-preplace netloc i2s_receiver_0_sclk_out 1 3 10 N -1880 N -1880 N -1880 2900 -1360 NJ -1360 NJ -1360 N -1360 NJ -1360 NJ -1360 4980J
+preplace netloc microblaze_0_Clk 1 1 11 610 -610 1140 -2190 1580 -2550 2060 -2650 2360 -2440 2810 -2440 3340 -2410 3730 -2410 4110 -2410 4450 -2410 4720
+preplace netloc clk_wiz_1_locked 1 1 2 630 -620 1130J
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 5 N -370 N -370 N -370 N -370 2780
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 10 1170 -2170 1600 -2430 2060 -2430 2350 -2430 2790 -1340 3330 -1340 3730 -1340 4090 -1340 4460J -1340 4710
+preplace netloc mdm_1_debug_sys_rst 1 1 10 600 50 N 50 N 50 N 50 N 50 N 50 N 50 N 50 N 50 4430
+preplace netloc clk_in1_0_1 1 0 2 -250 -580 600
+preplace netloc clk_wiz_1_clk_out2 1 1 12 590 -1110 1150 -1750 N -1750 N -1750 N -1750 2820 -1360 N -1360 N -1360 N -1360 N -1360 N -1360 4970
+preplace netloc sdata_0_in_0_1 1 0 3 NJ -930 540 -1840 NJ
+preplace netloc i2s_receiver_0_lrclk_out 1 3 10 N -1860 N -1860 N -1860 2830 -1890 NJ -1890 NJ -1890 N -1890 NJ -1890 NJ -1890 4980J
+preplace netloc i2s_receiver_0_sclk_out 1 3 10 N -1840 N -1840 N -1840 2780 -1350 NJ -1350 NJ -1350 N -1350 NJ -1350 NJ -1350 4960J
 preplace netloc xlconstant_1_dout 1 8 5 NJ -1070 N -1070 NJ -1070 NJ -1070 NJ
-preplace netloc reset_1 1 0 2 N -290 600
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 1 11 650 60 1190 -40 N -40 N -40 N -40 N -40 N -40 N -40 N -40 N -40 4730
-preplace netloc rst_clk_wiz_1_100M1_peripheral_reset 1 2 5 1170J -1780 1550 -1830 N -1830 N -1830 N
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 560 -1720n
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 580 -1700n
-preplace netloc i2s_transmitter_0_sdata_0_out 1 7 6 N -1830 N -1830 N -1830 NJ -1830 NJ -1830 NJ
-preplace netloc axi_fifo_mm_s_1_interrupt 1 9 2 N -2330 4480
-preplace netloc microblaze_0_dlmb_1 1 2 5 1200 -190 N -190 N -190 N -190 N
-preplace netloc axis_broadcaster_0_M01_AXIS 1 4 3 N -2210 2540 -2300 2940
-preplace netloc axi_fifo_mm_s_0_AXI_STR_TXD 1 6 1 2930 -2240n
+preplace netloc reset_1 1 0 2 N -290 590
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 1 11 610 60 1180 70 N 70 N 70 N 70 N 70 N 70 3720 -250 N -250 N -250 4690
+preplace netloc rst_clk_wiz_1_100M1_peripheral_reset 1 2 5 1160J -1730 N -1730 N -1730 N -1730 N
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 1 550 -1720n
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 570 -1700n
+preplace netloc i2s_transmitter_0_sdata_0_out 1 7 6 3320 -1830 N -1830 N -1830 NJ -1830 NJ -1830 NJ
+preplace netloc axi_fifo_mm_s_1_interrupt 1 9 2 N -2330 4450
+preplace netloc microblaze_0_ilmb_1 1 2 5 1210 -70 N -70 N -70 N -70 N
+preplace netloc axis_broadcaster_0_M00_AXIS 1 4 1 2050 -2750n
+preplace netloc microblaze_0_debug 1 1 10 630 -150 NJ -150 N -150 N -150 N -150 N -150 3320J -70 NJ -70 N -70 4440
+preplace netloc microblaze_0_mdm_axi 1 8 2 N -410 4080
+preplace netloc microblaze_0_axi_periph_M07_AXI 1 6 3 2840 30 NJ 30 3680
+preplace netloc i2s_receiver_0_m_axis_aud 1 3 1 1590 -2210n
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 4 2370 60 NJ 60 NJ 60 3700
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 8 1 3720 -2350n
 preplace netloc axi_uartlite_0_UART 1 11 2 NJ -2550 NJ
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 8 2 3770 -1120 4110
-preplace netloc processing_system7_0_FIXED_IO 1 1 12 590J -780 NJ -780 N -780 N -780 N -780 N -780 NJ -780 NJ -780 4150 -790 NJ -790 NJ -790 NJ
-preplace netloc microblaze_0_axi_periph_M06_AXI 1 8 3 3740 -2560 N -2560 N
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 8 1 3750 -2350n
-preplace netloc processing_system7_0_DDR 1 1 12 570J -790 NJ -790 N -790 N -790 N -790 N -790 NJ -790 NJ -790 4130 -810 NJ -810 NJ -810 NJ
-preplace netloc microblaze_0_mdm_axi 1 8 2 N -410 4110
-preplace netloc axis_subset_converter_1_M_AXIS 1 7 2 3360 -2330 N
-preplace netloc microblaze_0_debug 1 1 10 660 40 NJ 40 N 40 N 40 N 40 N 40 NJ 40 NJ 40 N 40 4470
-preplace netloc microblaze_0_intc_axi 1 8 4 NJ -430 4130 -250 NJ -250 4730J
-preplace netloc microblaze_0_ilmb_1 1 2 5 1220 -170 N -170 N -170 N -170 N
-preplace netloc microblaze_0_axi_dp 1 2 6 1210 -590 N -590 N -590 N -590 N -590 NJ
-preplace netloc microblaze_0_axi_periph_M07_AXI 1 6 3 2960 -60 NJ -60 3710
-preplace netloc microblaze_0_interrupt 1 1 12 640 50 NJ 50 N 50 N 50 N 50 N 50 NJ 50 NJ 50 N 50 NJ 50 NJ 50 4990
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 2 7 1230 -70 N -70 N -70 N -70 N -70 NJ -70 3720
+preplace netloc processing_system7_0_DDR 1 1 12 560J -790 NJ -790 N -790 N -790 N -790 N -790 NJ -790 NJ -790 4100 -810 NJ -810 NJ -810 NJ
+preplace netloc axi_fifo_mm_s_0_AXI_STR_TXD 1 6 1 2830 -2370n
+preplace netloc microblaze_0_axi_periph_M06_AXI 1 8 3 3710 -2560 N -2560 N
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 8 2 3730 -1280 N
+preplace netloc processing_system7_0_FIXED_IO 1 1 12 580J -780 NJ -780 N -780 N -780 N -780 N -780 NJ -780 NJ -780 4120 -790 NJ -790 NJ -790 NJ
+preplace netloc axis_subset_converter_1_M_AXIS 1 7 2 3320 -2330 N
+preplace netloc microblaze_0_dlmb_1 1 2 5 1190 -90 N -90 N -90 N -90 N
+preplace netloc microblaze_0_intc_axi 1 8 4 NJ -430 4100 -260 NJ -260 4700J
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 2 7 1220 20 N 20 N 20 N 20 N 20 NJ 20 3690
+preplace netloc microblaze_0_axi_dp 1 2 6 1200 -590 N -590 N -590 N -590 N -590 NJ
+preplace netloc axis_broadcaster_0_M01_AXIS 1 4 3 N -2140 N -2140 2800
+preplace netloc microblaze_0_interrupt 1 1 12 620 40 NJ 40 N 40 N 40 N 40 N 40 NJ 40 NJ 40 N 40 NJ 40 NJ 40 4970
 preplace netloc axi_iic_0_IIC 1 10 3 NJ -1280 NJ -1280 NJ
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 4 2550 -50 NJ -50 NJ -50 3730
-preplace netloc monoAudio_0_M_AXIS 1 5 2 2550 -2320 2960
-preplace netloc i2s_receiver_0_m_axis_aud 1 3 1 1550 -2240n
-preplace netloc axis_broadcaster_0_M00_AXIS 1 4 1 2030 -2750n
-levelinfo -pg 1 -270 400 900 1400 1880 2400 2740 3180 3560 3940 4310 4610 4860 5020
-pagesize -pg 1 -db -bbox -sgen -390 -3200 5160 350
+preplace netloc Conn 1 5 2 2370 -2450 2840
+levelinfo -pg 1 -270 390 890 1400 1870 2220 2620 3120 3530 3910 4280 4580 4840 5000
+pagesize -pg 1 -db -bbox -sgen -390 -3200 5140 390
 "
 }
 {

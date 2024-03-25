@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Sat Mar 23 22:21:48 2024
+// Date        : Mon Mar 25 14:00:12 2024
 // Host        : LAPTOP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_monoAudio_0_0/design_1_monoAudio_0_0_sim_netlist.v
@@ -35,7 +35,8 @@ module design_1_monoAudio_0_0
   (* x_interface_info = "xilinx.com:signal:reset:1.0 aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aresetn;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 S_AXIS TID" *) input [2:0]s_axis_aud_tid;
 
-  wire [31:0]M_AXIS_DATA;
+  wire \<const0> ;
+  wire [15:0]\^M_AXIS_DATA ;
   wire M_READY;
   wire M_VALID;
   wire [31:0]S_AXIS_DATA;
@@ -45,8 +46,25 @@ module design_1_monoAudio_0_0
   wire clk;
   wire [2:0]s_axis_aud_tid;
 
+  xVIA M_AXIS_DATA_16via (M_AXIS_DATA[16], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_17via (M_AXIS_DATA[17], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_18via (M_AXIS_DATA[18], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_19via (M_AXIS_DATA[19], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_20via (M_AXIS_DATA[20], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_21via (M_AXIS_DATA[21], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_22via (M_AXIS_DATA[22], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_23via (M_AXIS_DATA[23], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_24via (M_AXIS_DATA[24], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_25via (M_AXIS_DATA[25], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_26via (M_AXIS_DATA[26], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_27via (M_AXIS_DATA[27], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_28via (M_AXIS_DATA[28], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_29via (M_AXIS_DATA[29], M_AXIS_DATA[31]);
+  xVIA M_AXIS_DATA_30via (M_AXIS_DATA[30], M_AXIS_DATA[31]);
+  GND GND
+       (.G(M_AXIS_DATA[31]));
   design_1_monoAudio_0_0_monoAudio U0
-       (.M_AXIS_DATA(M_AXIS_DATA),
+       (.M_AXIS_DATA(M_AXIS_DATA[15:0]),
         .M_READY(M_READY),
         .M_VALID(M_VALID),
         .S_AXIS_DATA(S_AXIS_DATA[27:12]),
@@ -60,17 +78,17 @@ endmodule
 (* ORIG_REF_NAME = "monoAudio" *) 
 module design_1_monoAudio_0_0_monoAudio
    (M_AXIS_DATA,
-    S_READY,
     M_VALID,
+    S_READY,
     S_AXIS_DATA,
     s_axis_aud_tid,
     aresetn,
     M_READY,
     S_VALID,
     clk);
-  output [31:0]M_AXIS_DATA;
-  output S_READY;
+  output [15:0]M_AXIS_DATA;
   output M_VALID;
+  output S_READY;
   input [15:0]S_AXIS_DATA;
   input [2:0]s_axis_aud_tid;
   input aresetn;
@@ -78,7 +96,8 @@ module design_1_monoAudio_0_0_monoAudio
   input S_VALID;
   input clk;
 
-  wire [31:0]M_AXIS_DATA;
+  wire [15:0]M_AXIS_DATA;
+  wire \M_AXIS_DATA_reg[15]_i_1_n_0 ;
   wire M_READY;
   wire M_VALID;
   wire [15:0]S_AXIS_DATA;
@@ -93,294 +112,158 @@ module design_1_monoAudio_0_0_monoAudio
   wire d_first_pass_x1_i_1_n_0;
   wire [2:0]s_axis_aud_tid;
 
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[0] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[0]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[0]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[10] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[10]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[10]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[11] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[11]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[11]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[12] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[12]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[12]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[13] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[13]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[13]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[14] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[14]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[14]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[15] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[15]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[15]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[16] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[16]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[17] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[17]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[18] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[18]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[19] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[19]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \M_AXIS_DATA_reg[15]_i_1 
+       (.I0(d_etat),
+        .I1(d_first_pass_x1),
+        .O(\M_AXIS_DATA_reg[15]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[1] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[1]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[1]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[20] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[20]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[21] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[21]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[22] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[22]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[23] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[23]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[24] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[24]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[25] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[25]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[26] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[26]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[27] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[27]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[28] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[28]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[29] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[29]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[2] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[2]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[2]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[30] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[30]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \M_AXIS_DATA_reg[31] 
-       (.CLR(S_READY),
-        .D(1'b0),
-        .G(d_first_pass_x1),
-        .GE(1'b1),
-        .Q(M_AXIS_DATA[31]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[3] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[3]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[3]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[4] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[4]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[4]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[5] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[5]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[5]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[6] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[6]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[6]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[7] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[7]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[7]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[8] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[8]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[8]));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \M_AXIS_DATA_reg[9] 
-       (.CLR(S_READY),
+       (.CLR(1'b0),
         .D(S_AXIS_DATA[9]),
-        .G(d_first_pass_x1),
+        .G(\M_AXIS_DATA_reg[15]_i_1_n_0 ),
         .GE(1'b1),
         .Q(M_AXIS_DATA[9]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h0002)) 
     M_VALID_INST_0
@@ -389,6 +272,7 @@ module design_1_monoAudio_0_0_monoAudio
         .I2(s_axis_aud_tid[0]),
         .I3(s_axis_aud_tid[1]),
         .O(M_VALID));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT1 #(
     .INIT(2'h1)) 
     S_READY_INST_0
@@ -415,6 +299,7 @@ module design_1_monoAudio_0_0_monoAudio
         .CLR(d_first_pass_x12),
         .D(d_etat_i_1_n_0),
         .Q(d_etat));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h3A)) 
     d_first_pass_x1_i_1
@@ -428,6 +313,9 @@ module design_1_monoAudio_0_0_monoAudio
         .D(d_first_pass_x1_i_1_n_0),
         .Q(d_first_pass_x1),
         .R(1'b0));
+endmodule
+module xVIA(.a(w),.b(w));
+inout w;
 endmodule
 `ifndef GLBL
 `define GLBL

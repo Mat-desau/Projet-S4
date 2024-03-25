@@ -207,7 +207,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_axi_uartlite_0_0/sim/design_1_axi_uartlite_0_0.vhd" \
-  "../../../bd/design_1/ip/design_1_ila_1_0/sim/design_1_ila_1_0.vhd" \
 -endlib
 -makelib xcelium_lib/i2s_transmitter_v1_0_4 -sv \
   "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/a4b3/hdl/i2s_transmitter_v1_0_rfs.sv" \
@@ -233,6 +232,7 @@
   "../../../bd/design_1/ip/design_1_ila_2_0/sim/design_1_ila_2_0.vhd" \
   "../../../bd/design_1/ip/design_1_ILA_SORTIE_MONO_0/sim/design_1_ILA_SORTIE_MONO_0.vhd" \
   "../../../bd/design_1/ip/design_1_monoAudio_0_0/sim/design_1_monoAudio_0_0.vhd" \
+  "../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.vhd" \
   "../../../bd/design_1/sim/design_1.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

@@ -308,7 +308,6 @@ vcom -work axi_uartlite_v2_0_26 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_axi_uartlite_0_0/sim/design_1_axi_uartlite_0_0.vhd" \
-"../../../bd/design_1/ip/design_1_ila_1_0/sim/design_1_ila_1_0.vhd" \
 
 vlog -work i2s_transmitter_v1_0_4  -sv2k12 "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/d0f7" "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/34f8/hdl" "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/122e/hdl/verilog" "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/b205/hdl/verilog" "+incdir+../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/c968/hdl/verilog" "+incdir+C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include" \
 "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/a4b3/hdl/i2s_transmitter_v1_0_rfs.sv" \
@@ -334,6 +333,7 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_ila_2_0/sim/design_1_ila_2_0.vhd" \
 "../../../bd/design_1/ip/design_1_ILA_SORTIE_MONO_0/sim/design_1_ILA_SORTIE_MONO_0.vhd" \
 "../../../bd/design_1/ip/design_1_monoAudio_0_0/sim/design_1_monoAudio_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

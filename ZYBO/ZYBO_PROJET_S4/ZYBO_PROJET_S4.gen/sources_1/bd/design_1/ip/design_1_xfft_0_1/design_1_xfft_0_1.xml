@@ -1060,7 +1060,7 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9522bfdb</spirit:value>
+            <spirit:value>9:fd5087b5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1074,11 +1074,11 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 24 02:20:59 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 17:08:39 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9522bfdb</spirit:value>
+            <spirit:value>9:fd5087b5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1094,11 +1094,11 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 24 02:20:59 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 17:08:39 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9522bfdb</spirit:value>
+            <spirit:value>9:fd5087b5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1160,7 +1160,7 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8256875b</spirit:value>
+            <spirit:value>9:53365e58</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1176,11 +1176,11 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 24 02:20:59 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 17:08:39 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8256875b</spirit:value>
+            <spirit:value>9:53365e58</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1194,11 +1194,11 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Mar 24 02:23:30 UTC 2024</spirit:value>
+            <spirit:value>Mon Mar 25 17:10:08 UTC 2024</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9522bfdb</spirit:value>
+            <spirit:value>9:fd5087b5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1699,7 +1699,7 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ARCH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ARCH">3</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ARCH">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_NFFT</spirit:name>
@@ -1771,7 +1771,7 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_BRAM_STAGES</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_BRAM_STAGES">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_BRAM_STAGES">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_REORDER_MEM_TYPE</spirit:name>
@@ -1829,12 +1829,6 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
       <spirit:enumeration>65536</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_ab15ea50</spirit:name>
-      <spirit:enumeration>0</spirit:enumeration>
-      <spirit:enumeration>1</spirit:enumeration>
-      <spirit:enumeration>2</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_c6ed4a00</spirit:name>
       <spirit:enumeration>8</spirit:enumeration>
       <spirit:enumeration>9</spirit:enumeration>
@@ -1863,6 +1857,10 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
       <spirit:enumeration>32</spirit:enumeration>
       <spirit:enumeration>33</spirit:enumeration>
       <spirit:enumeration>34</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_d85ad257</spirit:name>
+      <spirit:enumeration>0</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_2533cddb</spirit:name>
@@ -2450,7 +2448,7 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>implementation_options</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.implementation_options" spirit:choiceRef="choice_pairs_5f99d630" spirit:order="5">automatically_select</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.implementation_options" spirit:choiceRef="choice_pairs_5f99d630" spirit:order="5">radix_2_burst_io</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>target_data_throughput</spirit:name>
@@ -2522,7 +2520,7 @@ datatype {name {attribs {resolve_type immediate dependency {} format string mini
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>number_of_stages_using_block_ram_for_data_and_phase_factors</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.number_of_stages_using_block_ram_for_data_and_phase_factors" spirit:choiceRef="choice_list_ab15ea50" spirit:order="23">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.number_of_stages_using_block_ram_for_data_and_phase_factors" spirit:choiceRef="choice_list_d85ad257" spirit:order="23">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>memory_options_hybrid</spirit:name>

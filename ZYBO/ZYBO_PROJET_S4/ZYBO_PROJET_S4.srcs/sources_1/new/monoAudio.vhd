@@ -98,7 +98,7 @@ begin
         if d_etat = '0' then
             d_m_valid <= '0';
             d_s_ready <= '1';
-            M_AXIS_DATA <= (others => '0');
+            M_AXIS_DATA <= M_AXIS_DATA;
              
         else
             if d_first_pass_x1 = '1' then

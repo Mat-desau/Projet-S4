@@ -59,10 +59,11 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="design_1_i/axis_broadcaster_0_M00_AXIS_TVALID" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/axis_subset_converter_0_M_AXIS_TVALID" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/axis_subset_converter_1_M_AXIS_TDATA[31:0]" gui_info=""/>
     <Object name="design_1_i/axis_subset_converter_1_M_AXIS_TREADY" gui_info=""/>
-    <Object name="design_1_i/axis_subset_converter_1_M_AXIS_TVALID" gui_info=""/>
+    <Object name="design_1_i/axis_subset_converter_1_M_AXIS_TVALID" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/clk_wiz_1_clk_out2" gui_info="Trigger Setup=2"/>
     <Object name="design_1_i/i2s_receiver_0_lrclk_out" gui_info=""/>
     <Object name="design_1_i/i2s_receiver_0_m_axis_aud_TREADY" gui_info="Trigger Setup=1"/>
@@ -74,6 +75,9 @@
     <Object name="design_1_i/monoAudio_0_M_AXIS_TDATA[31:0]" gui_info=""/>
     <Object name="design_1_i/monoAudio_0_M_AXIS_TREADY" gui_info=""/>
     <Object name="design_1_i/monoAudio_0_M_AXIS_TVALID" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/probe4" gui_info=""/>
+    <Object name="design_1_i/probe5" gui_info=""/>
+    <Object name="design_1_i/probe7" gui_info=""/>
     <Object name="design_1_i/sdata_0_in_0_1" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
@@ -218,7 +222,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -229,7 +233,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -345,7 +349,7 @@
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
-        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+        <Option Id="WAVEFORM_STYLE" value="Analog"/>
       </probeOptions>
       <nets>
         <net name="design_1_i/axis_subset_converter_1_M_AXIS_TDATA[31]"/>
@@ -455,7 +459,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -466,7 +470,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>

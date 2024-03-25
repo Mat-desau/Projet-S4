@@ -284,7 +284,6 @@ proc create_root_design { parentCell } {
   set ILA_SORTIE_FFT [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ILA_SORTIE_FFT ]
   set_property -dict [ list \
    CONFIG.C_NUM_OF_PROBES {9} \
-   CONFIG.C_SLOT_0_AXIS_TDATA_WIDTH {32} \
    CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
  ] $ILA_SORTIE_FFT
 
@@ -900,9 +899,9 @@ proc create_root_design { parentCell } {
   # Create instance: xfft_0, and set properties
   set xfft_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.1 xfft_0 ]
   set_property -dict [ list \
-   CONFIG.implementation_options {automatically_select} \
+   CONFIG.implementation_options {radix_2_burst_io} \
    CONFIG.input_width {16} \
-   CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {1} \
+   CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0} \
    CONFIG.output_ordering {natural_order} \
    CONFIG.phase_factor_width {16} \
    CONFIG.rounding_modes {convergent_rounding} \
@@ -916,6 +915,8 @@ proc create_root_design { parentCell } {
   set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
 
   # Create interface connections
+  connect_bd_intf_net -intf_net Conn [get_bd_intf_pins monoAudio_0/M_AXIS] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
+connect_bd_intf_net -intf_net [get_bd_intf_nets Conn] [get_bd_intf_pins ILA_SORTIE_MONO/SLOT_0_AXIS] [get_bd_intf_pins monoAudio_0/M_AXIS]
   connect_bd_intf_net -intf_net axi_fifo_mm_s_0_AXI_STR_TXD [get_bd_intf_pins axi_fifo_mm_s_0/AXI_STR_TXD] [get_bd_intf_pins xfft_0/S_AXIS_CONFIG]
   connect_bd_intf_net -intf_net axi_iic_0_IIC [get_bd_intf_ports iic] [get_bd_intf_pins axi_iic_0/IIC]
   connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports uart] [get_bd_intf_pins axi_uartlite_0/UART]
@@ -938,8 +939,6 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axis_subset_converter_1_M_AXIS] 
   connect_bd_intf_net -intf_net microblaze_0_intc_axi [get_bd_intf_pins microblaze_0_axi_intc/s_axi] [get_bd_intf_pins microblaze_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net microblaze_0_interrupt [get_bd_intf_pins microblaze_0/INTERRUPT] [get_bd_intf_pins microblaze_0_axi_intc/interrupt]
   connect_bd_intf_net -intf_net microblaze_0_mdm_axi [get_bd_intf_pins mdm_1/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net monoAudio_0_M_AXIS [get_bd_intf_pins monoAudio_0/M_AXIS] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
-connect_bd_intf_net -intf_net [get_bd_intf_nets monoAudio_0_M_AXIS] [get_bd_intf_pins ILA_SORTIE_MONO/SLOT_0_AXIS] [get_bd_intf_pins monoAudio_0/M_AXIS]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
 

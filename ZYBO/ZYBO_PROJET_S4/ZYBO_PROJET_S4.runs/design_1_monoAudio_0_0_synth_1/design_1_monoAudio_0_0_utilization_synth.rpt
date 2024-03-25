@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Mar 23 22:21:48 2024
+| Date         : Mon Mar 25 14:00:12 2024
 | Host         : LAPTOP running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_monoAudio_0_0_utilization_synth.rpt -pb design_1_monoAudio_0_0_utilization_synth.pb
 | Design       : design_1_monoAudio_0_0
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    5 |     0 |     17600 |  0.03 |
-|   LUT as Logic          |    5 |     0 |     17600 |  0.03 |
+| Slice LUTs*             |    4 |     0 |     17600 |  0.02 |
+|   LUT as Logic          |    4 |     0 |     17600 |  0.02 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         |   34 |     0 |     35200 |  0.10 |
+| Slice Registers         |   18 |     0 |     35200 |  0.05 |
 |   Register as Flip Flop |    2 |     0 |     35200 | <0.01 |
-|   Register as Latch     |   32 |     0 |     35200 |  0.09 |
+|   Register as Latch     |   16 |     0 |     35200 |  0.05 |
 | F7 Muxes                |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 33    |          Yes |           - |        Reset |
+| 17    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 1     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -146,11 +146,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LDCE     |   32 |        Flop & Latch |
+| LDCE     |   16 |        Flop & Latch |
 | LUT1     |    2 |                 LUT |
 | LUT6     |    1 |                 LUT |
 | LUT4     |    1 |                 LUT |
 | LUT3     |    1 |                 LUT |
+| LUT2     |    1 |                 LUT |
 | FDRE     |    1 |        Flop & Latch |
 | FDCE     |    1 |        Flop & Latch |
 +----------+------+---------------------+

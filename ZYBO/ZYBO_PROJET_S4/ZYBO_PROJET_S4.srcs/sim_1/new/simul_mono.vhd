@@ -75,8 +75,8 @@ end component;
 
    CONSTANT PERIOD    : time := 10 ns;                  --  *** à ajouter avant le premier BEGIN
    
-   CONSTANT DATA_GAUCHE : std_logic_vector := "11110000000000000000000000010010";
-   CONSTANT DATA_DROITE : std_logic_vector := "11110000000000000000000000110010";
+   CONSTANT DATA_GAUCHE : std_logic_vector := "01010101010101010101010101010101";
+   CONSTANT DATA_DROITE : std_logic_vector := "10101010101010101010101010101010";
    
 -- Data:
 --• [31] P (Parity)

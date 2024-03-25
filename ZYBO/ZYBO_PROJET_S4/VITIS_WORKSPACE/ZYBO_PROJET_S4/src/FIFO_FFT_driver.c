@@ -253,9 +253,9 @@ void FifoRecvHandler(XLlFifo *InstancePtr)
 		//xil_printf("%d ", ReceiveLength);
 		for (i=0; i < ReceiveLength; i++) {
 				RxWord = XLlFifo_RxGetWord(InstancePtr);
-				if(RxWord & 0x0000FFFF){
+				/*if(RxWord & 0x0000FFFF){
 					RxWord = 0;
-				}
+				}*/
 
 				ReceiveTempBuffer[i] = RxWord;
 
