@@ -28,9 +28,12 @@ static volatile int Flag_750ms = 0;     //Flag de 750ms
 static volatile int Flag_5min = 0;      //Flag de 5 min
 int count5min = 0;                      //Compteur de 5 minutes
 int count = 0;                          //Compteur
+int Compteur_Moyenne = 0;               //Compteur pour moyenne
 int Mode_Oiseau = 0;                    //Mode des oiseau 0 = aucucn, 1 = bruant, 2 = COQ, 3 = Huart, 4 = Bruant+Coq, 5 = Bruant+Huard, 6 = Coq+Huart, 7 = Bruant+Coq+Huard
-int Valeur_Threshold = 50;               //Valeur du threshold afficher sur LCD ligne 2
+int Mode_Lumiere = 0;                   //Mode de la lumiere : (0 = Lorsque la lumiËre est en haut du threshold pendant plus de 5 minutes, 1 = Lorsque la lumiËre est sous le threshold pendant plus de 5 minutes)
+int Valeur_Threshold = 50;              //Valeur du threshold afficher sur LCD ligne 2
 int Valeur_Lumiere = 0;                 //Valeur de la lumiere lu par la cellule photolumineuse
+int Valeur_Lumiere_Tableau[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};   //Moyenne pour les valeur de lumieres 
 int BTN_Valeurs[5]; //U L C R D         //Valeurs de bouttons 1 = peser, 0 = pas peser (debounce inclu dans la fonction)
 int Last_count[5] = {0, 0, 0, 0, 0};    //Pour les debounce des boutons
 
@@ -45,6 +48,9 @@ void FCT_Affichage_Lumiere();           //Affichage sur 7 segments
 void FCT_Boutons();                     //Obtenir les valeurs de bouttons
 void FCT_Lecture_Threshold();           //Lecture des boutons pour ajuster la valeur du threshold
 int FCT_Compteur_5Minutes(int Activer); //Compteur de 5 minutes
+int FCT_Sur100(int Valeur_Entree, int Valeur_Max);  //Adapte une entrÈe sur 100
+void FCT_Lecture_Lumiere();                         //Lecture de lumiËre avec sortie sur 100
+int FCT_Comparer_Lumiere();                         //Compare la luimiËre avec threshold
 
 
 #define BAUD_RATE 9600
@@ -58,6 +64,7 @@ void main()
     SSD_Init();
     BTN_Init();
     LED_Init();
+    ADC_Init();
 
     initialize_timer_interrupt();
     
@@ -68,6 +75,8 @@ void main()
     {
         FCT_Boutons();                  //Lecture des boutons
         FCT_Lecture_Threshold();        //Fonction pour ajuster le threshold
+        FCT_Lecture_Lumiere();
+        Mode_Lumiere = FCT_Comparer_Lumiere();
         
         //Ici on peut mettre FCT_Comparer_Lumiere la sortie Mode_Lumiere de 1 sera mit quand 
         //Ici on mets la fermeture du rideau en fonction de Mode_Lumiere
@@ -310,4 +319,50 @@ int FCT_Compteur_5Minutes(int Activer)
     {
         return 0;
     }
+}
+
+void FCT_Lecture_Lumiere()
+{
+    Valeur_Lumiere_Tableau[Compteur_Moyenne] = FCT_Sur100(ADC_AnalogRead(24), 1024); 
+    
+    Valeur_Lumiere = (Valeur_Lumiere_Tableau[0]+Valeur_Lumiere_Tableau[1]+Valeur_Lumiere_Tableau[2]+Valeur_Lumiere_Tableau[3]+Valeur_Lumiere_Tableau[4]+Valeur_Lumiere_Tableau[5]+Valeur_Lumiere_Tableau[6]+Valeur_Lumiere_Tableau[7]+Valeur_Lumiere_Tableau[8]+Valeur_Lumiere_Tableau[9])/10;
+    
+    Compteur_Moyenne++;
+            
+    if(Compteur_Moyenne == 9)
+    {
+        Compteur_Moyenne = 0;
+    }
+}
+
+int FCT_Sur100(int Valeur_Entree, int Valeur_Max)
+{
+    return (Valeur_Entree*100/Valeur_Max);
+
+}
+
+int FCT_Comparer_Lumiere()
+{
+    if(Valeur_Lumiere >= Valeur_Threshold)
+    {
+        LED_SetValue(5, 0);
+        LED_SetValue(6, 1);
+        FCT_Compteur_5Minutes(1);               //Active compteur Si lumiere plus grand que threshold
+    }
+    else if (Valeur_Lumiere < Valeur_Threshold)
+    {
+        LED_SetValue(5, 1);
+        LED_SetValue(6, 0);
+        LED_SetValue(7, 0);
+        FCT_Compteur_5Minutes(0);                //DÈsactive le compteur si Lumiere plus petit que threshold
+    }
+    if (FCT_Compteur_5Minutes(1) == 1)          //5 minutes ont passÈes
+    {
+        if(Valeur_Lumiere >= Valeur_Threshold)  //ENCORE NOIR
+        {
+            LED_SetValue(7, 1);
+            return 1; 
+        }
+    }  
+    return 0;
 }
