@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Feb 24 13:51:34 2024
+# Process ID: 139936
+# Current directory: C:/Users/cbowlieu/APP4/Code_D_trous/SuperMegaFinal_update/S4e_Depart
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent159140 C:\Users\cbowlieu\APP4\Code_D_trous\SuperMegaFinal_update\S4e_Depart\S4e_Depart.xpr
+# Log file: C:/Users/cbowlieu/APP4/Code_D_trous/SuperMegaFinal_update/S4e_Depart/vivado.log
+# Journal file: C:/Users/cbowlieu/APP4/Code_D_trous/SuperMegaFinal_update/S4e_Depart\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/cbowlieu/APP4/Code_D_trous/SuperMegaFinal_update/S4e_Depart/S4e_Depart.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/cbowlieu/APP4/Code_D_trous/SuperMegaFinal_update/S4e_Depart/S4e_Depart.srcs/sources_1/bd/main_design/main_design.bd}
