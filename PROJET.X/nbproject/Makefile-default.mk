@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=led.c main.c adc.c btn.c swt.c lcd.c ssd.c
+SOURCEFILES_QUOTED_IF_SPACED=led.c main.c adc.c btn.c swt.c lcd.c ssd.c mot.c pmods.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/ssd.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/led.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/btn.o.d ${OBJECTDIR}/swt.o.d ${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/ssd.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/ssd.o ${OBJECTDIR}/mot.o ${OBJECTDIR}/pmods.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/led.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/btn.o.d ${OBJECTDIR}/swt.o.d ${OBJECTDIR}/lcd.o.d ${OBJECTDIR}/ssd.o.d ${OBJECTDIR}/mot.o.d ${OBJECTDIR}/pmods.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/ssd.o
+OBJECTFILES=${OBJECTDIR}/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/btn.o ${OBJECTDIR}/swt.o ${OBJECTDIR}/lcd.o ${OBJECTDIR}/ssd.o ${OBJECTDIR}/mot.o ${OBJECTDIR}/pmods.o
 
 # Source Files
-SOURCEFILES=led.c main.c adc.c btn.c swt.c lcd.c ssd.c
+SOURCEFILES=led.c main.c adc.c btn.c swt.c lcd.c ssd.c mot.c pmods.c
 
 
 
@@ -149,6 +149,18 @@ ${OBJECTDIR}/ssd.o: ssd.c  .generated_files/flags/default/85abab540dec78e0788484
 	@${RM} ${OBJECTDIR}/ssd.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/ssd.o.d" -o ${OBJECTDIR}/ssd.o ssd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/mot.o: mot.c  .generated_files/flags/default/c5100fb730bdc5d0491608d2ca82a3ef45adb11a .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mot.o.d 
+	@${RM} ${OBJECTDIR}/mot.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/mot.o.d" -o ${OBJECTDIR}/mot.o mot.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/pmods.o: pmods.c  .generated_files/flags/default/6c8bf7111319b134cf328f067cdaca8f377f7b32 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pmods.o.d 
+	@${RM} ${OBJECTDIR}/pmods.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/pmods.o.d" -o ${OBJECTDIR}/pmods.o pmods.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
 else
 ${OBJECTDIR}/led.o: led.c  .generated_files/flags/default/84f814f8124bf835982bb979d8525f6711bb5f .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
 	@${MKDIR} "${OBJECTDIR}" 
@@ -191,6 +203,18 @@ ${OBJECTDIR}/ssd.o: ssd.c  .generated_files/flags/default/b4df717de2911761012d37
 	@${RM} ${OBJECTDIR}/ssd.o.d 
 	@${RM} ${OBJECTDIR}/ssd.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/ssd.o.d" -o ${OBJECTDIR}/ssd.o ssd.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/mot.o: mot.c  .generated_files/flags/default/edf5d02812c5b758abf807832da34f6887601941 .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mot.o.d 
+	@${RM} ${OBJECTDIR}/mot.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/mot.o.d" -o ${OBJECTDIR}/mot.o mot.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/pmods.o: pmods.c  .generated_files/flags/default/c89852c5af96a7fc7a7fb84a69d300e1b8ea717c .generated_files/flags/default/9eda87469e415ee830aa5503a20329eaebe41883
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/pmods.o.d 
+	@${RM} ${OBJECTDIR}/pmods.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/pmods.o.d" -o ${OBJECTDIR}/pmods.o pmods.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 

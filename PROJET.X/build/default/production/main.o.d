@@ -1,5 +1,5 @@
 build/default/production/main.o: main.c config.h config_bits.h lcd.h \
- btn.h ssd.h swt.h led.h pmods.h
+ btn.h ssd.h swt.h led.h pmods.h mot.h
 
 config.h:
 
@@ -16,3 +16,5 @@ swt.h:
 led.h:
 
 pmods.h:
+
+mot.h:

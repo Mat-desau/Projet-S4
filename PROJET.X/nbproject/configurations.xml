@@ -13,6 +13,7 @@
       <itemPath>swt.h</itemPath>
       <itemPath>lcd.h</itemPath>
       <itemPath>ssd.h</itemPath>
+      <itemPath>mot.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -28,6 +29,8 @@
       <itemPath>swt.c</itemPath>
       <itemPath>lcd.c</itemPath>
       <itemPath>ssd.c</itemPath>
+      <itemPath>mot.c</itemPath>
+      <itemPath>pmods.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

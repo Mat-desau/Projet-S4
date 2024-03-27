@@ -21,6 +21,7 @@
 #include "swt.h"
 #include "led.h"
 #include "pmods.h"
+#include "mot.h"
 
 // Variables globales
 static volatile int Flag_1m = 0;        //Flag de 1ms
@@ -36,6 +37,10 @@ int Valeur_Lumiere = 0;                 //Valeur de la lumiere lu par la cellule
 int Valeur_Lumiere_Tableau[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};   //Moyenne pour les valeur de lumieres 
 int BTN_Valeurs[5]; //U L C R D         //Valeurs de bouttons 1 = peser, 0 = pas peser (debounce inclu dans la fonction)
 int Last_count[5] = {0, 0, 0, 0, 0};    //Pour les debounce des boutons
+const int FwMot = 1;
+const int BwMot = 0;
+int EtapeRideau = 0;
+
 
 
 //Fonctions
@@ -51,6 +56,11 @@ int FCT_Compteur_5Minutes(int Activer); //Compteur de 5 minutes
 int FCT_Sur100(int Valeur_Entree, int Valeur_Max);  //Adapte une entr»e sur 100
 void FCT_Lecture_Lumiere();                         //Lecture de lumiÀre avec sortie sur 100
 int FCT_Comparer_Lumiere();                         //Compare la luimiÀre avec threshold
+int FCT_Ouvrir_Rideau();
+int FCT_Fermer_Rideau();
+void FCT_Mode_Manuel_Mot();
+void FCT_Mode_Auto_Mot(int fermer, int ouvrir);
+void FCT_Gestion_Rideau(int mode, int fermer, int ouvrir);
 
 
 #define BAUD_RATE 9600
@@ -65,6 +75,9 @@ void main()
     BTN_Init();
     LED_Init();
     ADC_Init();
+    PMODS_InitPin(1,1,1,0,1);           // initialisation du JB1 (RD9))
+    PMODS_InitPin(1,2,1,0,1);           // initialisation du JB2 (RD11))
+    MOT_Init(1);                        // Initialisation des motor et sortie pwm
 
     initialize_timer_interrupt();
     
@@ -78,6 +91,8 @@ void main()
         FCT_Lecture_Lumiere();
         Mode_Lumiere = FCT_Comparer_Lumiere();
         
+        FCT_Gestion_Rideau(0, 1, 0);
+       
         //Ici on peut mettre FCT_Comparer_Lumiere la sortie Mode_Lumiere de 1 sera mit quand 
         //Ici on mets la fermeture du rideau en fonction de Mode_Lumiere
         
@@ -337,7 +352,7 @@ void FCT_Lecture_Lumiere()
 
 int FCT_Sur100(int Valeur_Entree, int Valeur_Max)
 {
-    return (Valeur_Entree*100/Valeur_Max);
+    return (Valeur_Entree*110/Valeur_Max);
 
 }
 
@@ -365,4 +380,117 @@ int FCT_Comparer_Lumiere()
         }
     }  
     return 0;
+}
+
+int FCT_Ouvrir_Rideau()
+{
+    if(!PMODS_GetValue(1,1))
+    {
+        MOT_SetPhEnMotor2(BwMot, 100);
+        return (0);
+    }
+    else
+    {
+        MOT_SetPhEnMotor2(BwMot, 0);
+        return 1;
+    }
+}
+
+int FCT_Fermer_Rideau()
+{
+    if(!PMODS_GetValue(1,2))
+    {
+        MOT_SetPhEnMotor2(FwMot, 75);
+        return (0);
+    }
+    else
+    {
+        MOT_SetPhEnMotor2(FwMot, 0);
+        return 1;
+    }
+    
+}
+
+void FCT_Mode_Manuel_Mot()
+{
+    if(BTN_Valeurs[1] && !PMODS_GetValue(1,1))
+    {
+        FCT_Ouvrir_Rideau();
+        //MOT_SetPhEnMotor2(BwMot, 100);
+    }
+    else if(BTN_Valeurs[3] && !PMODS_GetValue(1,2))
+    {
+        FCT_Fermer_Rideau();
+        //MOT_SetPhEnMotor2(FwMot, 100);
+    }
+    //else
+    //{
+        //MOT_SetPhEnMotor2(FwMot, 0);
+    //}
+}
+
+void FCT_Mode_Auto_Mot(int fermer, int ouvrir){
+    switch (EtapeRideau) 
+    {
+     case 0:
+       // code block
+       EtapeRideau= 1;
+       break;
+     case 1:
+       // code block
+         MOT_SetPhEnMotor1(FwMot, 0);
+         if (ouvrir && !PMODS_GetValue(1,1)) 
+         {
+           EtapeRideau= 2;  
+         }
+         else if (fermer && !PMODS_GetValue(1,2))
+         {
+             EtapeRideau= 3;
+         }
+
+       break;
+     case 2:
+       // code block
+         if(FCT_Ouvrir_Rideau())
+         {
+             EtapeRideau= 1;
+         }
+       break;
+     case 3:
+       // code block
+         if(FCT_Fermer_Rideau())
+         {
+             EtapeRideau= 1;
+         }
+       break;
+     default:
+       // code block
+         EtapeRideau= 0;
+    }
+
+    return;
+}
+
+//Seule Fonction ? appeler
+// BTN_Valeurs sont les entr»es des bontons en mode manuel seulement
+// mode sert ? mettre en manuel si 0 et auto si 1
+// ouvrir sert en mode auto et sert ? ouvrir le rideau jusqu'? l'interrupteur magn»tique Hsw
+// Fermer est comme ouvrir mais pour fermer le rideau jusqu'? LSW
+void FCT_Gestion_Rideau(int mode, int fermer, int ouvrir)
+{
+    switch (mode) {
+        case 0:
+        // code block
+          FCT_Mode_Manuel_Mot();
+        break;
+      case 1:
+        // code block
+         FCT_Mode_Auto_Mot(fermer, ouvrir);
+        break;
+      default:
+        // code block
+          FCT_Mode_Manuel_Mot();
+    }
+
+    return;
 }
