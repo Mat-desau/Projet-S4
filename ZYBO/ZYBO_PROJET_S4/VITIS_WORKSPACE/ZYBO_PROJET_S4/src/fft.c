@@ -61,6 +61,7 @@ void initFIFO_FFT(){
 
 void do_forward_FFT(u32* dataToFFT, u32* FFTResult)
 {
+	xil_printf("aa");
 	u32 FFTConf = 0x1; // = forward fft, no scaling
 	if( XLlFifo_iTxVacancy(&FifoInstance2) ){
 		XLlFifo_TxPutWord(&FifoInstance2, FFTConf);
@@ -69,14 +70,17 @@ void do_forward_FFT(u32* dataToFFT, u32* FFTResult)
 
 	//Envoie les données à convertir au module FFT
 	Received = 0;
+	xil_printf("aa");
 	int Status = XLlFifoSendData(&FifoInstance, FIFO_FFT_ID, dataToFFT);
 	while(!Received); //wait for the data to come out of the fft processing via interrupt
 
 	//build the natural order result
 	for(unsigned int i=0;i<MAX_DATA_BUFFER_SIZE;i++){
 		FFTResult[i] = ReceiveTempBuffer[FFT_ReorderIndex[i]];
-	}
+		Buffer_in_FIFO[i] = FFTResult[i];
 
+	}
+	//xil_printf("alllloooo ");
 }
 
 void do_reverse_FFT(u32* dataToiFFT, u32* iFFTResult)

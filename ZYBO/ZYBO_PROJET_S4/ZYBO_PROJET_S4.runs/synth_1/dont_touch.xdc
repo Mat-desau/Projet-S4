@@ -87,10 +87,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_il
 # IP: bd/design_1/ip/design_1_ILA_SORTIE_MONO_0/design_1_ILA_SORTIE_MONO_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ILA_SORTIE_MONO_0 || ORIG_REF_NAME==design_1_ILA_SORTIE_MONO_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_monoAudio_0_0/design_1_monoAudio_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_monoAudio_0_0 || ORIG_REF_NAME==design_1_monoAudio_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
 
-# XDC: c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# IP: bd/design_1/ip/design_1_monoAudio_0_0/design_1_monoAudio_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_monoAudio_0_0 || ORIG_REF_NAME==design_1_monoAudio_0_0} -quiet] -quiet
+
+# XDC: c:/Users/victo/Documents/GitHub/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/design_1_ooc.xdc

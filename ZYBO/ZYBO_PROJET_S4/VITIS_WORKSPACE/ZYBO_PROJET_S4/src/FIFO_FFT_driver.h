@@ -29,9 +29,10 @@ int SetupInterruptSystem();
 int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId);
 
 
+
 //FFT Bloc Parameters
 #define WORD_SIZE 4			/* Size of words in bytes */
-#define MAX_FFT_LEN 1024
+#define MAX_FFT_LEN 512
 #define NO_OF_PACKETS 1
 #define MAX_DATA_BUFFER_SIZE NO_OF_PACKETS*MAX_FFT_LEN
 
@@ -42,5 +43,6 @@ int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId);
 extern u32 ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE]; //buffer for the interrupt data storage
 extern char flagDonnes;
 extern u32 BufferMain[MAX_DATA_BUFFER_SIZE];
+extern u32 Buffer_in_FIFO[MAX_DATA_BUFFER_SIZE];
 
 #endif /* FIFO_H_ */

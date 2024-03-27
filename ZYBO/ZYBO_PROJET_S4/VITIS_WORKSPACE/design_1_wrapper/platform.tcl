@@ -109,3 +109,17 @@ platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S
 platform generate -domains 
 platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
 platform generate -domains 
+platform generate -domains standalone_microblaze_0,zynq_fsbl 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Users/victo/Documents/GitHub/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform config -updatehw {C:/Users/victo/Documents/GitHub/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/victo/Documents/GitHub/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/victo/Documents/GitHub/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/victo/Documents/GitHub/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Users/victo/Documents/GitHub/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
