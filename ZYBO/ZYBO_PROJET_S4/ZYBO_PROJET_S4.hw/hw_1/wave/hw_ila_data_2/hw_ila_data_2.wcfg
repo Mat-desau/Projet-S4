@@ -11,10 +11,10 @@
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
       <ZoomEndTime time="1025fs"></ZoomEndTime>
-      <Cursor1Time time="96fs"></Cursor1Time>
+      <Cursor1Time time="125fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <NameColumnWidth column_width="252"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
@@ -199,9 +199,9 @@
    </wvobject>
    <wvobject fp_name="design_1_i/axis_subset_converter_1_M_AXIS_TUSER" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/axis_subset_converter_1_M_AXIS_TUSER[15:0]</obj_property>
-      <obj_property name="ObjectShortName">axis_subset_converter_1_M_AXIS_TUSER[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">design_1_i/axis_subset_converter_1_M_AXIS_TUSER[23:0]</obj_property>
+      <obj_property name="ObjectShortName">axis_subset_converter_1_M_AXIS_TUSER[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

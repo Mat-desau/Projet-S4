@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Mon Mar 25 15:54:48 2024
+| Date             : Wed Mar 27 20:31:18 2024
 | Host             : LAPTOP running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.041 |       14 |       --- |             --- |
-| Slice Logic              |     0.010 |    25722 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     7096 |     17600 |           40.32 |
+| Slice Logic              |     0.010 |    25714 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     7091 |     17600 |           40.29 |
 |   LUT as Distributed RAM |    <0.001 |      360 |      6000 |            6.00 |
 |   Register               |    <0.001 |    13114 |     35200 |           37.26 |
 |   CARRY4                 |    <0.001 |      360 |      4400 |            8.18 |
 |   LUT as Shift Register  |    <0.001 |      706 |      6000 |           11.77 |
 |   F7/F8 Muxes            |    <0.001 |      273 |     17600 |            1.55 |
 |   Others                 |    <0.001 |     1821 |       --- |             --- |
-| Signals                  |     0.016 |    18423 |       --- |             --- |
+| Signals                  |     0.016 |    18419 |       --- |             --- |
 | Block RAM                |     0.014 |     27.5 |        60 |           45.83 |
 | MMCM                     |     0.103 |        1 |         2 |           50.00 |
 | DSPs                     |     0.003 |        3 |        80 |            3.75 |

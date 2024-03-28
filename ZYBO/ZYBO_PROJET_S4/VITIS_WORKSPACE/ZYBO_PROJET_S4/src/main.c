@@ -15,7 +15,7 @@ u8 buffer_test[2] = {0x88,0x88};
 
 
 void init(){
-	xil_printf("Init OK\n");
+	xil_printf("Init OK\n\r");
 	initAudio();
 	sleep(1);
 	initCodec();
@@ -37,14 +37,11 @@ int main(){
 
 	while(1){
 		uartTask();
-		usleep(500000);
-		//xil_printf("B");
-		//int bytes = XUartLite_Send(&UartLite, buffer_test , 2);
-		//xil_printf("%d",bytes);
 
 		if(flagDonnes){
+			//xil_printf("d\n\r");
 			u32 *premierInt = (u32 *)(BufferMain);
-			XUartLite_Send(&UartLite, BufferMain , MAX_FFT_LEN*4);
+			//XUartLite_Send(&UartLite, BufferMain , MAX_FFT_LEN*4);
 			flagDonnes = 0;
 
 		}

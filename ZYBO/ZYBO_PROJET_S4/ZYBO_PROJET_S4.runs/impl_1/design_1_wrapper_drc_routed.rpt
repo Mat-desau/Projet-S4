@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Mar 25 15:54:34 2024
+| Date         : Wed Mar 27 20:31:04 2024
 | Host         : LAPTOP running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -56,7 +56,7 @@ dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[
 dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0],
 dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0],
 design_1_i/ILA_ENTREE_MONO/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13],
-design_1_i/ILA_SORTIE_MONO/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13]
+design_1_i/ILA_SORTIE_FFT/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13]
  (the first 15 of 35 listed).
 Related violations: <none>
 

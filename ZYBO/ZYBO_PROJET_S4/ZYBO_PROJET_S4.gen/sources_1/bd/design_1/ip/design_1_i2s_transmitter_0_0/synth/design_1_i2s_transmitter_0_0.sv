@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "i2s_transmitter_v1_0_4,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_i2s_transmitter_0_0,i2s_transmitter_v1_0_4,{}" *)
-(* CORE_GENERATION_INFO = "design_1_i2s_transmitter_0_0,i2s_transmitter_v1_0_4,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=i2s_transmitter,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_IS_MASTER=0,C_NUM_CHANNELS=1,C_DWIDTH=24,C_32BIT_LR=0,C_DEPTH=128}" *)
+(* CORE_GENERATION_INFO = "design_1_i2s_transmitter_0_0,i2s_transmitter_v1_0_4,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=i2s_transmitter,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_IS_MASTER=0,C_NUM_CHANNELS=1,C_DWIDTH=24,C_32BIT_LR=1,C_DEPTH=128}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_i2s_transmitter_0_0 (
   s_axi_ctrl_aclk,
@@ -159,7 +159,7 @@ output wire s_axis_aud_tready;
     .C_IS_MASTER(0),
     .C_NUM_CHANNELS(1),
     .C_DWIDTH(24),
-    .C_32BIT_LR(0),
+    .C_32BIT_LR(1),
     .C_DEPTH(128)
   ) inst (
     .s_axi_ctrl_aclk(s_axi_ctrl_aclk),

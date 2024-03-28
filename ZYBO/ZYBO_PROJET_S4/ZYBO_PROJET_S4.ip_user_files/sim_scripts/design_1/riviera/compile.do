@@ -332,8 +332,8 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../ZYBO_PROJET_S4.gen/sources
 vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_ila_2_0/sim/design_1_ila_2_0.vhd" \
 "../../../bd/design_1/ip/design_1_ILA_SORTIE_MONO_0/sim/design_1_ILA_SORTIE_MONO_0.vhd" \
-"../../../bd/design_1/ip/design_1_monoAudio_0_0/sim/design_1_monoAudio_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_monoAudio_0_0/sim/design_1_monoAudio_0_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib \

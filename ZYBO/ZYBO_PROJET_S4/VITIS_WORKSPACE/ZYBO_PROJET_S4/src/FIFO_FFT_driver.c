@@ -2,6 +2,8 @@
 #include "FIFO_FFT_driver.h"
 #include "uart.h"
 #include <stdio.h>
+#include "sleep.h"
+#include <stdlib.h>
 
 
 
@@ -14,8 +16,8 @@ volatile int Done;
 volatile int Error;
 
 extern u32 Received;
-u32 ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE];
-u32 BufferMain[MAX_DATA_BUFFER_SIZE];
+short ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE];
+int BufferMain[MAX_DATA_BUFFER_SIZE];
 
 
 XLlFifo FifoInstance, FifoInstance2;
@@ -244,24 +246,47 @@ void FifoRecvHandler(XLlFifo *InstancePtr)
 	unsigned int i;
 	u32 RxWord;
 	u32 ReceiveLength;
-
 	//xil_printf("Receiving Data... \n\r");
 	int occ = XLlFifo_iRxOccupancy(InstancePtr);
-	while(occ) {
+	while(occ >= MAX_FFT_LEN) {
 		ReceiveLength = (XLlFifo_iRxGetLen(InstancePtr)) & 0x7FFFFFFF;
 		ReceiveLength /= 4;
-		//xil_printf("%d ", ReceiveLength);
-		for (i=0; i < ReceiveLength; i++) {
-				RxWord = XLlFifo_RxGetWord(InstancePtr);
-				/*if(RxWord & 0x0000FFFF){
-					RxWord = 0;
-				}*/
+		//xil_printf("%d \n\r", ReceiveLength);
 
-				ReceiveTempBuffer[i] = RxWord;
+		short max,imax = 1;
+		for (i=0; i < ReceiveLength; i++) {
+			ReceiveTempBuffer[i] = XLlFifo_RxGetWord(InstancePtr) & 0x0000FFFF;
+			//ReceiveTempBuffer[i] = (ReceiveTempBuffer[i] << 16) >> 16;
+			if(abs(ReceiveTempBuffer[i]) > max){
+				imax = i;
+				max = abs(ReceiveTempBuffer[i]);
+
+			}
 
 
 		}
-		memcpy(BufferMain,ReceiveTempBuffer,ReceiveLength*4);
+
+		if(imax > 10){
+			//xil_printf("\t\t\t%d \n\r", imax);
+
+			if((imax >= 300) && (imax < 350)){
+				xil_printf("Bruyant \n\r", imax);
+			}
+
+			if((imax >= 90) && (imax < 110)){
+				xil_printf("Huard \n\r", imax);
+			}
+
+			if((imax >= 110) && (imax < 130)){
+				xil_printf("Coq \n\r", imax);
+			}
+
+		}else{
+			//xil_printf("%d %d\n\r", imax,max);
+		}
+
+
+		//memcpy(BufferMain,ReceiveTempBuffer,ReceiveLength*4);
 		flagDonnes  =1;
 
 

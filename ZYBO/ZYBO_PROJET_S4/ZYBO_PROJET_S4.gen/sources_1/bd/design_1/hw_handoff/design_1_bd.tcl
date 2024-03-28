@@ -358,10 +358,14 @@ proc create_root_design { parentCell } {
 
   # Create instance: i2s_receiver_0, and set properties
   set i2s_receiver_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:i2s_receiver:1.0 i2s_receiver_0 ]
+  set_property -dict [ list \
+   CONFIG.C_32BIT_LR {1} \
+ ] $i2s_receiver_0
 
   # Create instance: i2s_transmitter_0, and set properties
   set i2s_transmitter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:i2s_transmitter:1.0 i2s_transmitter_0 ]
   set_property -dict [ list \
+   CONFIG.C_32BIT_LR {1} \
    CONFIG.C_IS_MASTER {0} \
  ] $i2s_transmitter_0
 

@@ -1,3 +1,28 @@
-16:05:22 **** Incremental Build of project design_1_wrapper ****
-buildplatform.bat 61663 design_1_wrapper no_domain_build 
-XSDB Server Channel: tcfchan#17
+Nothing to build in platform 'design_1_wrapper'
+
+20:58:06 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
+make all 
+'Building file: ../src/FIFO_FFT_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/FIFO_FFT_driver.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/FIFO_FFT_driver.d" -MT"src/FIFO_FFT_driver.o" -o "src/FIFO_FFT_driver.o" "../src/FIFO_FFT_driver.c"
+../src/FIFO_FFT_driver.c: In function 'SetupInterruptSystem':
+../src/FIFO_FFT_driver.c:44:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+   44 |  int Status;
+      |      ^~~~~~
+../src/FIFO_FFT_driver.c: In function 'FifoRecvHandler':
+../src/FIFO_FFT_driver.c:247:6: warning: unused variable 'RxWord' [-Wunused-variable]
+  247 |  u32 RxWord;
+      |      ^~~~~~
+'Finished building: ../src/FIFO_FFT_driver.c'
+' '
+'Building target: ZYBO_PROJET_S4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/FIFO_FFT_driver.o ./src/fft.o ./src/gestionAudio.o ./src/initCodec.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ZYBO_PROJET_S4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  15740	    416	   9724	  25880	   6518	ZYBO_PROJET_S4.elf
+'Finished building: ZYBO_PROJET_S4.elf.size'
+' '

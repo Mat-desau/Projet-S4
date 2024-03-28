@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Memory/>
+<Memory>
+    <Block Addr="0x3e74" Context="JTAG-jsn-Zybo Z7-210351A77C98A-13722093-0.MDM1.0" Size="4096"/>
+    <Block Addr="0x3e74" Context="JTAG-jsn-Zybo Z7-210351A77C98A-13722093-0.MDM1.0" Size="4096"/>
+</Memory>

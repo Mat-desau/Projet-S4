@@ -1,6 +1,6 @@
-13:17:32 **** Build of configuration Debug for project ZYBO_PROJET_S4_system ****
+19:52:02 **** Build of configuration Release for project ZYBO_PROJET_S4_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-13:17:32 Build Finished (took 101ms)
+19:52:02 Build Finished (took 94ms)
 

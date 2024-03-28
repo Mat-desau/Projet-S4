@@ -39,8 +39,8 @@ int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId);
 #define FIFO_CONFIG_ID		XPAR_AXI_FIFO_0_DEVICE_ID	  //THe FIFO only configures the FFT block
 
 
-extern u32 ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE]; //buffer for the interrupt data storage
+extern short ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE]; //buffer for the interrupt data storage
 extern char flagDonnes;
-extern u32 BufferMain[MAX_DATA_BUFFER_SIZE];
+extern int BufferMain[MAX_DATA_BUFFER_SIZE];
 
 #endif /* FIFO_H_ */
