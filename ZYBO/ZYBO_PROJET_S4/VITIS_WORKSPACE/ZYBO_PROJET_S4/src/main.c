@@ -42,7 +42,7 @@ int main(){
 	init();
 	while(1){
 		uartTask();
-		usleep(500000);
+		//usleep(500000);
 		xil_printf("B");
 		//int bytes = XUartLite_Send(&UartLite, buffer_test , 2);
 		//xil_printf("%d",bytes);
@@ -70,9 +70,9 @@ int main(){
 				maxBin = maxBin;
 			}
 		mainFreq = maxBin*64000/MAX_FFT_LEN;
-		xil_printf("%d : ", mainFreq);
-
-		/* avec 8x la fft
+		xil_printf("%d : ", maxBin);
+			/*
+		 avec 8x la fft
 
 		for (unsigned int j = 1; j < 9; j++) {
 

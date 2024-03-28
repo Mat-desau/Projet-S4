@@ -286,6 +286,7 @@ void FifoRecvHandler(XLlFifo *InstancePtr)
 		occ = XLlFifo_iRxOccupancy(InstancePtr);
 	}
 	Received = 1;
+	print("i");
 }
 
 /*****************************************************************************/

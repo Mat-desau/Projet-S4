@@ -32,7 +32,7 @@ int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId);
 
 //FFT Bloc Parameters
 #define WORD_SIZE 4			/* Size of words in bytes */
-#define MAX_FFT_LEN 512
+#define MAX_FFT_LEN 1024
 #define NO_OF_PACKETS 1
 #define MAX_DATA_BUFFER_SIZE NO_OF_PACKETS*MAX_FFT_LEN
 
