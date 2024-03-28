@@ -1,6 +1,0 @@
-Voici les branches à allé voir pour les différentes sections
-
-Main : Basys avec contrôle, moteur, lumière et affichage
-CB-Audio : Détection de son
-Communication(Basys) : Communication du côté basys et Zybo
-
