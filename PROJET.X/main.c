@@ -273,7 +273,7 @@ void FCT_Affichage_Lumiere()
 void FCT_Afficher_Threshold() 
 {
     char VALEUR[3];
-    sprintf(VALEUR, "%d", Mode_Lumiere);
+    sprintf(VALEUR, "%d", Valeur_Threshold);
     LCD_WriteStringAtPos("VAL:", 1, 0);
     LCD_WriteStringAtPos(VALEUR, 1, 4);
 }
@@ -376,19 +376,19 @@ int FCT_Comparer_Lumiere()
     {
         LED_SetValue(5, 0);
         LED_SetValue(6, 1);
-        FCT_Compteur_5Minutes(1);               //Active compteur Si lumiere plus grand que threshold
+        FCT_Compteur_5Minutes(0);               //Active compteur Si lumiere plus grand que threshold
     }
     else if (Valeur_Lumiere < Valeur_Threshold)
     {
         LED_SetValue(5, 1);
         LED_SetValue(6, 0);
         LED_SetValue(7, 0);
-        FCT_Compteur_5Minutes(0);                //Desactive le compteur si Lumiere plus petit que threshold
+        FCT_Compteur_5Minutes(1);                //Desactive le compteur si Lumiere plus petit que threshold
     }
     
     if (FCT_Compteur_5Minutes(1) == 1)          //5 minutes ont passÈes
     {
-        if(Valeur_Lumiere >= Valeur_Threshold)  //ENCORE NOIR
+        if(Valeur_Lumiere <= Valeur_Threshold)  //ENCORE NOIR
         {
             LED_SetValue(7, 1);
             return 1; 
