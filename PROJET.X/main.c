@@ -23,6 +23,8 @@
 #include "pmods.h"
 #include "mot.h"
 
+int Varible5minutes = 10;               //Nombre de 750ms (400 pour avoir 5 minutes)(10 pour avoir 15 secondes)
+
 // Variables globales
 static volatile int Flag_1m = 0;        //Flag de 1ms
 static volatile int Flag_750ms = 0;     //Flag de 750ms
@@ -39,7 +41,10 @@ int BTN_Valeurs[5]; //U L C R D         //Valeurs de bouttons 1 = peser, 0 = pas
 int Last_count[5] = {0, 0, 0, 0, 0};    //Pour les debounce des boutons
 const int FwMot = 1;
 const int BwMot = 0;
+int Mode_Manuel = 0;
 int EtapeRideau = 0;
+int OuvrirRideau = 0;
+int FermerRideau = 0;
 
 
 
@@ -91,10 +96,19 @@ void main()
         FCT_Lecture_Lumiere();
         Mode_Lumiere = FCT_Comparer_Lumiere();
         
-        FCT_Gestion_Rideau(0, 1, 0);
+        if(Mode_Oiseau == 0)
+        {
+            Mode_Manuel = 0;
+        }
+        else
+        {
+            Mode_Manuel = 1;
+        }
+        
+        //Changer le 0 pour Oiseau Trouver
+        FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 0);
+        //FCT_Gestion_Rideau(0, 0, 0);
        
-        //Ici on peut mettre FCT_Comparer_Lumiere la sortie Mode_Lumiere de 1 sera mit quand 
-        //Ici on mets la fermeture du rideau en fonction de Mode_Lumiere
         
         if(Flag_750ms)                 
         {
@@ -259,7 +273,7 @@ void FCT_Affichage_Lumiere()
 void FCT_Afficher_Threshold() 
 {
     char VALEUR[3];
-    sprintf(VALEUR, "%d", Valeur_Threshold);
+    sprintf(VALEUR, "%d", Mode_Lumiere);
     LCD_WriteStringAtPos("VAL:", 1, 0);
     LCD_WriteStringAtPos(VALEUR, 1, 4);
 }
@@ -326,7 +340,7 @@ int FCT_Compteur_5Minutes(int Activer)
         count5min = 0;              //Count5min remis a 0
     }
     
-    if(count5min >= 400)            //Si par dessus 400 c'est bon pour return 1
+    if(count5min >= Varible5minutes)            //Si par dessus 400 c'est bon pour return 1
     {
         return 1;
     }
@@ -369,8 +383,9 @@ int FCT_Comparer_Lumiere()
         LED_SetValue(5, 1);
         LED_SetValue(6, 0);
         LED_SetValue(7, 0);
-        FCT_Compteur_5Minutes(0);                //D»sactive le compteur si Lumiere plus petit que threshold
+        FCT_Compteur_5Minutes(0);                //Desactive le compteur si Lumiere plus petit que threshold
     }
+    
     if (FCT_Compteur_5Minutes(1) == 1)          //5 minutes ont pass»es
     {
         if(Valeur_Lumiere >= Valeur_Threshold)  //ENCORE NOIR
@@ -387,11 +402,13 @@ int FCT_Ouvrir_Rideau()
     if(!PMODS_GetValue(1,1))
     {
         MOT_SetPhEnMotor2(BwMot, 100);
+        OuvrirRideau = 1;
         return (0);
     }
     else
     {
         MOT_SetPhEnMotor2(BwMot, 0);
+        OuvrirRideau = 0;
         return 1;
     }
 }
@@ -401,11 +418,13 @@ int FCT_Fermer_Rideau()
     if(!PMODS_GetValue(1,2))
     {
         MOT_SetPhEnMotor2(FwMot, 75);
+        FermerRideau = 1;
         return (0);
     }
     else
     {
         MOT_SetPhEnMotor2(FwMot, 0);
+        FermerRideau = 0;
         return 1;
     }
     
@@ -413,12 +432,12 @@ int FCT_Fermer_Rideau()
 
 void FCT_Mode_Manuel_Mot()
 {
-    if(BTN_Valeurs[1] && !PMODS_GetValue(1,1))
+    if(BTN_Valeurs[1] && !PMODS_GetValue(1,1) || OuvrirRideau)
     {
         FCT_Ouvrir_Rideau();
         //MOT_SetPhEnMotor2(BwMot, 100);
     }
-    else if(BTN_Valeurs[3] && !PMODS_GetValue(1,2))
+    else if(BTN_Valeurs[3] && !PMODS_GetValue(1,2) || FermerRideau)
     {
         FCT_Fermer_Rideau();
         //MOT_SetPhEnMotor2(FwMot, 100);
@@ -471,13 +490,12 @@ void FCT_Mode_Auto_Mot(int fermer, int ouvrir){
     return;
 }
 
-//Seule Fonction ? appeler
-// BTN_Valeurs sont les entr»es des bontons en mode manuel seulement
-// mode sert ? mettre en manuel si 0 et auto si 1
-// ouvrir sert en mode auto et sert ? ouvrir le rideau jusqu'? l'interrupteur magn»tique Hsw
-// Fermer est comme ouvrir mais pour fermer le rideau jusqu'? LSW
 void FCT_Gestion_Rideau(int mode, int fermer, int ouvrir)
 {
+    //Seule Fonction a appeler
+    // mode sert a mettre en manuel si 0 et auto si 1
+    // ouvrir sert en mode auto et sert a ouvrir le rideau jusqu'a l'interrupteur magnetique Hsw
+    // Fermer est comme ouvrir mais pour fermer le rideau jusqu'a LSW
     switch (mode) {
         case 0:
         // code block
