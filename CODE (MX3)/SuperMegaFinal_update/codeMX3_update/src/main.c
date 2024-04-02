@@ -87,18 +87,21 @@ int main(void) {
     SYS_INT_Enable();
     
     
-    if(ipChoix){
+    if(ipChoix)
+    {
         LCD_WriteStringAtPos("s: 192.168.1.123", 1, 0);
-    }else{
+    }
+    else
+    {
         LCD_WriteStringAtPos("s: 192.168.1.207", 1, 0);
     }
+    
     SSD_WriteDigitsGrouped(0x7777,0x1);
     
-    while (1) {
+    while (1) 
+    {
         SYS_Tasks();
-        MAIN_Tasks();
-        
-       
+        MAIN_Tasks();   
     };
 
     return 0;
