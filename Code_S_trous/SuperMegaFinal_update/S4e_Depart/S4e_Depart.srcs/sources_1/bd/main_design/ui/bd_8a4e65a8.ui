@@ -1,0 +1,26 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.75",
+   "Default View_TopLeft":"-326,-233",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x -10 -y 50 -defaultsOSRD
+preplace port s00_axi_aclk -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace port s00_axi_aresetn -pg 1 -lvl 0 -x -10 -y 130 -defaultsOSRD
+preplace portBus Interrupt -pg 1 -lvl 3 -x 740 -y 120 -defaultsOSRD
+preplace inst myip_S4e_4reg_0 -pg 1 -lvl 1 -x 180 -y 90 -defaultsOSRD
+preplace inst DSP -pg 1 -lvl 2 -x 580 -y 90 -defaultsOSRD
+preplace netloc s00_axi_aclk_1 1 0 2 10J 190 350
+preplace netloc s00_axi_aresetn_1 1 0 1 NJ 130
+preplace netloc DSP_Q_0 1 2 1 720 90n
+preplace netloc CE_1 1 1 1 340 80n
+preplace netloc Data_1 1 1 1 330 70n
+preplace netloc DSP_Somme 1 0 3 30 210 NJ 210 710
+preplace netloc DSP_Moyenne 1 0 3 20 200 NJ 200 700
+preplace netloc Conn1 1 0 1 NJ 50
+levelinfo -pg 1 -10 180 580 740
+pagesize -pg 1 -db -bbox -sgen -160 -10 880 270
+"
+}
+

@@ -1,0 +1,194 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.824688",
+   "Default View_TopLeft":"3730,-7280",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port Pmod_NIC100 -pg 1 -lvl 7 -x 5040 -y 740 -defaultsOSRD
+preplace port UART -pg 1 -lvl 7 -x 5040 -y 890 -defaultsOSRD
+preplace port GPIO_0 -pg 1 -lvl 7 -x 5040 -y 1020 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 7 -x 5040 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 7 -x 5040 -y 90 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -80 -y 1140 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x -80 -y 1290 -defaultsOSRD
+preplace portBus INT_NIC100 -pg 1 -lvl 0 -x -80 -y 1410 -defaultsOSRD
+preplace portBus LEDS -pg 1 -lvl 7 -x 5040 -y 1060 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -x 1250 -y 1170 -defaultsOSRD
+preplace inst mdm_0 -pg 1 -lvl 3 -x 830 -y 1130 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -x 1830 -y 2050 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -x 1830 -y 890 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 3 -x 830 -y 1370 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 2 -x 480 -y 1490 -defaultsOSRD
+preplace inst Calcul_Moyenne -pg 1 -lvl 6 -x 3252 -y -8968 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 3252 -y 8802 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 6 -x 3252 -y -9160 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 480 -y 1160 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 100 -y 1290 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 3252 -y 8656 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 6 -x 3252 -y 8500 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M_1 -pg 1 -lvl 2 -x 480 -y 1340 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1 -pg 1 -lvl 2 -x 3822 -y -8906 -defaultsOSRD
+preplace inst Calcul_Moyenne|myip_S4e_4reg_0 -pg 1 -lvl 1 -x 3382 -y -8508 -defaultsOSRD
+preplace inst Calcul_Moyenne|myip_S4e_4reg_1 -pg 1 -lvl 1 -x 3382 -y -8938 -defaultsOSRD
+preplace inst Calcul_Moyenne|myip_S4e_4reg_2 -pg 1 -lvl 1 -x 3382 -y -8728 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2 -pg 1 -lvl 2 -x 3822 -y -7982 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP -pg 1 -lvl 2 -x 3822 -y -7108 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|Delai_1cycle_A -pg 1 -lvl 1 -x 3872 -y -8276 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|Somme -pg 1 -lvl 3 -x 4332 -y -8546 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|c_shift_ram_0 -pg 1 -lvl 3 -x 4332 -y -8366 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|substract -pg 1 -lvl 4 -x 4592 -y -8356 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|Delai_3cycle -pg 1 -lvl 3 -x 4332 -y -8216 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|xlslice_0 -pg 1 -lvl 3 -x 4332 -y -8676 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|Delai_2cycle -pg 1 -lvl 2 -x 4082 -y -8276 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|c_addsub_0 -pg 1 -lvl 4 -x 4592 -y -8646 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|Delai_4CYCLES_1 -pg 1 -lvl 4 -x 4592 -y -8216 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|xlslice_1 -pg 1 -lvl 2 -x 4082 -y -8896 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|xlconstant_0 -pg 1 -lvl 2 -x 4082 -y -8796 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|xlconstant_1 -pg 1 -lvl 2 -x 4082 -y -8696 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_1|mux2_0 -pg 1 -lvl 3 -x 4332 -y -8796 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|Delai_1cycle_A -pg 1 -lvl 1 -x 3872 -y -7352 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|Somme -pg 1 -lvl 3 -x 4332 -y -7622 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|c_shift_ram_0 -pg 1 -lvl 3 -x 4332 -y -7442 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|substract -pg 1 -lvl 4 -x 4592 -y -7432 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|Delai_3cycle -pg 1 -lvl 3 -x 4332 -y -7292 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|xlslice_0 -pg 1 -lvl 3 -x 4332 -y -7752 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|Delai_2cycle -pg 1 -lvl 2 -x 4082 -y -7352 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|c_addsub_0 -pg 1 -lvl 4 -x 4592 -y -7722 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|Delai_4CYCLES_1 -pg 1 -lvl 4 -x 4592 -y -7292 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|xlslice_1 -pg 1 -lvl 2 -x 4082 -y -7972 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|xlconstant_0 -pg 1 -lvl 2 -x 4082 -y -7872 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|xlconstant_1 -pg 1 -lvl 2 -x 4082 -y -7772 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP_2|mux2_0 -pg 1 -lvl 3 -x 4332 -y -7872 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|Delai_1cycle_A -pg 1 -lvl 1 -x 3872 -y -6478 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|Somme -pg 1 -lvl 3 -x 4332 -y -6748 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|c_shift_ram_0 -pg 1 -lvl 3 -x 4332 -y -6568 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|substract -pg 1 -lvl 4 -x 4592 -y -6558 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|Delai_3cycle -pg 1 -lvl 3 -x 4332 -y -6418 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|xlslice_0 -pg 1 -lvl 3 -x 4332 -y -6878 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|Delai_2cycle -pg 1 -lvl 2 -x 4082 -y -6478 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|c_addsub_0 -pg 1 -lvl 4 -x 4592 -y -6848 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|Delai_4CYCLES_1 -pg 1 -lvl 4 -x 4592 -y -6418 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|xlslice_1 -pg 1 -lvl 2 -x 4082 -y -7098 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|xlconstant_0 -pg 1 -lvl 2 -x 4082 -y -6998 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|xlconstant_1 -pg 1 -lvl 2 -x 4082 -y -6898 -defaultsOSRD
+preplace inst Calcul_Moyenne|DSP|mux2_0 -pg 1 -lvl 3 -x 4332 -y -6998 -defaultsOSRD
+preplace netloc microblaze_0_intr 1 2 1 690 1400n
+preplace netloc microblaze_0_Clk 1 1 5 200J 1060 660 1050 980 1050 1520 630 2050
+preplace netloc clk_wiz_1_locked 1 1 1 210 1200n
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 700J 1210 1000
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 690J 1200 960J 1080 1500
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 680 1020 NJ 1020 1500 650 2060
+preplace netloc mdm_1_debug_sys_rst 1 1 3 240 1040 NJ 1040 950
+preplace netloc ext_reset_in_0_1 1 0 2 NJ 1140 NJ
+preplace netloc clk_in1_0_1 1 0 1 NJ 1290
+preplace netloc clk_wiz_1_clk_out2 1 1 5 190 1030 NJ 1030 NJ 1030 1540J 1130 2010
+preplace netloc In1_0_1 1 0 2 NJ 1410 190J
+preplace netloc axi_gpio_0_gpio2_io_o 1 6 1 5020J 1060n
+preplace netloc ARESETN_1 1 2 3 650J 750 NJ 750 N
+preplace netloc Calcul_Moyenne_Q 1 1 6 220 10 N 10 N 10 N 10 N 10 4990
+preplace netloc rst_clk_wiz_1_100M_1_peripheral_aresetn 1 2 4 670 1060 NJ 1060 1550 -8448 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 230 20 NJ 20 NJ 20 NJ 20 NJ 20 5000
+preplace netloc processing_system7_0_FIXED_IO 1 6 1 5010J -9180n
+preplace netloc processing_system7_0_DDR 1 6 1 5020J -9200n
+preplace netloc microblaze_0_ilmb_1 1 4 1 1490 1170n
+preplace netloc axi_gpio_0_GPIO 1 6 1 5010J 1020n
+preplace netloc microblaze_0_axi_dp 1 4 1 1530 710n
+preplace netloc microblaze_0_dlmb_1 1 4 1 1510 1150n
+preplace netloc microblaze_0_interrupt 1 3 1 990 1140n
+preplace netloc axi_quad_spi_0_SPI_0 1 6 1 4990J 740n
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 2040 850n
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 2000 890n
+preplace netloc microblaze_0_debug 1 3 1 970 1120n
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 2020 870n
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 2010 -8978n
+preplace netloc microblaze_0_intc_axi 1 2 4 710 640 NJ 640 NJ 640 1980
+preplace netloc axi_uartlite_0_UART 1 6 1 5000J 890n
+preplace netloc microblaze_0_axi_periph_M06_AXI 1 5 1 2030 -8768n
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1990 -8998n
+preplace netloc Calcul_Moyenne|s00_axi_aclk_1 1 0 2 3192 -8408 3542
+preplace netloc Calcul_Moyenne|s00_axi_aresetn_1 1 0 1 N -8468
+preplace netloc Calcul_Moyenne|myip_S4e_4reg_1_o_data_available 1 1 1 3622 -8948n
+preplace netloc Calcul_Moyenne|myip_S4e_4reg_1_o_data 1 1 1 3612 -8928n
+preplace netloc Calcul_Moyenne|DSP_1_Somme 1 0 3 3222 -8838 3542J -9006 4852
+preplace netloc Calcul_Moyenne|DSP_1_Moyenne 1 0 3 3192 -9038 NJ -9038 4872
+preplace netloc Calcul_Moyenne|s00_axi_aresetn1_1 1 0 1 3202 -8898n
+preplace netloc Calcul_Moyenne|DSP_2_Q 1 2 1 N -7292
+preplace netloc Calcul_Moyenne|myip_S4e_4reg_2_o_data_available 1 1 1 3582 -8738n
+preplace netloc Calcul_Moyenne|myip_S4e_4reg_0_o_data_available 1 1 1 3552 -8518n
+preplace netloc Calcul_Moyenne|myip_S4e_4reg_0_o_data 1 1 1 3562 -8498n
+preplace netloc Calcul_Moyenne|myip_S4e_4reg_2_o_data 1 1 1 3572 -8718n
+preplace netloc Calcul_Moyenne|DSP_Somme 1 0 3 3212 -8618 3552J -9026 4892
+preplace netloc Calcul_Moyenne|DSP_Moyenne 1 0 3 3222 -8608 3592J -9016 4882
+preplace netloc Calcul_Moyenne|DSP_2_Somme 1 0 3 3222 -8628 3602J -8986 4842
+preplace netloc Calcul_Moyenne|DSP_2_Moyenne 1 0 3 3222 -8828 3572J -8996 4862
+preplace netloc Calcul_Moyenne|Conn1 1 0 1 3182 -8998n
+preplace netloc Calcul_Moyenne|S00_AXI2_1 1 0 1 N -8768
+preplace netloc Calcul_Moyenne|S00_AXI1_1 1 0 1 N -8978
+preplace netloc Calcul_Moyenne|DSP_1|D_0_1 1 0 3 3762 -8206 NJ -8206 4192
+preplace netloc Calcul_Moyenne|DSP_1|Somme_S 1 3 1 4462 -8546n
+preplace netloc Calcul_Moyenne|DSP_1|Net 1 1 2 3982 -8516 NJ
+preplace netloc Calcul_Moyenne|DSP_1|Delai_2cycle_Q 1 2 2 4202 -8286 4492
+preplace netloc Calcul_Moyenne|DSP_1|Net1 1 0 3 NJ -8506 NJ -8506 4202
+preplace netloc Calcul_Moyenne|DSP_1|substract_S 1 1 4 3982 -8636 4202 -8876 NJ -8876 4692
+preplace netloc Calcul_Moyenne|DSP_1|c_shift_ram_0_Q 1 3 1 N -8366
+preplace netloc Calcul_Moyenne|DSP_1|CLK_1 1 0 4 3772 -8346 3972 -8346 4182 -8456 4472
+preplace netloc Calcul_Moyenne|DSP_1|Delai_4CYCLES_Q 1 3 1 4482 -8616n
+preplace netloc Calcul_Moyenne|DSP_1|Delai_4CYCLES_1_Q 1 4 1 N -8216
+preplace netloc Calcul_Moyenne|DSP_1|xlslice_0_Dout 1 3 1 N -8676
+preplace netloc Calcul_Moyenne|DSP_1|c_addsub_0_S 1 4 1 N -8646
+preplace netloc Calcul_Moyenne|DSP_1|xlslice_1_Dout 1 2 1 4182J -8896n
+preplace netloc Calcul_Moyenne|DSP_1|xlconstant_1_dout 1 2 1 4182J -8776n
+preplace netloc Calcul_Moyenne|DSP_1|xlconstant_0_dout 1 2 1 NJ -8796
+preplace netloc Calcul_Moyenne|DSP_1|mux2_0_output0 1 3 1 4462 -8796n
+preplace netloc Calcul_Moyenne|DSP_2|D_0_1 1 0 3 3762 -7282 NJ -7282 4192
+preplace netloc Calcul_Moyenne|DSP_2|Somme_S 1 3 1 4462 -7622n
+preplace netloc Calcul_Moyenne|DSP_2|Net 1 1 2 3982 -7592 NJ
+preplace netloc Calcul_Moyenne|DSP_2|Delai_2cycle_Q 1 2 2 4202 -7362 4492
+preplace netloc Calcul_Moyenne|DSP_2|Net1 1 0 3 NJ -7582 NJ -7582 4202
+preplace netloc Calcul_Moyenne|DSP_2|substract_S 1 1 4 3982 -7712 4202 -7952 NJ -7952 4692
+preplace netloc Calcul_Moyenne|DSP_2|c_shift_ram_0_Q 1 3 1 N -7442
+preplace netloc Calcul_Moyenne|DSP_2|CLK_1 1 0 4 3772 -7422 3972 -7422 4182 -7532 4472
+preplace netloc Calcul_Moyenne|DSP_2|Delai_4CYCLES_Q 1 3 1 4482 -7692n
+preplace netloc Calcul_Moyenne|DSP_2|Delai_4CYCLES_1_Q 1 4 1 N -7292
+preplace netloc Calcul_Moyenne|DSP_2|xlslice_0_Dout 1 3 1 N -7752
+preplace netloc Calcul_Moyenne|DSP_2|c_addsub_0_S 1 4 1 N -7722
+preplace netloc Calcul_Moyenne|DSP_2|xlslice_1_Dout 1 2 1 4182J -7972n
+preplace netloc Calcul_Moyenne|DSP_2|xlconstant_1_dout 1 2 1 4182J -7852n
+preplace netloc Calcul_Moyenne|DSP_2|xlconstant_0_dout 1 2 1 NJ -7872
+preplace netloc Calcul_Moyenne|DSP_2|mux2_0_output0 1 3 1 4462 -7872n
+preplace netloc Calcul_Moyenne|DSP|D_0_1 1 0 3 3762 -6408 NJ -6408 4192
+preplace netloc Calcul_Moyenne|DSP|Somme_S 1 3 1 4462 -6748n
+preplace netloc Calcul_Moyenne|DSP|Net 1 1 2 3982 -6718 NJ
+preplace netloc Calcul_Moyenne|DSP|Delai_2cycle_Q 1 2 2 4202 -6488 4492
+preplace netloc Calcul_Moyenne|DSP|Net1 1 0 3 NJ -6708 NJ -6708 4202
+preplace netloc Calcul_Moyenne|DSP|substract_S 1 1 4 3982 -6838 4202 -7078 NJ -7078 4692
+preplace netloc Calcul_Moyenne|DSP|c_shift_ram_0_Q 1 3 1 N -6568
+preplace netloc Calcul_Moyenne|DSP|CLK_1 1 0 4 3772 -6548 3972 -6548 4182 -6658 4472
+preplace netloc Calcul_Moyenne|DSP|Delai_4CYCLES_Q 1 3 1 4482 -6818n
+preplace netloc Calcul_Moyenne|DSP|Delai_4CYCLES_1_Q 1 4 1 N -6418
+preplace netloc Calcul_Moyenne|DSP|xlslice_0_Dout 1 3 1 N -6878
+preplace netloc Calcul_Moyenne|DSP|xlslice_1_Dout 1 2 1 4182J -7098n
+preplace netloc Calcul_Moyenne|DSP|xlconstant_1_dout 1 2 1 4182J -6978n
+preplace netloc Calcul_Moyenne|DSP|xlconstant_0_dout 1 2 1 NJ -6998
+preplace netloc Calcul_Moyenne|DSP|mux2_0_output0 1 3 1 4462 -6998n
+preplace netloc Calcul_Moyenne|DSP|c_addsub_0_S 1 4 1 N -6848
+levelinfo -pg 1 -80 100 480 830 1250 1830 3252 5040
+levelinfo -hier Calcul_Moyenne * 3382 3822 *
+levelinfo -hier Calcul_Moyenne|DSP_1 * 3872 4082 4332 4592 *
+levelinfo -hier Calcul_Moyenne|DSP_2 * 3872 4082 4332 4592 *
+levelinfo -hier Calcul_Moyenne|DSP * 3872 4082 4332 4592 *
+pagesize -pg 1 -db -bbox -sgen -240 -9260 5190 8890
+pagesize -hier Calcul_Moyenne -db -bbox -sgen 3152 -9048 4922 -6328
+pagesize -hier Calcul_Moyenne|DSP_1 -db -bbox -sgen 3732 -8956 4722 -8146
+pagesize -hier Calcul_Moyenne|DSP_2 -db -bbox -sgen 3732 -8032 4722 -7222
+pagesize -hier Calcul_Moyenne|DSP -db -bbox -sgen 3732 -7158 4722 -6348
+"
+}
+{
+   "da_axi4_cnt":"7",
+   "da_board_cnt":"5",
+   "da_clkrst_cnt":"3",
+   "da_mb_cnt":"1",
+   "da_ps7_cnt":"1"
+}
