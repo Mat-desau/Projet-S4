@@ -81,15 +81,13 @@ void __ISR(_UART_4_VECTOR, ipl1AUTO) _IntHandlerDrvUsartInstance0(void)
 
 int data_count = 0;
 void __ISR(_EXTERNAL_4_VECTOR, IPL1AUTO) _IntHandlerExternalInterruptInstance0(void)
-{
-    
+{  
     PLIB_INT_SourceFlagClear(INT_ID_0, INT_SOURCE_EXTERNAL_4);
-
 }
  
 
 void __ISR(_TIMER_1_VECTOR, ipl1AUTO) IntHandlerDrvTmrInstance0(void)
-{   
+{
     DRV_TMR_Tasks(sysObj.drvTmr0);
 }
  
