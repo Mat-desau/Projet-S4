@@ -364,7 +364,8 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/system_config/default/framework/driver/spi/src/drv_spi_sys_queue.h \
  ../src/system_config/default/framework/driver/spi/src/drv_spi_variant_mapping.h \
  ../src/UDP_app.h ../src/led.h ../src/config.h ../src/ssd.h ../src/lcd.h \
- ../src/app_commands.h ../src/swt.h
+ ../src/app_commands.h ../src/swt.h ../src/../MX3_accel_paquet.X/btn.h \
+ ../src/../MX3_accel_paquet.X/pmods.h ../src/../MX3_accel_paquet.X/mot.h
 
 ../src/main.h:
 
@@ -1111,3 +1112,9 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/app_commands.h:
 
 ../src/swt.h:
+
+../src/../MX3_accel_paquet.X/btn.h:
+
+../src/../MX3_accel_paquet.X/pmods.h:
+
+../src/../MX3_accel_paquet.X/mot.h:

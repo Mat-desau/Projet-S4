@@ -56,6 +56,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <math.h>
+#include <xc.h>
+#include <sys/attribs.h>
+#include <stdio.h>
 #include "system_config.h"
 #include "system_definitions.h"
 
@@ -83,6 +87,7 @@ extern "C" {
     This enumeration defines the valid application states.  These states
     determine the behavior of the application at various times.
 */
+   
 
 typedef enum
 {
@@ -205,6 +210,28 @@ void MAIN_Initialize ( void );
 void MAIN_Tasks( void );
 
 void RGB_Task();
+
+void Test_Comm();
+
+void ProjectTask();
+
+//void __ISR(_TIMER_1_VECTOR, IPL2AUTO) Timer1ISR(void);
+void initialize_timer_interrupt(void);
+void FCT_Mode_Fonctionnement();         //Mode sur LCD
+void FCT_Afficher_Threshold();          //Threshold sur LCD
+void FCT_Toute_Affichage_LCD();         //Clear et affichage des informations sur le LCD
+void FCT_Affichage_Lumiere();           //Affichage sur 7 segments
+void FCT_Boutons();                     //Obtenir les valeurs de bouttons
+void FCT_Lecture_Threshold();           //Lecture des boutons pour ajuster la valeur du threshold
+int FCT_Compteur_5Minutes(int Activer); //Compteur de 5 minutes
+int FCT_Sur100(int Valeur_Entree, int Valeur_Max);  //Adapte une entr»e sur 100
+void FCT_Lecture_Lumiere();                         //Lecture de lumiÀre avec sortie sur 100
+int FCT_Comparer_Lumiere();                         //Compare la luimiÀre avec threshold
+int FCT_Ouvrir_Rideau();
+int FCT_Fermer_Rideau();
+void FCT_Mode_Manuel_Mot();
+void FCT_Mode_Auto_Mot(int fermer, int ouvrir);
+void FCT_Gestion_Rideau(int mode, int fermer, int ouvrir);
 
 #endif /* _MAIN_H */
 
