@@ -189,7 +189,7 @@ void _UDP_ClientTasks() {
 void UDP_Tasks ( void )
 {
     SYS_STATUS          tcpipStat;
-    const char          *netName, *netBiosName;
+    //const char          *netName, *netBiosName;
     static IPV4_ADDR    dwLastIP[2] = { {-1}, {-1} };
     IPV4_ADDR           ipAddr;
     int                 i, nNets;
@@ -218,8 +218,8 @@ void UDP_Tasks ( void )
                 for (i = 0; i < nNets; i++) {
 
                     netH = TCPIP_STACK_IndexToNet(i);
-                    netName = TCPIP_STACK_NetNameGet(netH);
-                    netBiosName = TCPIP_STACK_NetBIOSName(netH);
+                    //netName = TCPIP_STACK_NetNameGet(netH);
+                    //netBiosName = TCPIP_STACK_NetBIOSName(netH);
 
             
                 }

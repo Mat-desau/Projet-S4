@@ -3210,7 +3210,7 @@ static bool _LoadNetworkConfig(const TCPIP_NETWORK_CONFIG* pUsrConfig, TCPIP_NET
 
     if(restartIf)
     {   // save old data that's still useful
-        strncpy(oldIfName, pNetIf->ifName, sizeof(pNetIf->ifName)); 
+        strncpy(oldIfName, pNetIf->ifName, sizeof(oldIfName)); 
         pMacConfig = pNetIf->pMacConfig;
         netIfIx = pNetIf->netIfIx;
 #if (_TCPIP_STACK_ALIAS_INTERFACE_SUPPORT)

@@ -1,7 +1,7 @@
 
 #include "main.h"
 #include "system_config.h"
-#include "system/common/sys_module.h"   // SYS function prototypes
+//#include "system/common/sys_module.h"   // SYS function prototypes
 #include "driver/spi/src/dynamic/drv_spi_internal.h"
 #include "UDP_app.h"
 #include "led.h"

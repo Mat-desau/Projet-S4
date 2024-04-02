@@ -87,7 +87,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     the 'configuration bits' to configure the system oscillators. 
 */
 
-void SYS_CLK_Initialize( const SYS_CLK_INIT const * clkInit )
+void SYS_CLK_Initialize( const SYS_CLK_INIT * clkInit )
 {
     SYS_DEVCON_SystemUnlock ( );
     
