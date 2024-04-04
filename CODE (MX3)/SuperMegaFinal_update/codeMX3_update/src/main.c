@@ -1,7 +1,8 @@
 
 #include "main.h"
 #include "system_config.h"
-//#include "system/common/sys_module.h"   // SYS function prototypes
+#include "system/common/sys_module.h"   // SYS function prototypes
+#include "config.h"
 #include "driver/spi/src/dynamic/drv_spi_internal.h"
 #include "UDP_app.h"
 #include "led.h"
@@ -51,18 +52,19 @@ void MAIN_Initialize ( void )
     mainData.state = MAIN_STATE_INIT;
 
     mainData.handleUSART0 = DRV_HANDLE_INVALID;
-    LED_Init();
-    SWT_Init();
-    ipChoix = SWT_GetValue(7);
-    UDP_Initialize();
-    LCD_Init();
-    SSD_Init();
     
+    LCD_Init();
+    SWT_Init();
+    SSD_Init();
     BTN_Init();
+    LED_Init();
     ADC_Init();
     PMODS_InitPin(1,1,1,0,1);           // initialisation du JB1 (RD9))
     PMODS_InitPin(1,2,1,0,1);           // initialisation du JB2 (RD11))
     MOT_Init(1);                        // Initialisation des motor et sortie pwm
+    
+    ipChoix = SWT_GetValue(7);
+    UDP_Initialize();
 
     initialize_timer_interrupt();
     
@@ -72,8 +74,6 @@ void MAIN_Initialize ( void )
 
 void MAIN_Tasks ( void )
 {
-
-   
     switch ( mainData.state )
     {
            
@@ -115,17 +115,16 @@ int main(void) {
     MAIN_Initialize();
     SYS_INT_Enable();
     
-    
-    if(ipChoix)
-    {
-        LCD_WriteStringAtPos("s: 192.168.1.123", 1, 0);
-    }
-    else
-    {
-        LCD_WriteStringAtPos("s: 192.168.1.207", 1, 0);
-    }
-    
-    SSD_WriteDigitsGrouped(0x7777,0x1);
+//    if(ipChoix)
+//    {
+//        LCD_WriteStringAtPos("s: 192.168.1.123", 1, 0);
+//    }
+//    else
+//    {
+//        LCD_WriteStringAtPos("s: 192.168.1.207", 1, 0);
+//    }
+//    
+//    SSD_WriteDigitsGrouped(0x7777,0x1);
     
     while (1) 
     {
@@ -157,19 +156,7 @@ void ProjectTask()
     FCT_Lecture_Lumiere();
     Mode_Lumiere = FCT_Comparer_Lumiere();
 
-    if(Mode_Oiseau == 0)
-    {
-        Mode_Manuel = 0;
-    }
-    else
-    {
-        Mode_Manuel = 1;
-    }
-
-    //Changer le 0 pour Oiseau Trouver
-    FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 0);
-    //FCT_Gestion_Rideau(0, 0, 0);
-
+    FCT_Lecture_Ethernet();
     
     if(Flag_750ms)                 
     {
@@ -178,7 +165,7 @@ void ProjectTask()
     } 
 }
 
-void __ISR(_TIMER_2_VECTOR, IPL2AUTO) Timer2ISR(void)
+void __ISR(_TIMER_3_VECTOR, IPL2AUTO) Timer3ISR(void)
 {
    count++;
    Flag_1m = 1;                     //Flag 1 ms
@@ -199,28 +186,78 @@ void __ISR(_TIMER_2_VECTOR, IPL2AUTO) Timer2ISR(void)
        
        Flag_750ms = 1;                   //Flag 1 sec
    }
-   IFS0bits.T2IF = 0;               //clear interrupt flag
+   IFS0bits.T3IF = 0;               //clear interrupt flag
 }
 
 void initialize_timer_interrupt(void)
 {
   //macro_disable_interrupts();          
   //T4CONbits.ON = 0;                   //    turn off Timer1
-  PR2 = (int)(((float)(TMR_TIME2 * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
-  TMR2 = 0;                           //    initialize count to 0
+  PR3 = (int)(((float)(TMR_TIME2 * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
+  TMR3 = 0;                           //    initialize count to 0
+  
   //T4CONbits.ON = 1;                   //    turn on Timer1
-  T2CONbits.TCKPS = 7;                //    8
-  T2CONbits.TGATE = 0;                //    not gated input (the default)
-  T2CONbits.TCS = 0;                  //    PCBLK input (the default)
-  T2CONbits.T32 = 0;                   //    turn on Timer1
-  T2CONbits.ON = 1;                   //    turn on Timer1
-  IPC2bits.T2IP = 1;                  //    priority
-  IPC2bits.T2IS = 0;                  //    subpriority
-  IFS0bits.T2IF = 0;                  //    clear interrupt flag
-  IEC0bits.T2IE = 1;                  //    enable interrupt 
+  T3CONbits.TCKPS = 7;                //    256
+  T3CONbits.TGATE = 0;                //    not gated input (the default)
+  T3CONbits.TCS = 0;                  //    PCBLK input (the default)
+//  T3CONbits.T32 = 0;                   //    turn on Timer1
+  T3CONbits.ON = 1;                   //    turn on Timer1
+  IPC3bits.T3IP = 1;                  //    priority
+  IPC3bits.T3IS = 0;                  //    subpriority
+  IFS0bits.T3IF = 0;                  //    clear interrupt flag
+  IEC0bits.T3IE = 1;                  //    enable interrupt 
   //macro_enable_interrupts();          //    enable interrupts at CPU */
 }
 
+void FCT_Lecture_Ethernet()
+{
+    if (Type_Oiseau == 1) 
+    {
+        LED_SetValue(0,1);
+        LED_SetValue(1,0);
+        LED_SetValue(2,0);
+        Confirmation = true;
+        
+        if(Mode_Oiseau == 1 || Mode_Oiseau == 4 || Mode_Oiseau == 5 || Mode_Oiseau == 7)
+        {
+            FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 1);
+        }
+    }
+    else if(Type_Oiseau == 2)
+    {
+        LED_SetValue(0,0);
+        LED_SetValue(1,1);
+        LED_SetValue(2,0);
+        Confirmation = true;
+        
+        if(Mode_Oiseau == 2 || Mode_Oiseau == 4 || Mode_Oiseau == 6 || Mode_Oiseau == 7)
+        {
+            FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 1);
+        }
+    } 
+    else if(Type_Oiseau == 3)
+    {
+        LED_SetValue(0,0);
+        LED_SetValue(1,0);
+        LED_SetValue(2,1);
+        Confirmation = true;
+        
+        if(Mode_Oiseau == 3 || Mode_Oiseau == 5 || Mode_Oiseau == 6 || Mode_Oiseau == 7)
+        {
+            FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 1);
+        }
+    } 
+    else
+    {
+        LED_SetValue(0,0);
+        LED_SetValue(1,0);
+        LED_SetValue(2,0);
+        Confirmation = true;
+        
+        FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 0);
+    } 
+    
+}
 
 void FCT_Mode_Fonctionnement() 
 {
@@ -230,9 +267,9 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("AUCUN", 0, 5);
        
-       LED_SetValue(0, 0);
-       LED_SetValue(1, 0);
-       LED_SetValue(2, 0);
+//       LED_SetValue(0, 0);
+//       LED_SetValue(1, 0);
+//       LED_SetValue(2, 0);
        
        Mode_Oiseau = 0;
     }
@@ -240,9 +277,9 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("BRUANT", 0, 5);
        
-       LED_SetValue(0, 1);
-       LED_SetValue(1, 0);
-       LED_SetValue(2, 0);
+//       LED_SetValue(0, 1);
+//       LED_SetValue(1, 0);
+//       LED_SetValue(2, 0);
        
        Mode_Oiseau = 1;
     }
@@ -250,9 +287,9 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("COQ", 0, 5); 
        
-       LED_SetValue(0, 0);
-       LED_SetValue(1, 1);
-       LED_SetValue(2, 0);
+//       LED_SetValue(0, 0);
+//       LED_SetValue(1, 1);
+//       LED_SetValue(2, 0);
        
        Mode_Oiseau = 2;
     }
@@ -260,9 +297,9 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("HUARD", 0, 5);
        
-       LED_SetValue(0, 0);
-       LED_SetValue(1, 0);
-       LED_SetValue(2, 1);
+//       LED_SetValue(0, 0);
+//       LED_SetValue(1, 0);
+//       LED_SetValue(2, 1);
        
        Mode_Oiseau = 3;
     }
@@ -270,9 +307,9 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("BRUANT+COQ", 0, 5);
        
-       LED_SetValue(0, 1);
-       LED_SetValue(1, 1);
-       LED_SetValue(2, 0);
+//       LED_SetValue(0, 1);
+//       LED_SetValue(1, 1);
+//       LED_SetValue(2, 0);
        
        Mode_Oiseau = 4;
     }
@@ -280,9 +317,9 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("BRUANT+HUART", 0, 5);
        
-       LED_SetValue(0, 1);
-       LED_SetValue(1, 0);
-       LED_SetValue(2, 1);
+//       LED_SetValue(0, 1);
+//       LED_SetValue(1, 0);
+//       LED_SetValue(2, 1);
        
        Mode_Oiseau = 5;
     }
@@ -290,9 +327,9 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("HUART+COQ", 0, 5);
        
-       LED_SetValue(0, 0);
-       LED_SetValue(1, 1);
-       LED_SetValue(2, 1);
+//       LED_SetValue(0, 0);
+//       LED_SetValue(1, 1);
+//       LED_SetValue(2, 1);
        
        Mode_Oiseau = 6;
     }
@@ -300,11 +337,20 @@ void FCT_Mode_Fonctionnement()
     {
        LCD_WriteStringAtPos("BRU+COQ+HUA", 0, 5); 
        
-       LED_SetValue(0, 1);
-       LED_SetValue(1, 1);
-       LED_SetValue(2, 1);
+//       LED_SetValue(0, 1);
+//       LED_SetValue(1, 1);
+//       LED_SetValue(2, 1);
        
        Mode_Oiseau = 7;
+    }
+    
+    if(Mode_Oiseau == 0)
+    {
+        Mode_Manuel = 0;
+    }
+    else
+    {
+        Mode_Manuel = 1;
     }
     
     //Pour debug du mode oiseau dependant des switch allumer
@@ -433,7 +479,6 @@ void FCT_Lecture_Lumiere()
 int FCT_Sur100(int Valeur_Entree, int Valeur_Max)
 {
     return (Valeur_Entree*110/Valeur_Max);
-
 }
 
 int FCT_Comparer_Lumiere()

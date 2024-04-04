@@ -216,6 +216,7 @@ void Test_Comm();
 void ProjectTask();
 
 void initialize_timer_interrupt(void);
+void FCT_Lecture_Ethernet();
 void FCT_Mode_Fonctionnement();         //Mode sur LCD
 void FCT_Afficher_Threshold();          //Threshold sur LCD
 void FCT_Toute_Affichage_LCD();         //Clear et affichage des informations sur le LCD

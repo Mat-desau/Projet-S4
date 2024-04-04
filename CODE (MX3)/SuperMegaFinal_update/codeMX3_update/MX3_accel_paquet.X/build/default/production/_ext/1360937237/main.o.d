@@ -356,14 +356,14 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/system_config/default/framework/tcpip/tcpip_commands.h \
  ../src/system_config/default/framework/tcpip/tftps.h \
  ../src/system_config/default/framework/driver/ethmac/drv_ethmac.h \
- ../src/main.h \
+ ../src/main.h ../src/config.h \
  ../src/system_config/default/framework/driver/spi/src/dynamic/drv_spi_internal.h \
  ../src/system_config/default/framework/osal/osal.h \
  ../src/system_config/default/framework/osal/osal_definitions.h \
  ../src/system_config/default/framework/osal/osal_impl_basic.h \
  ../src/system_config/default/framework/driver/spi/src/drv_spi_sys_queue.h \
  ../src/system_config/default/framework/driver/spi/src/drv_spi_variant_mapping.h \
- ../src/UDP_app.h ../src/led.h ../src/config.h ../src/ssd.h ../src/lcd.h \
+ ../src/UDP_app.h ../src/led.h ../src/ssd.h ../src/lcd.h \
  ../src/app_commands.h ../src/swt.h ../src/../MX3_accel_paquet.X/adc.h \
  ../src/../MX3_accel_paquet.X/btn.h ../src/../MX3_accel_paquet.X/pmods.h \
  ../src/../MX3_accel_paquet.X/mot.h
@@ -1088,6 +1088,8 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/main.h:
 
+../src/config.h:
+
 ../src/system_config/default/framework/driver/spi/src/dynamic/drv_spi_internal.h:
 
 ../src/system_config/default/framework/osal/osal.h:
@@ -1103,8 +1105,6 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/UDP_app.h:
 
 ../src/led.h:
-
-../src/config.h:
 
 ../src/ssd.h:
 

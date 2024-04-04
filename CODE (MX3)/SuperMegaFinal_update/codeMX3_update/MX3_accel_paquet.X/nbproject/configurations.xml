@@ -12,7 +12,6 @@
           <itemPath>../src/i2c.h</itemPath>
           <itemPath>../src/lcd.h</itemPath>
           <itemPath>rgbled.h</itemPath>
-          <itemPath>adc.h</itemPath>
           <itemPath>btn.h</itemPath>
           <itemPath>mot.h</itemPath>
           <itemPath>pmods.h</itemPath>
@@ -193,12 +192,12 @@
         <itemPath>../src/config.h</itemPath>
         <itemPath>../src/main.h</itemPath>
       </logicalFolder>
+      <itemPath>adc.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
-      <itemPath>MyConfig.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -214,7 +213,6 @@
           <itemPath>../src/i2c.c</itemPath>
           <itemPath>../src/lcd.c</itemPath>
           <itemPath>../src/swt.c</itemPath>
-          <itemPath>adc.c</itemPath>
           <itemPath>btn.c</itemPath>
           <itemPath>mot.c</itemPath>
           <itemPath>pmods.c</itemPath>
@@ -363,6 +361,7 @@
         <itemPath>../src/UDP_app.c</itemPath>
         <itemPath>../src/main.c</itemPath>
       </logicalFolder>
+      <itemPath>adc.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
