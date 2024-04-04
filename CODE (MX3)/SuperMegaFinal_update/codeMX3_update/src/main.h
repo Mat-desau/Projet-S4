@@ -215,7 +215,6 @@ void Test_Comm();
 
 void ProjectTask();
 
-//void __ISR(_TIMER_5_VECTOR, IPL2AUTO) Timer5ISR(void);
 void initialize_timer_interrupt(void);
 void FCT_Mode_Fonctionnement();         //Mode sur LCD
 void FCT_Afficher_Threshold();          //Threshold sur LCD

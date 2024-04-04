@@ -64,7 +64,7 @@ void MAIN_Initialize ( void )
     PMODS_InitPin(1,2,1,0,1);           // initialisation du JB2 (RD11))
     MOT_Init(1);                        // Initialisation des motor et sortie pwm
 
-    //initialize_timer_interrupt();
+    initialize_timer_interrupt();
     
     macro_enable_interrupts();
 
@@ -137,8 +137,6 @@ int main(void) {
     return 0;
 }
 
-
-
 void Test_Comm()
 {
     Confirmation = true;
@@ -172,15 +170,15 @@ void ProjectTask()
     FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 0);
     //FCT_Gestion_Rideau(0, 0, 0);
 
-
+    
     if(Flag_750ms)                 
     {
-        FCT_Toute_Affichage_LCD();
+        FCT_Toute_Affichage_LCD(); 
         Flag_750ms = 0;
     } 
 }
 
-/*void __ISR(_TIMER_5_VECTOR, IPL2AUTO) Timer5ISR(void)
+void __ISR(_TIMER_2_VECTOR, IPL2AUTO) Timer2ISR(void)
 {
    count++;
    Flag_1m = 1;                     //Flag 1 ms
@@ -201,22 +199,28 @@ void ProjectTask()
        
        Flag_750ms = 1;                   //Flag 1 sec
    }
-   IFS0bits.T5IF = 0;               //clear interrupt flag
+   IFS0bits.T2IF = 0;               //clear interrupt flag
 }
 
-void initialize_timer_interrupt(void) {
-  T5CONbits.TCKPS = 3;                //    256 prescaler value
-  T5CONbits.TGATE = 0;                //    not gated input (the default)
-  T5CONbits.TCS = 0;                  //    PCBLK input (the default)
-  PR5 = (int)(((float)(TMR_TIME2 * PB_FRQ) / 256) + 0.5);   //set period register, generates one interrupt every 1 ms
-                                      //    48 kHz * 1 ms / 256 = 188
-  TMR5 = 0;                           //    initialize count to 0
-  IPC5bits.T5IP = 2;                  //    INT step 4: priority
-  IPC5bits.T5IS = 0;                  //    subpriority
-  IFS0bits.T5IF = 0;                  //    clear interrupt flag
-  IEC0bits.T5IE = 1;                  //    enable interrupt
-  T5CONbits.ON = 1;                   //    turn on Timer5
-}*/
+void initialize_timer_interrupt(void)
+{
+  //macro_disable_interrupts();          
+  //T4CONbits.ON = 0;                   //    turn off Timer1
+  PR2 = (int)(((float)(TMR_TIME2 * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
+  TMR2 = 0;                           //    initialize count to 0
+  //T4CONbits.ON = 1;                   //    turn on Timer1
+  T2CONbits.TCKPS = 7;                //    8
+  T2CONbits.TGATE = 0;                //    not gated input (the default)
+  T2CONbits.TCS = 0;                  //    PCBLK input (the default)
+  T2CONbits.T32 = 0;                   //    turn on Timer1
+  T2CONbits.ON = 1;                   //    turn on Timer1
+  IPC2bits.T2IP = 1;                  //    priority
+  IPC2bits.T2IS = 0;                  //    subpriority
+  IFS0bits.T2IF = 0;                  //    clear interrupt flag
+  IEC0bits.T2IE = 1;                  //    enable interrupt 
+  //macro_enable_interrupts();          //    enable interrupts at CPU */
+}
+
 
 void FCT_Mode_Fonctionnement() 
 {
