@@ -49,7 +49,8 @@ void ADC_Init()
 	AD1CON1	=	0; 
     AD1CON1bits.SSRC = 7;   // Internal counter ends sampling and starts conversion (auto convert)
     AD1CON1bits.FORM = 0;   // Integer 16-bit
-	// Setup for manual sampling
+	
+    // Setup for manual sampling
 	AD1CSSL	=	0;
 	AD1CON3	=	0x0002;     // ADC Conversion Clock Select bits: TAD = 6 TPB
 	AD1CON2	=	0;

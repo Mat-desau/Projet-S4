@@ -2,7 +2,6 @@
 #include "main.h"
 #include "system_config.h"
 #include "system/common/sys_module.h"   // SYS function prototypes
-#include "config.h"
 #include "driver/spi/src/dynamic/drv_spi_internal.h"
 #include "UDP_app.h"
 #include "led.h"
@@ -15,6 +14,7 @@
 #include "../MX3_accel_paquet.X/btn.h"
 #include "../MX3_accel_paquet.X/pmods.h"
 #include "../MX3_accel_paquet.X/mot.h"
+#include "config.h"
 
 MAIN_DATA mainData;
 
@@ -40,6 +40,8 @@ int Mode_Manuel = 0;
 int EtapeRideau = 0;
 int OuvrirRideau = 0;
 int FermerRideau = 0;
+
+unsigned int test = 0;
 
 #define BAUD_RATE 9600
 #define TMR_TIME2    0.001               // x us for each tick
@@ -165,7 +167,7 @@ void ProjectTask()
     } 
 }
 
-void __ISR(_TIMER_3_VECTOR, IPL2AUTO) Timer3ISR(void)
+void __ISR(_TIMER_2_VECTOR, IPL2AUTO) Timer2ISR(void)
 {
    count++;
    Flag_1m = 1;                     //Flag 1 ms
@@ -186,26 +188,26 @@ void __ISR(_TIMER_3_VECTOR, IPL2AUTO) Timer3ISR(void)
        
        Flag_750ms = 1;                   //Flag 1 sec
    }
-   IFS0bits.T3IF = 0;               //clear interrupt flag
+   IFS0bits.T2IF = 0;               //clear interrupt flag
 }
 
 void initialize_timer_interrupt(void)
 {
   //macro_disable_interrupts();          
   //T4CONbits.ON = 0;                   //    turn off Timer1
-  PR3 = (int)(((float)(TMR_TIME2 * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
-  TMR3 = 0;                           //    initialize count to 0
+  PR2 = (int)(((float)(TMR_TIME2 * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
+  TMR2 = 0;                           //    initialize count to 0
   
   //T4CONbits.ON = 1;                   //    turn on Timer1
-  T3CONbits.TCKPS = 7;                //    256
-  T3CONbits.TGATE = 0;                //    not gated input (the default)
-  T3CONbits.TCS = 0;                  //    PCBLK input (the default)
-//  T3CONbits.T32 = 0;                   //    turn on Timer1
-  T3CONbits.ON = 1;                   //    turn on Timer1
-  IPC3bits.T3IP = 1;                  //    priority
-  IPC3bits.T3IS = 0;                  //    subpriority
-  IFS0bits.T3IF = 0;                  //    clear interrupt flag
-  IEC0bits.T3IE = 1;                  //    enable interrupt 
+  T2CONbits.TCKPS = 7;                //    256
+  T2CONbits.TGATE = 0;                //    not gated input (the default)
+  T2CONbits.TCS = 0;                  //    PCBLK input (the default)
+  T2CONbits.T32 = 0;                   //    turn on Timer1
+  T2CONbits.ON = 1;                   //    turn on Timer1
+  IPC2bits.T2IP = 1;                  //    priority
+  IPC2bits.T2IS = 0;                  //    subpriority
+  IFS0bits.T2IF = 0;                  //    clear interrupt flag
+  IEC0bits.T2IE = 1;                  //    enable interrupt 
   //macro_enable_interrupts();          //    enable interrupts at CPU */
 }
 
@@ -485,15 +487,15 @@ int FCT_Comparer_Lumiere()
 {
     if(Valeur_Lumiere >= Valeur_Threshold)
     {
-        LED_SetValue(5, 0);
-        LED_SetValue(6, 1);
+        LED_SetValue(4, 0);
+        LED_SetValue(5, 1);
         FCT_Compteur_5Minutes(0);               //Active compteur Si lumiere plus grand que threshold
     }
     else if (Valeur_Lumiere < Valeur_Threshold)
     {
+        LED_SetValue(4, 1);
         LED_SetValue(5, 1);
         LED_SetValue(6, 0);
-        LED_SetValue(7, 0);
         FCT_Compteur_5Minutes(1);                //Desactive le compteur si Lumiere plus petit que threshold
     }
     
@@ -501,7 +503,9 @@ int FCT_Comparer_Lumiere()
     {
         if(Valeur_Lumiere <= Valeur_Threshold)  //ENCORE NOIR
         {
-            LED_SetValue(7, 1);
+            
+            LED_SetValue(5, 0);
+            LED_SetValue(6, 1);
             return 1; 
         }
     }  
