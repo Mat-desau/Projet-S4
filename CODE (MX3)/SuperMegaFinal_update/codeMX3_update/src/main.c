@@ -61,6 +61,7 @@ void MAIN_Initialize ( void )
     BTN_Init();
     LED_Init();
     ADC_Init();
+    PMODS_InitPin(1,9,1,0,0);           // initialisation du JB9
     PMODS_InitPin(1,1,1,0,1);           // initialisation du JB1 (RD9))
     PMODS_InitPin(1,2,1,0,1);           // initialisation du JB2 (RD11))
     MOT_Init(1);                        // Initialisation des motor et sortie pwm
@@ -193,15 +194,17 @@ void __ISR(_TIMER_2_VECTOR, IPL2AUTO) Timer2ISR(void)
 
 void initialize_timer_interrupt(void)
 {
+  T2CONbits.TCKPS = 7;                //    256
+  T2CONbits.TGATE = 0;                //    not gated input (the default)
+  T2CONbits.TCS = 0;                  //    PCBLK input (the default)
+  
   //macro_disable_interrupts();          
   //T4CONbits.ON = 0;                   //    turn off Timer1
   PR2 = (int)(((float)(TMR_TIME2 * PB_FRQ) / 256) + 0.5); //set period register, generates one interrupt every 3 ms
   TMR2 = 0;                           //    initialize count to 0
   
   //T4CONbits.ON = 1;                   //    turn on Timer1
-  T2CONbits.TCKPS = 7;                //    256
-  T2CONbits.TGATE = 0;                //    not gated input (the default)
-  T2CONbits.TCS = 0;                  //    PCBLK input (the default)
+  
   T2CONbits.T32 = 0;                   //    turn on Timer1
   T2CONbits.ON = 1;                   //    turn on Timer1
   IPC2bits.T2IP = 1;                  //    priority

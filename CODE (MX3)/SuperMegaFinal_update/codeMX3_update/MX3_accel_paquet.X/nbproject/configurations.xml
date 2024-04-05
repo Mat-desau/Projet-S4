@@ -15,6 +15,7 @@
           <itemPath>btn.h</itemPath>
           <itemPath>mot.h</itemPath>
           <itemPath>pmods.h</itemPath>
+          <itemPath>adc.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
@@ -192,7 +193,6 @@
         <itemPath>../src/config.h</itemPath>
         <itemPath>../src/main.h</itemPath>
       </logicalFolder>
-      <itemPath>adc.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -216,6 +216,7 @@
           <itemPath>btn.c</itemPath>
           <itemPath>mot.c</itemPath>
           <itemPath>pmods.c</itemPath>
+          <itemPath>adc.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
           <logicalFolder name="f1" displayName="default" projectFiles="true">
@@ -361,7 +362,6 @@
         <itemPath>../src/UDP_app.c</itemPath>
         <itemPath>../src/main.c</itemPath>
       </logicalFolder>
-      <itemPath>adc.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

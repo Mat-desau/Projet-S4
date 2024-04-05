@@ -188,7 +188,7 @@ void PMODS_InitPin(unsigned char bPmod, unsigned char bPos, unsigned char bDir, 
                 break;
                 case 9: 
                 // JB9
-                    ansel_PMODS_JB9 = 0;    // set pis as digital
+                    ansel_PMODS_JB9 = 1;    // set pis as digital
                     rp_PMODS_JB9 = 0;   // default pin function (no remapable)
                     tris_PMODS_JB9 = bDir;
                     cnpu_PMODS_JB9 = pullup;        

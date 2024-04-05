@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jun 21 18:04:59 2022
+# Process ID: 23720
+# Current directory: C:/Users/Alexi/OneDrive/S4/APP4/S4e_Depart_etud/S4e_Depart.runs/main_design_ilmb_bram_if_cntlr_0_synth_1
+# Command line: vivado.exe -log main_design_ilmb_bram_if_cntlr_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_ilmb_bram_if_cntlr_0.tcl
+# Log file: C:/Users/Alexi/OneDrive/S4/APP4/S4e_Depart_etud/S4e_Depart.runs/main_design_ilmb_bram_if_cntlr_0_synth_1/main_design_ilmb_bram_if_cntlr_0.vds
+# Journal file: C:/Users/Alexi/OneDrive/S4/APP4/S4e_Depart_etud/S4e_Depart.runs/main_design_ilmb_bram_if_cntlr_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source main_design_ilmb_bram_if_cntlr_0.tcl -notrace

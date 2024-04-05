@@ -55,6 +55,7 @@ void ADC_Init()
 	AD1CON3	=	0x0002;     // ADC Conversion Clock Select bits: TAD = 6 TPB
 	AD1CON2	=	0;
     AD1CON2bits.VCFG = 0;   // Voltage Reference Configuration bits: VREFH = AVDD and VREFL = AVSS
+    
 	// Turn on ADC
     AD1CON1bits.ON = 1;
 } 
