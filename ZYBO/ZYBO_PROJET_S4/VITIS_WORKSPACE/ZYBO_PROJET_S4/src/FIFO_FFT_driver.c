@@ -16,8 +16,8 @@ volatile int Done;
 volatile int Error;
 
 extern u32 Received;
-short ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE];
-int BufferMain[MAX_DATA_BUFFER_SIZE];
+//short ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE];
+//int BufferMain[MAX_DATA_BUFFER_SIZE];
 
 
 XLlFifo FifoInstance, FifoInstance2;
@@ -255,11 +255,11 @@ void FifoRecvHandler(XLlFifo *InstancePtr)
 
 		short max,imax = 1;
 		for (i=0; i < ReceiveLength; i++) {
-			ReceiveTempBuffer[i] = XLlFifo_RxGetWord(InstancePtr) & 0x0000FFFF;
+			short re = XLlFifo_RxGetWord(InstancePtr) & 0x0000FFFF;
 			//ReceiveTempBuffer[i] = (ReceiveTempBuffer[i] << 16) >> 16;
-			if(abs(ReceiveTempBuffer[i]) > max){
+			if(abs(re) > max){
 				imax = i;
-				max = abs(ReceiveTempBuffer[i]);
+				max = abs(re);
 
 			}
 

@@ -1256,6 +1256,27 @@
 						"WVALID": { "actual": "s_axi_wvalid[1:1]"}
 					}
 				},
+				"/monoAudio_0/M_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "M_AXIS_DATA"},
+						"TREADY": { "actual": "M_READY"},
+						"TVALID": { "actual": "M_VALID"}
+					}
+				},
+				"/monoAudio_0/S_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "S_AXIS_DATA"},
+						"TID": { "actual": "s_axis_aud_tid"},
+						"TREADY": { "actual": "S_READY"},
+						"TVALID": { "actual": "S_VALID"}
+					}
+				},
 				"/xfft_0/M_AXIS_DATA": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {

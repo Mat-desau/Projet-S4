@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="simul_mono_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="simul_mono" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="687160fs"></ZoomStartTime>
+      <ZoomEndTime time="2575161fs"></ZoomEndTime>
+      <Cursor1Time time="1840000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="256"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wave_markers>
+      <marker time="920000" label="" />
+      <marker time="700000" label="" />
+      <marker time="220000" label="" />
+      <marker time="1840000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/M_AXIS_DATA" type="array">
+      <obj_property name="ElementShortName">M_AXIS_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/S_AXIS_DATA" type="array">
+      <obj_property name="ElementShortName">S_AXIS_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/S_READY" type="logic">
+      <obj_property name="ElementShortName">S_READY</obj_property>
+      <obj_property name="ObjectShortName">S_READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/M_READY" type="logic">
+      <obj_property name="ElementShortName">M_READY</obj_property>
+      <obj_property name="ObjectShortName">M_READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/S_VALID" type="logic">
+      <obj_property name="ElementShortName">S_VALID</obj_property>
+      <obj_property name="ObjectShortName">S_VALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/M_VALID" type="logic">
+      <obj_property name="ElementShortName">M_VALID</obj_property>
+      <obj_property name="ObjectShortName">M_VALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/aresetn" type="logic">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/s_axis_aud_tid" type="array">
+      <obj_property name="ElementShortName">s_axis_aud_tid[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_aud_tid[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/d_s_ready" type="logic">
+      <obj_property name="ElementShortName">d_s_ready</obj_property>
+      <obj_property name="ObjectShortName">d_s_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/d_m_valid" type="logic">
+      <obj_property name="ElementShortName">d_m_valid</obj_property>
+      <obj_property name="ObjectShortName">d_m_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/d_etat" type="logic">
+      <obj_property name="ElementShortName">d_etat</obj_property>
+      <obj_property name="ObjectShortName">d_etat</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/d_canal_est_gauche" type="logic">
+      <obj_property name="ElementShortName">d_canal_est_gauche</obj_property>
+      <obj_property name="ObjectShortName">d_canal_est_gauche</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simul_mono/inst_MonoAudio/d_first_pass_x1" type="logic">
+      <obj_property name="ElementShortName">d_first_pass_x1</obj_property>
+      <obj_property name="ObjectShortName">d_first_pass_x1</obj_property>
+   </wvobject>
+</wave_config>

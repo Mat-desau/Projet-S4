@@ -1,4 +1,4 @@
-20:58:06 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
+10:17:50 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
 make all 
 'Building file: ../src/FIFO_FFT_driver.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -13,6 +13,19 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/FIFO_FFT_driver.o" -IC:/Users
       |      ^~~~~~
 'Finished building: ../src/FIFO_FFT_driver.c'
 ' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/initCodec.h:4,
+                 from ../src/main.c:5:
+C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xbasic_types.h:98:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+   98 | #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+      |  ^~~~~~~
+C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xbasic_types.h:99:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+   99 | #warning  Please refer the Standalone BSP UG647 for further details
+      |  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
 'Building target: ZYBO_PROJET_S4.elf'
 'Invoking: MicroBlaze gcc linker'
 mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/FIFO_FFT_driver.o ./src/fft.o ./src/gestionAudio.o ./src/initCodec.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -21,9 +34,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZY
 'Invoking: MicroBlaze Print Size'
 mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  15740	    416	   9724	  25880	   6518	ZYBO_PROJET_S4.elf
+  15684	    416	   3580	  19680	   4ce0	ZYBO_PROJET_S4.elf
 'Finished building: ZYBO_PROJET_S4.elf.size'
 ' '
 
-20:58:06 Build Finished (took 477ms)
+10:17:51 Build Finished (took 1s.419ms)
 
