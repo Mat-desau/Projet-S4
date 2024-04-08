@@ -566,7 +566,7 @@
 #define XPAR_I2S_RECEIVER_0_DWIDTH 24
 #define XPAR_I2S_RECEIVER_0_IS_MASTER 1
 #define XPAR_I2S_RECEIVER_0_NUM_CHANNELS 1
-#define XPAR_I2S_RECEIVER_0_32BIT_LR 0
+#define XPAR_I2S_RECEIVER_0_32BIT_LR 1
 
 
 /******************************************************************/
@@ -578,7 +578,7 @@
 #define XPAR_XI2SRX_0_DWIDTH 24
 #define XPAR_XI2SRX_0_IS_MASTER 1
 #define XPAR_XI2SRX_0_NUM_CHANNELS 1
-#define XPAR_XI2SRX_0_32BIT_LR 0
+#define XPAR_XI2SRX_0_32BIT_LR 1
 
 
 /******************************************************************/
@@ -593,7 +593,7 @@
 #define XPAR_I2S_TRANSMITTER_0_DWIDTH 24
 #define XPAR_I2S_TRANSMITTER_0_IS_MASTER 0
 #define XPAR_I2S_TRANSMITTER_0_NUM_CHANNELS 1
-#define XPAR_I2S_TRANSMITTER_0_32BIT_LR 0
+#define XPAR_I2S_TRANSMITTER_0_32BIT_LR 1
 
 
 /******************************************************************/
@@ -605,7 +605,7 @@
 #define XPAR_XI2STX_0_DWIDTH 24
 #define XPAR_XI2STX_0_IS_MASTER 0
 #define XPAR_XI2STX_0_NUM_CHANNELS 1
-#define XPAR_XI2STX_0_32BIT_LR 0
+#define XPAR_XI2STX_0_32BIT_LR 1
 
 
 /******************************************************************/
@@ -661,6 +661,8 @@
 #define XPAR_MICROBLAZE_0_AXI_INTC_TYPE 0U
 #define XPAR_AXI_FIFO_MM_S_1_INTERRUPT_MASK 0X000001U
 #define XPAR_MICROBLAZE_0_AXI_INTC_AXI_FIFO_MM_S_1_INTERRUPT_INTR 0U
+#define XPAR_SYSTEM_INT_NIC100_MASK 0X000002U
+#define XPAR_MICROBLAZE_0_AXI_INTC_SYSTEM_INT_NIC100_INTR 1U
 
 /******************************************************************/
 
@@ -676,6 +678,7 @@
 #define XPAR_INTC_0_ADDR_WIDTH 32U
 #define XPAR_INTC_0_INTC_TYPE 0U
 
+#define XPAR_INTC_0_LLFIFO_1_VEC_ID XPAR_MICROBLAZE_0_AXI_INTC_AXI_FIFO_MM_S_1_INTERRUPT_INTR
 
 /******************************************************************/
 
@@ -715,6 +718,44 @@
 #define XPAR_AXI_FIFO_1_AXI4_BASEADDR 0U
 #define XPAR_AXI_FIFO_1_AXI4_HIGHADDR 0U
 #define XPAR_AXI_FIFO_1_DATA_INTERFACE_TYPE 0U
+
+
+
+/******************************************************************/
+
+/* Definitions for driver SPI */
+#define XPAR_XSPI_NUM_INSTANCES 1U
+
+/* Definitions for peripheral AXI_QUAD_SPI_0 */
+#define XPAR_AXI_QUAD_SPI_0_DEVICE_ID 0U
+#define XPAR_AXI_QUAD_SPI_0_BASEADDR 0x44A40000U
+#define XPAR_AXI_QUAD_SPI_0_HIGHADDR 0x44A4FFFFU
+#define XPAR_AXI_QUAD_SPI_0_FIFO_EXIST 0U
+#define XPAR_AXI_QUAD_SPI_0_FIFO_DEPTH 0U
+#define XPAR_AXI_QUAD_SPI_0_SPI_SLAVE_ONLY 0U
+#define XPAR_AXI_QUAD_SPI_0_NUM_SS_BITS 1U
+#define XPAR_AXI_QUAD_SPI_0_NUM_TRANSFER_BITS 8U
+#define XPAR_AXI_QUAD_SPI_0_SPI_MODE 0U
+#define XPAR_AXI_QUAD_SPI_0_TYPE_OF_AXI4_INTERFACE 1U
+#define XPAR_AXI_QUAD_SPI_0_AXI4_BASEADDR 0x44A40000U
+#define XPAR_AXI_QUAD_SPI_0_AXI4_HIGHADDR 0x44A4FFFFU
+#define XPAR_AXI_QUAD_SPI_0_XIP_MODE 0U
+
+/* Canonical definitions for peripheral AXI_QUAD_SPI_0 */
+#define XPAR_SPI_0_DEVICE_ID 0U
+#define XPAR_SPI_0_BASEADDR 0x44A40000U
+#define XPAR_SPI_0_HIGHADDR 0x44A4FFFFU
+#define XPAR_SPI_0_FIFO_EXIST 0U
+#define XPAR_SPI_0_FIFO_DEPTH 0U
+#define XPAR_SPI_0_SPI_SLAVE_ONLY 0U
+#define XPAR_SPI_0_NUM_SS_BITS 1U
+#define XPAR_SPI_0_NUM_TRANSFER_BITS 8U
+#define XPAR_SPI_0_SPI_MODE 0U
+#define XPAR_SPI_0_TYPE_OF_AXI4_INTERFACE 1U
+#define XPAR_SPI_0_AXI4_BASEADDR 0x44A40000U
+#define XPAR_SPI_0_AXI4_HIGHADDR 0x44A4FFFFU
+#define XPAR_SPI_0_XIP_MODE 0U
+#define XPAR_SPI_0_USE_STARTUP 0U
 
 
 

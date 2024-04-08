@@ -235,6 +235,21 @@
   "../../../bd/design_1/ip/design_1_monoAudio_0_0/sim/design_1_monoAudio_0_0.vhd" \
   "../../../bd/design_1/sim/design_1.vhd" \
 -endlib
+-makelib ies_lib/axi_protocol_converter_v2_1_22 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+-endlib
+-makelib ies_lib/dist_mem_gen_v8_0_13 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/0bf5/simulation/dist_mem_gen_v8_0.v" \
+-endlib
+-makelib ies_lib/axi_quad_spi_v3_2_21 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_axi_quad_spi_0_0/sim/design_1_axi_quad_spi_0_0.vhd" \
+-endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v
 -endlib

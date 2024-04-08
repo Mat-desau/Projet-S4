@@ -27,3 +27,13 @@ set_property src_info {type:XDC file:1 line:143 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33     } [get_ports { uart_txd }];  	## i.e rxd on Pmod UART side
 set_property src_info {type:XDC file:1 line:144 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33     } [get_ports { uart_rxd }];      ## i.e txd on Pmod UART side
+set_property src_info {type:XDC file:1 line:182 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { Pmod_NIC100_ss_io[0] }]; #IO_L4P_T0_34 Sch=je[1]
+set_property src_info {type:XDC file:1 line:183 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { Pmod_NIC100_io0_io }]; #IO_L18N_T2_34 Sch=je[2]
+set_property src_info {type:XDC file:1 line:184 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { Pmod_NIC100_io1_io }]; #IO_25_35 Sch=je[3]
+set_property src_info {type:XDC file:1 line:185 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { Pmod_NIC100_sck_io }]; #IO_L19P_T3_35 Sch=je[4]
+set_property src_info {type:XDC file:1 line:186 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V13   IOSTANDARD LVCMOS33 } [get_ports { INT_NIC100[0] }]; #IO_L3N_T0_DQS_34 Sch=je[7]
