@@ -18,7 +18,7 @@
 
 MAIN_DATA mainData;
 
-int Varible5minutes = 10;               //Nombre de 750ms (400 pour avoir 5 minutes)(10 pour avoir 15 secondes)
+int Varible5minutes = 5;               //Nombre de 750ms (400 pour avoir 5 minutes)(10 pour avoir 15 secondes)
 
 int Test_Threshold_LED = 0;
 
@@ -42,6 +42,8 @@ int Mode_Manuel = 0;
 int EtapeRideau = 0;
 int OuvrirRideau = 0;
 int FermerRideau = 0;
+int Entree = 0;
+int Hauteur = 0;        //0 h en haut 1 = en bas
 
 unsigned int test = 0;
 
@@ -225,9 +227,10 @@ void FCT_Lecture_Ethernet()
         LED_SetValue(2,0);
         Confirmation = true;
         
-        if(Mode_Oiseau == 1 || Mode_Oiseau == 4 || Mode_Oiseau == 5 || Mode_Oiseau == 7)
+        if((Mode_Oiseau == 1 || Mode_Oiseau == 4 || Mode_Oiseau == 5 || Mode_Oiseau == 7) && !Mode_Lumiere && Hauteur)
         {
-            FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 1);
+            FCT_Gestion_Rideau(Mode_Manuel, 0, !Mode_Lumiere);
+            Entree = 1;
         }
     }
     else if(Type_Oiseau == 2)
@@ -237,9 +240,10 @@ void FCT_Lecture_Ethernet()
         LED_SetValue(2,0);
         Confirmation = true;
         
-        if(Mode_Oiseau == 2 || Mode_Oiseau == 4 || Mode_Oiseau == 6 || Mode_Oiseau == 7)
+        if((Mode_Oiseau == 2 || Mode_Oiseau == 4 || Mode_Oiseau == 6 || Mode_Oiseau == 7) && !Mode_Lumiere && Hauteur)
         {
-            FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 1);
+            FCT_Gestion_Rideau(Mode_Manuel, 0, !Mode_Lumiere);
+            Entree = 1;
         }
     } 
     else if(Type_Oiseau == 3)
@@ -249,9 +253,10 @@ void FCT_Lecture_Ethernet()
         LED_SetValue(2,1);
         Confirmation = true;
         
-        if(Mode_Oiseau == 3 || Mode_Oiseau == 5 || Mode_Oiseau == 6 || Mode_Oiseau == 7)
+        if((Mode_Oiseau == 3 || Mode_Oiseau == 5 || Mode_Oiseau == 6 || Mode_Oiseau == 7) && !Mode_Lumiere && Hauteur)
         {
-            FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 1);
+            FCT_Gestion_Rideau(Mode_Manuel, 0, !Mode_Lumiere);
+            Entree = 1;
         }
     } 
     else
@@ -261,7 +266,22 @@ void FCT_Lecture_Ethernet()
         LED_SetValue(2,0);
         Confirmation = true;
         
-        FCT_Gestion_Rideau(Mode_Manuel, 0, 0);
+        if(Mode_Manuel == 0)
+        {
+            FCT_Gestion_Rideau(Mode_Manuel, 0, 0);
+        }
+        else
+        {
+            if(Hauteur == 0)
+            {
+                FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 0);
+            }
+        }
+        
+        if(Entree && Hauteur)
+        {
+            FCT_Gestion_Rideau(Mode_Manuel, 0, !Mode_Lumiere);
+        }
     } 
 }
 
@@ -537,6 +557,8 @@ int FCT_Ouvrir_Rideau()
     else
     {
         MOT_SetPhEnMotor2(BwMot, 0);
+        Hauteur = 0;
+        Entree = 0;
         //LCD_WriteStringAtPos("OUVRIR2", 1, 4);
         OuvrirRideau = 0;
         return 1;
@@ -555,6 +577,7 @@ int FCT_Fermer_Rideau()
     else
     {
         MOT_SetPhEnMotor2(FwMot, 0);
+        Hauteur = 1;
         //LCD_WriteStringAtPos("FERMER2", 1, 4);
         FermerRideau = 0;
         return 1;
@@ -622,7 +645,7 @@ void FCT_Mode_Auto_Mot(int fermer, int ouvrir){
     return;
 }
 
-void FCT_Gestion_Rideau(int mode, int fermer, int ouvrir)
+int FCT_Gestion_Rideau(int mode, int fermer, int ouvrir)
 {
     //Seule Fonction a appeler
     // mode sert a mettre en manuel si 0 et auto si 1
@@ -632,17 +655,20 @@ void FCT_Gestion_Rideau(int mode, int fermer, int ouvrir)
         case 0:
         // code block
           FCT_Mode_Manuel_Mot();
+          return 0;
         break;
       case 1:
         // code block
          FCT_Mode_Auto_Mot(fermer, ouvrir);
+         return 1;
         break;
       default:
         // code block
           FCT_Mode_Manuel_Mot();
+          return 0;
     }
 
-    return;
+    return 0;
 }
 /*******************************************************************************
  End of File

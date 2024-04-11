@@ -231,7 +231,7 @@ int FCT_Ouvrir_Rideau();
 int FCT_Fermer_Rideau();
 void FCT_Mode_Manuel_Mot();
 void FCT_Mode_Auto_Mot(int fermer, int ouvrir);
-void FCT_Gestion_Rideau(int mode, int fermer, int ouvrir);
+int FCT_Gestion_Rideau(int mode, int fermer, int ouvrir);
 
 #endif /* _MAIN_H */
 
