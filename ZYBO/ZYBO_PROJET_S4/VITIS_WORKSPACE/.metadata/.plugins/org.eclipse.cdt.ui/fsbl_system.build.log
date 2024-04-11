@@ -1,0 +1,10 @@
+21:59:39 **** Build of configuration Debug for project fsbl_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 51412 C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/fsbl_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/fsbl_system/Debug/system.bif --bitstream C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/fsbl/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/fsbl/Debug/fsbl.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/fsbl/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/fsbl_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+21:59:44 Build Finished (took 5s.183ms)
+

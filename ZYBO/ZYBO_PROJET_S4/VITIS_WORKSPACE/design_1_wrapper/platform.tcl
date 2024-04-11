@@ -116,3 +116,30 @@ platform generate -domains
 platform active {design_1_wrapper}
 platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
 platform generate -domains 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+bsp reload
+platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+platform generate
+platform clean
+platform generate
+platform generate -domains standalone_microblaze_0 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 
+platform active {design_1_wrapper}
+domain create -name {standalone_ps7_cortexa9_0} -display-name {standalone_ps7_cortexa9_0} -os {standalone} -proc {ps7_cortexa9_0} -runtime {cpp} -arch {32-bit} -support-app {zynq_fsbl}
+platform generate -domains 
+platform write
+domain active {zynq_fsbl}
+domain active {standalone_microblaze_0}
+domain active {standalone_ps7_cortexa9_0}
+platform generate -quick
+platform generate -domains standalone_ps7_cortexa9_0 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/design_1_wrapper.xsa}
+platform generate -domains 

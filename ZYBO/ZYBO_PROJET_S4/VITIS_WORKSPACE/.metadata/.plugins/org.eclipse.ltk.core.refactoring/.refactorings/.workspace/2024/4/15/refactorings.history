@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;ZYBO_PROJET_S4/src/cyclone_tcp/std_services&apos;" deleteContents="false" description="Delete resource &apos;ZYBO_PROJET_S4/src/cyclone_tcp/std_services&apos;" element1="/ZYBO_PROJET_S4/src/cyclone_tcp/std_services" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1712627835452"/>
+</session>

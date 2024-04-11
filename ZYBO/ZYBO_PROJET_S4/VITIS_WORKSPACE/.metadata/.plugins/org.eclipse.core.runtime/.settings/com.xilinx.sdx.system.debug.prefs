@@ -1,0 +1,13 @@
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.bss=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.data=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.rodata=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.sbss=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.sbss2=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.sdata=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.sdata2=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:.text=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:heap=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:heap-size=268435456
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:stack=ps7_ddr_0_HP0_AXI_BASENAME
+com.xilinx.sdk.linkgen.prefs.ZYBO_PROJET_S4\:stack-size=1048576
+eclipse.preferences.version=1

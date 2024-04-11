@@ -1,42 +1,21 @@
-10:17:50 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
+01:05:11 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
 make all 
-'Building file: ../src/FIFO_FFT_driver.c'
+'Building file: ../src/common/os_port_none.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/FIFO_FFT_driver.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/FIFO_FFT_driver.d" -MT"src/FIFO_FFT_driver.o" -o "src/FIFO_FFT_driver.o" "../src/FIFO_FFT_driver.c"
-../src/FIFO_FFT_driver.c: In function 'SetupInterruptSystem':
-../src/FIFO_FFT_driver.c:44:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
-   44 |  int Status;
-      |      ^~~~~~
-../src/FIFO_FFT_driver.c: In function 'FifoRecvHandler':
-../src/FIFO_FFT_driver.c:247:6: warning: unused variable 'RxWord' [-Wunused-variable]
-  247 |  u32 RxWord;
-      |      ^~~~~~
-'Finished building: ../src/FIFO_FFT_driver.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/initCodec.h:4,
-                 from ../src/main.c:5:
-C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xbasic_types.h:98:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
-   98 | #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-      |  ^~~~~~~
-C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xbasic_types.h:99:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
-   99 | #warning  Please refer the Standalone BSP UG647 for further details
-      |  ^~~~~~~
-'Finished building: ../src/main.c'
+mb-gcc -Wall -O0 -g3 -I"C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4\src\common" -I"C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4\src" -I"C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4\src\cyclone_tcp" -c -fmessage-length=0 -MT"src/common/os_port_none.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/common/os_port_none.d" -MT"src/common/os_port_none.o" -o "src/common/os_port_none.o" "../src/common/os_port_none.c"
+'Finished building: ../src/common/os_port_none.c'
 ' '
 'Building target: ZYBO_PROJET_S4.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/FIFO_FFT_driver.o ./src/fft.o ./src/gestionAudio.o ./src/initCodec.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/cyclone_tcp/std_services/echo.o  ./src/cyclone_tcp/ipv4/arp.o ./src/cyclone_tcp/ipv4/ipv4.o  ./src/cyclone_tcp/drivers/eth/enc624j600_driver.o  ./src/cyclone_tcp/core/ethernet.o ./src/cyclone_tcp/core/ip.o ./src/cyclone_tcp/core/net.o ./src/cyclone_tcp/core/net_mem.o ./src/cyclone_tcp/core/nic.o ./src/cyclone_tcp/core/socket.o ./src/cyclone_tcp/core/udp.o  ./src/cyclone_tcp/ext_int_driver.o ./src/cyclone_tcp/spi_driver.o  ./src/common/cpu_endian.o ./src/common/date_time.o ./src/common/os_port_none.o  ./src/FIFO_FFT_driver.o ./src/comm.o ./src/fft.o ./src/gestionAudio.o ./src/initCodec.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: ZYBO_PROJET_S4.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  15684	    416	   3580	  19680	   4ce0	ZYBO_PROJET_S4.elf
+ 122720	   1828	269486612	269611160	1011f098	ZYBO_PROJET_S4.elf
 'Finished building: ZYBO_PROJET_S4.elf.size'
 ' '
 
-10:17:51 Build Finished (took 1s.419ms)
+01:05:11 Build Finished (took 540ms)
 

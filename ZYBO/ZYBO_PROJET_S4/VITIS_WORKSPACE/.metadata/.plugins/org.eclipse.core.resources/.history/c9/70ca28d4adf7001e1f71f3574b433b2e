@@ -1,0 +1,11 @@
+#ifndef COMM_H_
+#define COMM_H_
+
+
+void initComm();
+void transmettreOiseau(char oiseau);
+
+
+extern Socket *socket;
+
+#endif

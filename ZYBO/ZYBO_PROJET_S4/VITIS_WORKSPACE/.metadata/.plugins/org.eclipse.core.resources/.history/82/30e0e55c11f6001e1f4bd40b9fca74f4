@@ -1,0 +1,44 @@
+#include "comm.h"
+
+
+
+EchoServiceContext context;
+error_t error;
+   size_t length;
+   uint16_t port = 8888;
+   IpAddr ipAddr = 192.168.1.101;
+
+
+
+void initComm(){
+
+
+
+	   //Allocate a memory block to hold the context
+	   if(context.socket) socketClose(context.socket);
+
+	   context.socket = socketOpen(SOCKET_TYPE_DGRAM, SOCKET_IP_PROTO_UDP);
+
+	      //Failed to open socket?
+	      if(context.socket == NULL)
+	      {
+	         xil_printf("ERROR_OPEN_FAILED \n\r");
+	         //Exit immediately
+	         break;
+	      }
+
+	      //The server listens for incoming datagrams on port 8080
+	      //socketBind(context.socket, &IP_ADDR_ANY, 8080);
+
+
+
+}
+
+
+void transmettreOiseau(char oiseau){
+
+
+	socketSendTo(context.socket, &ipAddr, port, "a", 1, NULL, 0);
+
+
+}

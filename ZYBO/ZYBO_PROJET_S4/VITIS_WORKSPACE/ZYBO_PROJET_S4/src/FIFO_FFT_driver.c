@@ -1,6 +1,5 @@
 /***************************** Include Files *********************************/
 #include "FIFO_FFT_driver.h"
-#include "uart.h"
 #include <stdio.h>
 #include "sleep.h"
 #include <stdlib.h>
@@ -14,7 +13,7 @@
  */
 volatile int Done;
 volatile int Error;
-
+char flagDonnesOiseau = 0;
 extern u32 Received;
 //short ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE];
 //int BufferMain[MAX_DATA_BUFFER_SIZE];
@@ -33,41 +32,9 @@ XLlFifo FifoInstance, FifoInstance2;
 XIntc InterruptController; /* Instance of the Interrupt Controller */
 char flagDonnes = 0;
 
-void AXIS_InterruptHandler(void *CallbackRef)
-{
-	//xil_printf("In interrupt\n\r");
-	FifoHandler(&FifoInstance);
-}
 
-int SetupInterruptSystem()
-{
-	int Status;
 
-	Status = XIntc_Initialize(&InterruptController, XPAR_INTC_0_DEVICE_ID);
 
-	/*
-	 * Connect a device driver handler that will be called when an interrupt
-	 * for the device occurs, the device driver handler performs the
-	 * specific interrupt processing for the device.
-	 */
-	Status = XIntc_Connect(&InterruptController, 0x00,
-			   (XInterruptHandler)AXIS_InterruptHandler,
-			   (void *)0);
-
-	Status = XIntc_Start(&InterruptController, XIN_REAL_MODE);
-
-	XIntc_Enable(&InterruptController, 0x00);
-
-	Xil_ExceptionInit();
-
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-				(Xil_ExceptionHandler)XIntc_InterruptHandler,
-				&InterruptController);
-
-	Xil_ExceptionEnable();
-
-	return XST_SUCCESS;
-}
 
 int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId){
 
@@ -130,23 +97,23 @@ int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId){
 *		-XST_FAILURE to indicate failure
 *
 ******************************************************************************/
-int XLlFifoSendData(XLlFifo *InstancePtr, u16 DeviceId, u32* DataBuffer)
+/*int XLlFifoSendData(XLlFifo *InstancePtr, u16 DeviceId, u32* DataBuffer)
 {
 	int Status;
 
 	Done = 0;
-	/* Transmit the Data Stream */
+
 	Status = TxSend(InstancePtr, DataBuffer);
 	while(!Done); //wait for the fifo to be fully transmitted; this is indicated by an interrupt flag that sets Done
 
-	/* Check for errors */
+
 	if(Error) {
 		xil_printf("Errors in the FIFO\n\r");
 		return XST_FAILURE;
 	}
 
 	return Status;
-}
+}*/
 
 /*****************************************************************************/
 /**
@@ -166,6 +133,7 @@ int XLlFifoSendData(XLlFifo *InstancePtr, u16 DeviceId, u32* DataBuffer)
 * @note		None
 *
 ******************************************************************************/
+#if 0
 int TxSend(XLlFifo *InstancePtr, u32  *SourceAddr)
 {
 	int i;
@@ -190,7 +158,7 @@ int TxSend(XLlFifo *InstancePtr, u32  *SourceAddr)
 	/* Transmission Complete */
 	return XST_SUCCESS;
 }
-
+#endif
 /*****************************************************************************/
 /**
 *
@@ -270,15 +238,18 @@ void FifoRecvHandler(XLlFifo *InstancePtr)
 			//xil_printf("\t\t\t%d \n\r", imax);
 
 			if((imax >= 300) && (imax < 350)){
-				xil_printf("Bruyant \n\r", imax);
+				flagDonnesOiseau |= 0x01;
+				//xil_printf("Bruyant \n\r", imax);
 			}
 
 			if((imax >= 90) && (imax < 110)){
-				xil_printf("Huard \n\r", imax);
+				flagDonnesOiseau |= 0x02;
+				//xil_printf("Huard \n\r", imax);
 			}
 
 			if((imax >= 110) && (imax < 130)){
-				xil_printf("Coq \n\r", imax);
+				flagDonnesOiseau |= 0x04;
+				//xil_printf("Coq \n\r", imax);
 			}
 
 		}else{

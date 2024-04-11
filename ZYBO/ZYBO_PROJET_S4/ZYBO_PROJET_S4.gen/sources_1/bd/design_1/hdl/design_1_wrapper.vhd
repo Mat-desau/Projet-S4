@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Mon Apr  8 10:33:08 2024
+--Date        : Thu Apr 11 01:20:56 2024
 --Host        : LAPTOP running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -50,9 +50,7 @@ entity design_1_wrapper is
     iic_sda_io : inout STD_LOGIC;
     reset : in STD_LOGIC;
     swt0 : in STD_LOGIC;
-    sysclk : in STD_LOGIC;
-    uart_rxd : in STD_LOGIC;
-    uart_txd : out STD_LOGIC
+    sysclk : in STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -69,6 +67,19 @@ architecture STRUCTURE of design_1_wrapper is
     swt0 : in STD_LOGIC;
     ac_pblrc : out STD_LOGIC;
     ac_pbdat : out STD_LOGIC;
+    INT_NIC100 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Pmod_NIC100_io0_i : in STD_LOGIC;
+    Pmod_NIC100_io0_o : out STD_LOGIC;
+    Pmod_NIC100_io0_t : out STD_LOGIC;
+    Pmod_NIC100_io1_i : in STD_LOGIC;
+    Pmod_NIC100_io1_o : out STD_LOGIC;
+    Pmod_NIC100_io1_t : out STD_LOGIC;
+    Pmod_NIC100_sck_i : in STD_LOGIC;
+    Pmod_NIC100_sck_o : out STD_LOGIC;
+    Pmod_NIC100_sck_t : out STD_LOGIC;
+    Pmod_NIC100_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Pmod_NIC100_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    Pmod_NIC100_ss_t : out STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -84,33 +95,18 @@ architecture STRUCTURE of design_1_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    uart_rxd : in STD_LOGIC;
-    uart_txd : out STD_LOGIC;
-    iic_scl_i : in STD_LOGIC;
-    iic_scl_o : out STD_LOGIC;
-    iic_scl_t : out STD_LOGIC;
-    iic_sda_i : in STD_LOGIC;
-    iic_sda_o : out STD_LOGIC;
-    iic_sda_t : out STD_LOGIC;
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    Pmod_NIC100_io0_i : in STD_LOGIC;
-    Pmod_NIC100_io0_o : out STD_LOGIC;
-    Pmod_NIC100_io0_t : out STD_LOGIC;
-    Pmod_NIC100_io1_i : in STD_LOGIC;
-    Pmod_NIC100_io1_o : out STD_LOGIC;
-    Pmod_NIC100_io1_t : out STD_LOGIC;
-    Pmod_NIC100_sck_i : in STD_LOGIC;
-    Pmod_NIC100_sck_o : out STD_LOGIC;
-    Pmod_NIC100_sck_t : out STD_LOGIC;
-    Pmod_NIC100_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Pmod_NIC100_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    Pmod_NIC100_ss_t : out STD_LOGIC;
-    INT_NIC100 : in STD_LOGIC_VECTOR ( 0 to 0 )
+    iic_scl_i : in STD_LOGIC;
+    iic_scl_o : out STD_LOGIC;
+    iic_scl_t : out STD_LOGIC;
+    iic_sda_i : in STD_LOGIC;
+    iic_sda_o : out STD_LOGIC;
+    iic_sda_t : out STD_LOGIC
   );
   end component design_1;
   component IOBUF is
@@ -220,9 +216,7 @@ design_1_i: component design_1
       iic_sda_t => iic_sda_t,
       reset => reset,
       swt0 => swt0,
-      sysclk => sysclk,
-      uart_rxd => uart_rxd,
-      uart_txd => uart_txd
+      sysclk => sysclk
     );
 iic_scl_iobuf: component IOBUF
      port map (

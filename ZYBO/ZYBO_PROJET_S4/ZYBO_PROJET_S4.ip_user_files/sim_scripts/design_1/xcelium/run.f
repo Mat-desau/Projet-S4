@@ -23,26 +23,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_microblaze_0_0/sim/design_1_microblaze_0_0.vhd" \
 -endlib
--makelib xcelium_lib/lmb_v10_v3_0_11 \
-  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/c2ed/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_dlmb_v10_0/sim/design_1_dlmb_v10_0.vhd" \
-  "../../../bd/design_1/ip/design_1_ilmb_v10_0/sim/design_1_ilmb_v10_0.vhd" \
--endlib
--makelib xcelium_lib/lmb_bram_if_cntlr_v4_0_19 \
-  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/0b98/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/sim/design_1_dlmb_bram_if_cntlr_0.vhd" \
-  "../../../bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/sim/design_1_ilmb_bram_if_cntlr_0.vhd" \
--endlib
--makelib xcelium_lib/blk_mem_gen_v8_4_4 \
-  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.v" \
--endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
@@ -199,15 +179,6 @@
   "../../../bd/design_1/ip/design_1_axi_fifo_mm_s_0_0/sim/design_1_axi_fifo_mm_s_0_0.vhd" \
   "../../../bd/design_1/ip/design_1_axi_fifo_mm_s_1_0/sim/design_1_axi_fifo_mm_s_1_0.vhd" \
 -endlib
--makelib xcelium_lib/lib_srl_fifo_v1_0_2 \
-  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
--endlib
--makelib xcelium_lib/axi_uartlite_v2_0_26 \
-  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/5edb/hdl/axi_uartlite_v2_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_axi_uartlite_0_0/sim/design_1_axi_uartlite_0_0.vhd" \
--endlib
 -makelib xcelium_lib/i2s_transmitter_v1_0_4 -sv \
   "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/a4b3/hdl/i2s_transmitter_v1_0_rfs.sv" \
 -endlib
@@ -233,22 +204,60 @@
   "../../../bd/design_1/ip/design_1_ILA_SORTIE_MONO_0/sim/design_1_ILA_SORTIE_MONO_0.vhd" \
   "../../../bd/design_1/ip/design_1_ila_0_0/sim/design_1_ila_0_0.vhd" \
   "../../../bd/design_1/ip/design_1_monoAudio_0_0/sim/design_1_monoAudio_0_0.vhd" \
-  "../../../bd/design_1/sim/design_1.vhd" \
--endlib
--makelib xcelium_lib/axi_protocol_converter_v2_1_22 \
-  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 -endlib
 -makelib xcelium_lib/dist_mem_gen_v8_0_13 \
   "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/0bf5/simulation/dist_mem_gen_v8_0.v" \
+-endlib
+-makelib xcelium_lib/lib_srl_fifo_v1_0_2 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/axi_quad_spi_v3_2_21 \
   "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/63ec/hdl/axi_quad_spi_v3_2_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_axi_quad_spi_0_0/sim/design_1_axi_quad_spi_0_0.vhd" \
+  "../../../bd/design_1/sim/design_1.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_xlconstant_0_2/sim/design_1_xlconstant_0_2.v" \
+  "../../../bd/design_1/ip/design_1_xlconcat_0_0/sim/design_1_xlconcat_0_0.v" \
+-endlib
+-makelib xcelium_lib/axi_protocol_converter_v2_1_22 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_auto_pc_9/sim/design_1_auto_pc_9.v" \
+-endlib
+-makelib xcelium_lib/axi_clock_converter_v2_1_21 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/1304/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/blk_mem_gen_v8_4_4 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/2985/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib xcelium_lib/axi_dwidth_converter_v2_1_22 \
+  "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/2394/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+  "../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_1/sim/design_1_auto_ds_1.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_2/sim/design_1_auto_ds_2.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_2/sim/design_1_auto_pc_2.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_3/sim/design_1_auto_ds_3.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_3/sim/design_1_auto_pc_3.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_4/sim/design_1_auto_ds_4.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_4/sim/design_1_auto_pc_4.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_5/sim/design_1_auto_ds_5.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_5/sim/design_1_auto_pc_5.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_6/sim/design_1_auto_ds_6.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_6/sim/design_1_auto_pc_6.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_7/sim/design_1_auto_ds_7.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_7/sim/design_1_auto_pc_7.v" \
+  "../../../bd/design_1/ip/design_1_auto_ds_8/sim/design_1_auto_ds_8.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_8/sim/design_1_auto_pc_8.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

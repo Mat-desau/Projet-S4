@@ -3,12 +3,12 @@
 #include "xil_io.h"
 
 
-
+#if 0
 //stuff for the console
 XUartLite UartLite;
 u8 RecvBuffer[TEST_BUFFER_SIZE];	/* Buffer for Receiving Data */
 unsigned int ReceivedCount = 0;
-
+/*
 void uartInit(){
 	int Status;
 
@@ -23,6 +23,6 @@ void uartTask(){
 					   RecvBuffer + ReceivedCount,
 					   TEST_BUFFER_SIZE - ReceivedCount);
 }
+*/
 
-
-
+#endif

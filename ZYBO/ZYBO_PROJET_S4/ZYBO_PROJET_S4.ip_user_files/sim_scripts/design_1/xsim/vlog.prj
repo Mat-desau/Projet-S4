@@ -1,5 +1,4 @@
 verilog xil_defaultlib --include "C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/d0f7" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/34f8/hdl" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/8713/hdl" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/122e/hdl/verilog" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/b205/hdl/verilog" --include "../../../../ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/c968/hdl/verilog" \
-"../../../bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.v" \
 "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
 "../../../bd/design_1/ip/design_1_microblaze_0_xlconcat_0/sim/design_1_microblaze_0_xlconcat_0.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_clk_wiz.v" \
@@ -20,7 +19,29 @@ verilog xil_defaultlib --include "C:/Xilinx/Vivado/2020.2/data/xilinx_vip/includ
 "../../../bd/design_1/ip/design_1_axis_broadcaster_0_0/hdl/tuser_design_1_axis_broadcaster_0_0.v" \
 "../../../bd/design_1/ip/design_1_axis_broadcaster_0_0/hdl/top_design_1_axis_broadcaster_0_0.v" \
 "../../../bd/design_1/ip/design_1_axis_broadcaster_0_0/sim/design_1_axis_broadcaster_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_2/sim/design_1_xlconstant_0_2.v" \
+"../../../bd/design_1/ip/design_1_xlconcat_0_0/sim/design_1_xlconcat_0_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_9/sim/design_1_auto_pc_9.v" \
+"../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
+"../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_1/sim/design_1_auto_ds_1.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_2/sim/design_1_auto_ds_2.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_2/sim/design_1_auto_pc_2.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_3/sim/design_1_auto_ds_3.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_3/sim/design_1_auto_pc_3.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_4/sim/design_1_auto_ds_4.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_4/sim/design_1_auto_pc_4.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_5/sim/design_1_auto_ds_5.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_5/sim/design_1_auto_pc_5.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_6/sim/design_1_auto_ds_6.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_6/sim/design_1_auto_pc_6.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_7/sim/design_1_auto_ds_7.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_7/sim/design_1_auto_pc_7.v" \
+"../../../bd/design_1/ip/design_1_auto_ds_8/sim/design_1_auto_ds_8.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_8/sim/design_1_auto_pc_8.v" \
 
 verilog xil_defaultlib "glbl.v"
 

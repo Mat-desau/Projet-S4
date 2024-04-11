@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Apr  8 10:36:45 2024
-# Process ID: 31096
+# Start of session at: Thu Apr 11 01:22:07 2024
+# Process ID: 29232
 # Current directory: C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/design_1_wrapper.vds
@@ -13,7 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1095.598 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1113.398 ; gain = 0.000
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -21,94 +21,96 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9572
+INFO: [Synth 8-7075] Helper process launched with PID 9740
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1131.320 ; gain = 35.723
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1134.234 ; gain = 20.836
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:59]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_io0_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:57]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_io0_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:140]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
 	Parameter DRIVE bound to: 12 - type: integer 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_io1_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:151]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_sck_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:158]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_ss_iobuf_0' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:165]
-INFO: [Synth 8-3491] module 'design_1' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:3543' bound to instance 'design_1_i' of component 'design_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:172]
-INFO: [Synth 8-638] synthesizing module 'design_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:3604]
-INFO: [Synth 8-3491] module 'design_1_ILA_SORTIE_MONO_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ILA_SORTIE_MONO_0_stub.vhdl:5' bound to instance 'ILA_ENTREE_MONO' of component 'design_1_ILA_SORTIE_MONO_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4582]
-INFO: [Synth 8-638] synthesizing module 'design_1_ILA_SORTIE_MONO_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ILA_SORTIE_MONO_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ILA_SORTIE_FFT' of component 'design_1_ila_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4595]
-INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ila_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_ila_2_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ila_2_0_stub.vhdl:5' bound to instance 'ILA_SORTIE_MONO' of component 'design_1_ila_2_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4608]
-INFO: [Synth 8-638] synthesizing module 'design_1_ila_2_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ila_2_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_axi_fifo_mm_s_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_fifo_mm_s_0_0_stub.vhdl:5' bound to instance 'axi_fifo_mm_s_0' of component 'design_1_axi_fifo_mm_s_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4621]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_fifo_mm_s_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_fifo_mm_s_0_0_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'design_1_axi_fifo_mm_s_1_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_fifo_mm_s_1_0_stub.vhdl:5' bound to instance 'axi_fifo_mm_s_1' of component 'design_1_axi_fifo_mm_s_1_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4654]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_fifo_mm_s_1_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_fifo_mm_s_1_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_axi_iic_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_iic_0_0_stub.vhdl:5' bound to instance 'axi_iic_0' of component 'design_1_axi_iic_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4682]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_iic_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_iic_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'design_1_axi_quad_spi_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_quad_spi_0_0_stub.vhdl:5' bound to instance 'axi_quad_spi_0' of component 'design_1_axi_quad_spi_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4712]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_quad_spi_0_0_stub.vhdl:58]
-INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4762]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_axis_broadcaster_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axis_broadcaster_0_0_stub.vhdl:5' bound to instance 'axis_broadcaster_0' of component 'design_1_axis_broadcaster_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4787]
-INFO: [Synth 8-638] synthesizing module 'design_1_axis_broadcaster_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_axis_broadcaster_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4804]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_clk_wiz_1_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_i2s_receiver_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_i2s_receiver_0_0_stub.vhdl:5' bound to instance 'i2s_receiver_0' of component 'design_1_i2s_receiver_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4813]
-INFO: [Synth 8-638] synthesizing module 'design_1_i2s_receiver_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_i2s_receiver_0_0_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'design_1_i2s_transmitter_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_i2s_transmitter_0_0_stub.vhdl:5' bound to instance 'i2s_transmitter_0' of component 'design_1_i2s_transmitter_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4846]
-INFO: [Synth 8-638] synthesizing module 'design_1_i2s_transmitter_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_i2s_transmitter_0_0_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4879]
-INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_mdm_1_0_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4912]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_microblaze_0_0_stub.vhdl:63]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_intc_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_microblaze_0_axi_intc_0_stub.vhdl:5' bound to instance 'microblaze_0_axi_intc' of component 'design_1_microblaze_0_axi_intc_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4998]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_intc_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_microblaze_0_axi_intc_0_stub.vhdl:36]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2117]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (2#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:158]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (3#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:158]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7ANRHB' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7ANRHB' (4#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
-INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1W07O72' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:358]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1W07O72' (5#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:358]
-INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_5LX7BU' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:456]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_5LX7BU' (6#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:456]
-INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1XR4ZAZ' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:557]
-INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1XR4ZAZ' (7#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:557]
-INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_4YOIXL' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:658]
-INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_4YOIXL' (8#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:658]
-INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1YO2N20' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:757]
-INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1YO2N20' (9#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:757]
-INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_2FYR80' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:871]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1041]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_auto_pc_0_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_2FYR80' (10#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:871]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1710]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (11#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1710]
-INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_2REGHR' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1821]
-INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_2REGHR' (12#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1821]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:3238]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (13#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2117]
-INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1131]
-INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1345]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1399]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1427]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1509]
-INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_lmb_bram_0_stub.vhdl:27]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (14#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1131]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_xlconcat_0' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/synth/design_1_microblaze_0_xlconcat_0.v:60' bound to instance 'microblaze_0_xlconcat' of component 'design_1_microblaze_0_xlconcat_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5281]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_io1_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:147]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_sck_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:154]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'Pmod_NIC100_ss_iobuf_0' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:161]
+INFO: [Synth 8-3491] module 'design_1' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4632' bound to instance 'design_1_i' of component 'design_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'design_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4691]
+INFO: [Synth 8-3491] module 'design_1_ILA_SORTIE_MONO_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_ILA_SORTIE_MONO_0_stub.vhdl:5' bound to instance 'ILA_ENTREE_MONO' of component 'design_1_ILA_SORTIE_MONO_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5909]
+INFO: [Synth 8-638] synthesizing module 'design_1_ILA_SORTIE_MONO_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_ILA_SORTIE_MONO_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ILA_SORTIE_FFT' of component 'design_1_ila_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5922]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_ila_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_ila_2_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_ila_2_0_stub.vhdl:5' bound to instance 'ILA_SORTIE_MONO' of component 'design_1_ila_2_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5935]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_2_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_ila_2_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_axi_fifo_mm_s_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_fifo_mm_s_0_0_stub.vhdl:5' bound to instance 'axi_fifo_mm_s_0' of component 'design_1_axi_fifo_mm_s_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5948]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_fifo_mm_s_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_fifo_mm_s_0_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_1_axi_fifo_mm_s_1_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_fifo_mm_s_1_0_stub.vhdl:5' bound to instance 'axi_fifo_mm_s_1' of component 'design_1_axi_fifo_mm_s_1_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5981]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_fifo_mm_s_1_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_fifo_mm_s_1_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_axi_iic_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_iic_0_0_stub.vhdl:5' bound to instance 'axi_iic_0' of component 'design_1_axi_iic_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6009]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_iic_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_iic_0_0_stub.vhdl:38]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_interconnect_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2478]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1CA5Z32' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:100]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_2' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_2' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:343]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_2' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_pc_2_stub.vhdl:90]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1CA5Z32' (2#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:100]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_O7FAN0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1897]
+INFO: [Synth 8-3491] module 'design_1_auto_us_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_us_0_stub.vhdl:5' bound to instance 'auto_us' of component 'design_1_auto_us_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2113]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_us_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_us_0_stub.vhdl:83]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_O7FAN0' (3#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1897]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1F69D31' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2232]
+INFO: [Synth 8-3491] module 'design_1_auto_us_1' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_us_1_stub.vhdl:5' bound to instance 'auto_us' of component 'design_1_auto_us_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2337]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_us_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_us_1_stub.vhdl:45]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1F69D31' (4#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2232]
+INFO: [Synth 8-3491] module 'design_1_xbar_1' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_xbar_1_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:3025]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_xbar_1_stub.vhdl:89]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_interconnect_0_0' (5#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:2478]
+INFO: [Synth 8-3491] module 'design_1_axi_quad_spi_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_quad_spi_0_0_stub.vhdl:5' bound to instance 'axi_quad_spi_0' of component 'design_1_axi_quad_spi_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6136]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axi_quad_spi_0_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'design_1_axis_broadcaster_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axis_broadcaster_0_0_stub.vhdl:5' bound to instance 'axis_broadcaster_0' of component 'design_1_axis_broadcaster_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6186]
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_broadcaster_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_axis_broadcaster_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6203]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_clk_wiz_1_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_i2s_receiver_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_i2s_receiver_0_0_stub.vhdl:5' bound to instance 'i2s_receiver_0' of component 'design_1_i2s_receiver_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6212]
+INFO: [Synth 8-638] synthesizing module 'design_1_i2s_receiver_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_i2s_receiver_0_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_1_i2s_transmitter_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_i2s_transmitter_0_0_stub.vhdl:5' bound to instance 'i2s_transmitter_0' of component 'design_1_i2s_transmitter_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6245]
+INFO: [Synth 8-638] synthesizing module 'design_1_i2s_transmitter_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_i2s_transmitter_0_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6278]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_mdm_1_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6311]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_microblaze_0_0_stub.vhdl:132]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_intc_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_microblaze_0_axi_intc_0_stub.vhdl:5' bound to instance 'microblaze_0_axi_intc' of component 'design_1_microblaze_0_axi_intc_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6437]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_intc_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_microblaze_0_axi_intc_0_stub.vhdl:32]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:3371]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:473]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (6#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:473]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:574]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (7#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:574]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7ANRHB' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:675]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7ANRHB' (8#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:675]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1W07O72' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:774]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1W07O72' (9#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:774]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_5LX7BU' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:872]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_5LX7BU' (10#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:872]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1XR4ZAZ' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:973]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1XR4ZAZ' (11#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:973]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_4YOIXL' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1092]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1260]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_pc_0_stub.vhdl:65]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_4YOIXL' (12#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1092]
+INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1YO2N20' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1363]
+INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1YO2N20' (13#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1363]
+INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_2FYR80' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1477]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1647]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_auto_pc_1_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_2FYR80' (14#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1477]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1758]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (15#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:1758]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4442]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (16#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:3371]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_xlconcat_0' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/synth/design_1_microblaze_0_xlconcat_0.v:60' bound to instance 'microblaze_0_xlconcat' of component 'design_1_microblaze_0_xlconcat_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6686]
 INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_xlconcat_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/synth/design_1_microblaze_0_xlconcat_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -241,44 +243,54 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/cb
 	Parameter IN127_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 2 - type: integer 
 	Parameter NUM_PORTS bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (15#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_xlconcat_0' (16#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/synth/design_1_microblaze_0_xlconcat_0.v:60]
-INFO: [Synth 8-3491] module 'design_1_monoAudio_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_monoAudio_0_0_stub.vhdl:5' bound to instance 'monoAudio_0' of component 'design_1_monoAudio_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5287]
-INFO: [Synth 8-638] synthesizing module 'design_1_monoAudio_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_monoAudio_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5299]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_processing_system7_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5328]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_1' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_1_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M1' of component 'design_1_rst_clk_wiz_1_100M_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5341]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_1_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5354]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_xfft_0_1' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_xfft_0_1_stub.vhdl:5' bound to instance 'xfft_0' of component 'design_1_xfft_0_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5367]
-INFO: [Synth 8-638] synthesizing module 'design_1_xfft_0_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-31096-LAPTOP/realtime/design_1_xfft_0_1_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_1' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_0_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:5392]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (17#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_xlconcat_0' (18#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/synth/design_1_microblaze_0_xlconcat_0.v:60]
+INFO: [Synth 8-3491] module 'design_1_monoAudio_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_monoAudio_0_0_stub.vhdl:5' bound to instance 'monoAudio_0' of component 'design_1_monoAudio_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6692]
+INFO: [Synth 8-638] synthesizing module 'design_1_monoAudio_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_monoAudio_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6704]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_processing_system7_0_0_stub.vhdl:124]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6823]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_1' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_1_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M1' of component 'design_1_rst_clk_wiz_1_100M_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6836]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_rst_clk_wiz_1_100M_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6849]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_xfft_0_1' declared at 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_xfft_0_1_stub.vhdl:5' bound to instance 'xfft_0' of component 'design_1_xfft_0_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6862]
+INFO: [Synth 8-638] synthesizing module 'design_1_xfft_0_1' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/.Xil/Vivado-29232-LAPTOP/realtime/design_1_xfft_0_1_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6887]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (19#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_2' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_2/synth/design_1_xlconstant_0_2.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_2' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6893]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_2' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_2/synth/design_1_xlconstant_0_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 2'b01 
+	Parameter CONST_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (20#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_2' (21#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_2/synth/design_1_xlconstant_0_2.v:57]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_1' declared at 'c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_0_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:6897]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_1' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1'b1 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (17#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_1' (18#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (19#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:3604]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'iic_scl_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:227]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'iic_sda_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:234]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (20#1) [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (21#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_1' (22#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (23#1) [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/synth/design_1.vhd:4691]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'iic_scl_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:221]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:36242' bound to instance 'iic_sda_iobuf' of component 'IOBUF' [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:228]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (24#1) [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:57]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1202.707 ; gain = 107.109
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1211.180 ; gain = 97.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1202.707 ; gain = 107.109
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1211.180 ; gain = 97.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1202.707 ; gain = 107.109
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1211.180 ; gain = 97.781
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1202.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1211.180 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -287,20 +299,12 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
-Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
-Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m08_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m08_couplers/auto_pc'
+Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m06_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m06_couplers/auto_pc'
+Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m08_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m08_couplers/auto_pc'
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_intc'
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_intc'
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
@@ -325,8 +329,6 @@ Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PR
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axi_fifo_mm_s_0_0/design_1_axi_fifo_mm_s_0_0/design_1_axi_fifo_mm_s_0_0_in_context.xdc] for cell 'design_1_i/axi_fifo_mm_s_0'
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axi_fifo_mm_s_1_0/design_1_axi_fifo_mm_s_1_0/design_1_axi_fifo_mm_s_1_0_in_context.xdc] for cell 'design_1_i/axi_fifo_mm_s_1'
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axi_fifo_mm_s_1_0/design_1_axi_fifo_mm_s_1_0/design_1_axi_fifo_mm_s_1_0_in_context.xdc] for cell 'design_1_i/axi_fifo_mm_s_1'
-Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
-Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_i2s_transmitter_0_0/design_1_i2s_transmitter_0_0/design_1_i2s_transmitter_0_0_in_context.xdc] for cell 'design_1_i/i2s_transmitter_0'
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_i2s_transmitter_0_0/design_1_i2s_transmitter_0_0/design_1_i2s_transmitter_0_0_in_context.xdc] for cell 'design_1_i/i2s_transmitter_0'
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axis_broadcaster_0_0/design_1_axis_broadcaster_0_0/design_1_axis_broadcaster_0_0_in_context.xdc] for cell 'design_1_i/axis_broadcaster_0'
@@ -341,6 +343,14 @@ Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PR
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_monoAudio_0_0/design_1_monoAudio_0_0/design_1_monoAudio_0_0_in_context.xdc] for cell 'design_1_i/monoAudio_0'
 Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_in_context.xdc] for cell 'design_1_i/axi_quad_spi_0'
 Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_in_context.xdc] for cell 'design_1_i/axi_quad_spi_0'
+Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us'
+Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us'
+Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us'
+Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
 Parsing XDC File [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.srcs/constrs_1/new/design_1.xdc]
 Finished Parsing XDC File [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.srcs/constrs_1/new/design_1.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.srcs/constrs_1/new/design_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -349,22 +359,21 @@ Parsing XDC File [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PR
 Finished Parsing XDC File [C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.070 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1316.531 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1307.070 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1316.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -633,12 +642,8 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint fi
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  c:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph/m06_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph/m08_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/microblaze_0_axi_intc. (constraint file  auto generated constraint).
@@ -655,7 +660,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_50M. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xfft_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_fifo_mm_s_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_fifo_mm_s_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_uartlite_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/i2s_transmitter_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_broadcaster_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ILA_SORTIE_MONO. (constraint file  auto generated constraint).
@@ -663,11 +667,18 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ILA_ENTREE_MONO. (cons
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ILA_SORTIE_FFT. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/monoAudio_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_quad_spi_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s01_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/m00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -689,25 +700,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -725,37 +736,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -765,34 +776,33 @@ Report BlackBoxes:
 +------+---------------------------------+----------+
 |      |BlackBox name                    |Instances |
 +------+---------------------------------+----------+
-|1     |design_1_xbar_0                  |         1|
-|2     |design_1_auto_pc_0               |         1|
-|3     |design_1_ILA_SORTIE_MONO_0       |         1|
-|4     |design_1_ila_0_0                 |         1|
-|5     |design_1_ila_2_0                 |         1|
-|6     |design_1_axi_fifo_mm_s_0_0       |         1|
-|7     |design_1_axi_fifo_mm_s_1_0       |         1|
-|8     |design_1_axi_iic_0_0             |         1|
-|9     |design_1_axi_quad_spi_0_0        |         1|
-|10    |design_1_axi_uartlite_0_0        |         1|
-|11    |design_1_axis_broadcaster_0_0    |         1|
-|12    |design_1_clk_wiz_1_0             |         1|
-|13    |design_1_i2s_receiver_0_0        |         1|
-|14    |design_1_i2s_transmitter_0_0     |         1|
-|15    |design_1_mdm_1_0                 |         1|
-|16    |design_1_microblaze_0_0          |         1|
-|17    |design_1_microblaze_0_axi_intc_0 |         1|
-|18    |design_1_monoAudio_0_0           |         1|
-|19    |design_1_processing_system7_0_0  |         1|
-|20    |design_1_rst_clk_wiz_1_100M_0    |         1|
-|21    |design_1_rst_clk_wiz_1_100M_1    |         1|
-|22    |design_1_rst_ps7_0_50M_0         |         1|
-|23    |design_1_xfft_0_1                |         1|
-|24    |design_1_dlmb_bram_if_cntlr_0    |         1|
-|25    |design_1_dlmb_v10_0              |         1|
-|26    |design_1_ilmb_bram_if_cntlr_0    |         1|
-|27    |design_1_ilmb_v10_0              |         1|
-|28    |design_1_lmb_bram_0              |         1|
+|1     |design_1_xbar_1                  |         1|
+|2     |design_1_auto_pc_2               |         1|
+|3     |design_1_auto_us_0               |         1|
+|4     |design_1_auto_us_1               |         1|
+|5     |design_1_xbar_0                  |         1|
+|6     |design_1_auto_pc_0               |         1|
+|7     |design_1_auto_pc_1               |         1|
+|8     |design_1_ILA_SORTIE_MONO_0       |         1|
+|9     |design_1_ila_0_0                 |         1|
+|10    |design_1_ila_2_0                 |         1|
+|11    |design_1_axi_fifo_mm_s_0_0       |         1|
+|12    |design_1_axi_fifo_mm_s_1_0       |         1|
+|13    |design_1_axi_iic_0_0             |         1|
+|14    |design_1_axi_quad_spi_0_0        |         1|
+|15    |design_1_axis_broadcaster_0_0    |         1|
+|16    |design_1_clk_wiz_1_0             |         1|
+|17    |design_1_i2s_receiver_0_0        |         1|
+|18    |design_1_i2s_transmitter_0_0     |         1|
+|19    |design_1_mdm_1_0                 |         1|
+|20    |design_1_microblaze_0_0          |         1|
+|21    |design_1_microblaze_0_axi_intc_0 |         1|
+|22    |design_1_monoAudio_0_0           |         1|
+|23    |design_1_processing_system7_0_0  |         1|
+|24    |design_1_rst_clk_wiz_1_100M_0    |         1|
+|25    |design_1_rst_clk_wiz_1_100M_1    |         1|
+|26    |design_1_rst_ps7_0_50M_0         |         1|
+|27    |design_1_xfft_0_1                |         1|
 +------+---------------------------------+----------+
 
 Report Cell Usage: 
@@ -801,58 +811,57 @@ Report Cell Usage:
 +------+--------------------------------------+------+
 |1     |design_1_ILA_SORTIE_MONO_0_bbox       |     1|
 |2     |design_1_auto_pc_0_bbox               |     1|
-|3     |design_1_axi_fifo_mm_s_0_0_bbox       |     1|
-|4     |design_1_axi_fifo_mm_s_1_0_bbox       |     1|
-|5     |design_1_axi_iic_0_0_bbox             |     1|
-|6     |design_1_axi_quad_spi_0_0_bbox        |     1|
-|7     |design_1_axi_uartlite_0_0_bbox        |     1|
-|8     |design_1_axis_broadcaster_0_0_bbox    |     1|
-|9     |design_1_clk_wiz_1_0_bbox             |     1|
-|10    |design_1_dlmb_bram_if_cntlr_0_bbox    |     1|
-|11    |design_1_dlmb_v10_0_bbox              |     1|
-|12    |design_1_i2s_receiver_0_0_bbox        |     1|
-|13    |design_1_i2s_transmitter_0_0_bbox     |     1|
-|14    |design_1_ila_0_0_bbox                 |     1|
-|15    |design_1_ila_2_0_bbox                 |     1|
-|16    |design_1_ilmb_bram_if_cntlr_0_bbox    |     1|
-|17    |design_1_ilmb_v10_0_bbox              |     1|
-|18    |design_1_lmb_bram_0_bbox              |     1|
-|19    |design_1_mdm_1_0_bbox                 |     1|
-|20    |design_1_microblaze_0_0_bbox          |     1|
-|21    |design_1_microblaze_0_axi_intc_0_bbox |     1|
-|22    |design_1_monoAudio_0_0_bbox           |     1|
-|23    |design_1_processing_system7_0_0_bbox  |     1|
-|24    |design_1_rst_clk_wiz_1_100M_0_bbox    |     1|
-|25    |design_1_rst_clk_wiz_1_100M_1_bbox    |     1|
-|26    |design_1_rst_ps7_0_50M_0_bbox         |     1|
-|27    |design_1_xbar_0_bbox                  |     1|
-|28    |design_1_xfft_0_1_bbox                |     1|
-|29    |LUT1                                  |    33|
-|30    |IBUF                                  |     4|
-|31    |IOBUF                                 |     6|
-|32    |OBUF                                  |     7|
+|3     |design_1_auto_pc_1_bbox               |     1|
+|4     |design_1_auto_pc_2_bbox               |     1|
+|5     |design_1_auto_us_0_bbox               |     1|
+|6     |design_1_auto_us_1_bbox               |     1|
+|7     |design_1_axi_fifo_mm_s_0_0_bbox       |     1|
+|8     |design_1_axi_fifo_mm_s_1_0_bbox       |     1|
+|9     |design_1_axi_iic_0_0_bbox             |     1|
+|10    |design_1_axi_quad_spi_0_0_bbox        |     1|
+|11    |design_1_axis_broadcaster_0_0_bbox    |     1|
+|12    |design_1_clk_wiz_1_0_bbox             |     1|
+|13    |design_1_i2s_receiver_0_0_bbox        |     1|
+|14    |design_1_i2s_transmitter_0_0_bbox     |     1|
+|15    |design_1_ila_0_0_bbox                 |     1|
+|16    |design_1_ila_2_0_bbox                 |     1|
+|17    |design_1_mdm_1_0_bbox                 |     1|
+|18    |design_1_microblaze_0_0_bbox          |     1|
+|19    |design_1_microblaze_0_axi_intc_0_bbox |     1|
+|20    |design_1_monoAudio_0_0_bbox           |     1|
+|21    |design_1_processing_system7_0_0_bbox  |     1|
+|22    |design_1_rst_clk_wiz_1_100M_0_bbox    |     1|
+|23    |design_1_rst_clk_wiz_1_100M_1_bbox    |     1|
+|24    |design_1_rst_ps7_0_50M_0_bbox         |     1|
+|25    |design_1_xbar_0_bbox                  |     1|
+|26    |design_1_xbar_1_bbox                  |     1|
+|27    |design_1_xfft_0_1_bbox                |     1|
+|28    |LUT1                                  |    33|
+|29    |IBUF                                  |     3|
+|30    |IOBUF                                 |     6|
+|31    |OBUF                                  |     6|
 +------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1312.203 ; gain = 107.109
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1312.203 ; gain = 216.605
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1316.531 ; gain = 97.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1316.531 ; gain = 203.133
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1312.203 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1316.531 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1312.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1317.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-125 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+135 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1312.246 ; gain = 216.648
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1317.059 ; gain = 203.660
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/ZYBO_PROJET_S4.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  8 10:37:23 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 01:22:44 2024...

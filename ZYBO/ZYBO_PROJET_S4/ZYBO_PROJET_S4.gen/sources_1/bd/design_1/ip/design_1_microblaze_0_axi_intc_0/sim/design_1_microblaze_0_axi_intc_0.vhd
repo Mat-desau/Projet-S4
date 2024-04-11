@@ -78,11 +78,7 @@ ENTITY design_1_microblaze_0_axi_intc_0 IS
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
     intr : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    processor_clk : IN STD_LOGIC;
-    processor_rst : IN STD_LOGIC;
-    irq : OUT STD_LOGIC;
-    processor_ack : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-    interrupt_address : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    irq : OUT STD_LOGIC
   );
 END design_1_microblaze_0_axi_intc_0;
 
@@ -151,14 +147,8 @@ ARCHITECTURE design_1_microblaze_0_axi_intc_0_arch OF design_1_microblaze_0_axi_
   END COMPONENT axi_intc;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_INFO OF interrupt_address: SIGNAL IS "xilinx.com:interface:mbinterrupt:1.0 interrupt ADDRESS";
-  ATTRIBUTE X_INTERFACE_INFO OF processor_ack: SIGNAL IS "xilinx.com:interface:mbinterrupt:1.0 interrupt ACK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF irq: SIGNAL IS "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LOW_LATENCY 1";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF irq: SIGNAL IS "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LOW_LATENCY 0";
   ATTRIBUTE X_INTERFACE_INFO OF irq: SIGNAL IS "xilinx.com:interface:mbinterrupt:1.0 interrupt INTERRUPT";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF processor_rst: SIGNAL IS "XIL_INTERFACENAME proc_reset, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF processor_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 proc_reset RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF processor_clk: SIGNAL IS "XIL_INTERFACENAME proc_clock, ASSOCIATED_BUSIF interrupt, ASSOCIATED_RESET processor_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF processor_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 proc_clock CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF intr: SIGNAL IS "XIL_INTERFACENAME interrupt_input, SENSITIVITY NULL:LEVEL_HIGH, PortWidth 2";
   ATTRIBUTE X_INTERFACE_INFO OF intr: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt_input INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi RREADY";
@@ -193,13 +183,13 @@ BEGIN
       C_S_AXI_DATA_WIDTH => 32,
       C_NUM_INTR_INPUTS => 2,
       C_NUM_SW_INTR => 0,
-      C_KIND_OF_INTR => X"fffffffe",
+      C_KIND_OF_INTR => X"fffffffd",
       C_KIND_OF_EDGE => X"FFFFFFFF",
-      C_KIND_OF_LVL => X"FFFFFFFF",
+      C_KIND_OF_LVL => X"fffffffd",
       C_ASYNC_INTR => X"FFFFFFFE",
       C_NUM_SYNC_FF => 2,
       C_ADDR_WIDTH => 32,
-      C_IVAR_RESET_VALUE => X"0000000000000010",
+      C_IVAR_RESET_VALUE => X"0000000020000010",
       C_ENABLE_ASYNC => 0,
       C_HAS_IPR => 1,
       C_HAS_SIE => 1,
@@ -210,7 +200,7 @@ BEGIN
       C_IRQ_ACTIVE => '1',
       C_DISABLE_SYNCHRONIZERS => 1,
       C_MB_CLK_NOT_CONNECTED => 1,
-      C_HAS_FAST => 1,
+      C_HAS_FAST => 0,
       C_EN_CASCADE_MODE => 0,
       C_CASCADE_MASTER => 0
     )
@@ -235,11 +225,10 @@ BEGIN
       s_axi_rvalid => s_axi_rvalid,
       s_axi_rready => s_axi_rready,
       intr => intr,
-      processor_clk => processor_clk,
-      processor_rst => processor_rst,
+      processor_clk => '0',
+      processor_rst => '0',
       irq => irq,
-      processor_ack => processor_ack,
-      interrupt_address => interrupt_address,
+      processor_ack => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 2)),
       irq_in => '0',
       interrupt_address_in => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32))
     );

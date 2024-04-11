@@ -25,7 +25,6 @@ void FifoRecvHandler(XLlFifo *Fifo);
 void FifoSendHandler(XLlFifo *Fifo);
 void FifoErrorHandler(XLlFifo *InstancePtr, u32 Pending);
 void DisableIntrSystem(XIntc *IntcInstancePtr, u16 FifoIntrId);
-int SetupInterruptSystem();
 int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId);
 
 
@@ -39,8 +38,8 @@ int XLFifoInit(XLlFifo *InstancePtr, u16 DeviceId);
 #define FIFO_CONFIG_ID		XPAR_AXI_FIFO_0_DEVICE_ID	  //THe FIFO only configures the FFT block
 
 
-extern short ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE]; //buffer for the interrupt data storage
-extern char flagDonnes;
-extern int BufferMain[MAX_DATA_BUFFER_SIZE];
+//extern short ReceiveTempBuffer[MAX_DATA_BUFFER_SIZE]; //buffer for the interrupt data storage
+extern char flagDonnesOiseau;
+//extern int BufferMain[MAX_DATA_BUFFER_SIZE];
 
 #endif /* FIFO_H_ */
