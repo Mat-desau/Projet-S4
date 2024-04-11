@@ -49,10 +49,10 @@ void _UDP_ClientTasks() {
                     IPV4_ADDR addr;
                     //FPGA address
                     
-                    if(ipChoix){
+                    if(1){
                         TCPIP_Helper_StringToIPAddress("192.168.1.123", &addr);
                     }else{
-                        TCPIP_Helper_StringToIPAddress("192.168.1.207", &addr);
+                        TCPIP_Helper_StringToIPAddress("192.168.1.123", &addr);
                     }
                     
                     
@@ -141,7 +141,7 @@ void _UDP_ClientTasks() {
             if (UDP_bytes_received) {
                 
                 int *donnesNumeriques;
-                TCPIP_UDP_ArrayGet(appData.clientSocket, (uint8_t*)UDP_Receive_Buffer, 12);
+                TCPIP_UDP_ArrayGet(appData.clientSocket, (uint8_t*)UDP_Receive_Buffer, 1);
                 donnesNumeriques = (int *)UDP_Receive_Buffer;
     
                 

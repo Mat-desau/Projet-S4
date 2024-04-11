@@ -20,6 +20,8 @@ MAIN_DATA mainData;
 
 int Varible5minutes = 10;               //Nombre de 750ms (400 pour avoir 5 minutes)(10 pour avoir 15 secondes)
 
+int Test_Threshold_LED = 0;
+
 // Variables globales
 static volatile int Flag_1m = 0;        //Flag de 1ms
 static volatile int Flag_750ms = 0;     //Flag de 750ms
@@ -64,9 +66,9 @@ void MAIN_Initialize ( void )
     PMODS_InitPin(1,9,1,0,0);           // initialisation du JB9
     PMODS_InitPin(1,1,1,0,1);           // initialisation du JB1 (RD9))
     PMODS_InitPin(1,2,1,0,1);           // initialisation du JB2 (RD11))
+    
     MOT_Init(1);                        // Initialisation des motor et sortie pwm
     
-    ipChoix = SWT_GetValue(7);
     UDP_Initialize();
 
     initialize_timer_interrupt();
@@ -259,9 +261,8 @@ void FCT_Lecture_Ethernet()
         LED_SetValue(2,0);
         Confirmation = true;
         
-        FCT_Gestion_Rideau(Mode_Manuel, Mode_Lumiere, 0);
+        FCT_Gestion_Rideau(Mode_Manuel, 0, 0);
     } 
-    
 }
 
 void FCT_Mode_Fonctionnement() 
@@ -390,6 +391,7 @@ void FCT_Affichage_Lumiere()
 void FCT_Afficher_Threshold() 
 {
     char VALEUR[3];
+    //sprintf(VALEUR, "%d", Type_Oiseau);
     sprintf(VALEUR, "%d", Valeur_Threshold);
     LCD_WriteStringAtPos("VAL:", 1, 0);
     LCD_WriteStringAtPos(VALEUR, 1, 4);
@@ -490,15 +492,21 @@ int FCT_Comparer_Lumiere()
 {
     if(Valeur_Lumiere >= Valeur_Threshold)
     {
+        if(Test_Threshold_LED)
+        {
         LED_SetValue(4, 0);
         LED_SetValue(5, 1);
+        }
         FCT_Compteur_5Minutes(0);               //Active compteur Si lumiere plus grand que threshold
     }
     else if (Valeur_Lumiere < Valeur_Threshold)
     {
+        if(Test_Threshold_LED)
+        {
         LED_SetValue(4, 1);
         LED_SetValue(5, 1);
         LED_SetValue(6, 0);
+        }
         FCT_Compteur_5Minutes(1);                //Desactive le compteur si Lumiere plus petit que threshold
     }
     
@@ -506,9 +514,11 @@ int FCT_Comparer_Lumiere()
     {
         if(Valeur_Lumiere <= Valeur_Threshold)  //ENCORE NOIR
         {
-            
+            if(Test_Threshold_LED)
+            {
             LED_SetValue(5, 0);
             LED_SetValue(6, 1);
+            }
             return 1; 
         }
     }  
@@ -519,13 +529,15 @@ int FCT_Ouvrir_Rideau()
 {
     if(!PMODS_GetValue(1,1))
     {
-        MOT_SetPhEnMotor2(BwMot, 100);
+        MOT_SetPhEnMotor2(BwMot, 120);
         OuvrirRideau = 1;
+        //LCD_WriteStringAtPos("OUVRIR1", 1, 4);
         return (0);
     }
     else
     {
         MOT_SetPhEnMotor2(BwMot, 0);
+        //LCD_WriteStringAtPos("OUVRIR2", 1, 4);
         OuvrirRideau = 0;
         return 1;
     }
@@ -535,13 +547,15 @@ int FCT_Fermer_Rideau()
 {
     if(!PMODS_GetValue(1,2))
     {
-        MOT_SetPhEnMotor2(FwMot, 75);
+        MOT_SetPhEnMotor2(FwMot, 150);
+        //LCD_WriteStringAtPos("FERMER1", 1, 4);
         FermerRideau = 1;
         return (0);
     }
     else
     {
         MOT_SetPhEnMotor2(FwMot, 0);
+        //LCD_WriteStringAtPos("FERMER2", 1, 4);
         FermerRideau = 0;
         return 1;
     }

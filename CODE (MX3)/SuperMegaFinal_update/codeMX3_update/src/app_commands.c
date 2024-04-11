@@ -60,7 +60,7 @@ bool UDP_Commands_Init()
         return false;
     }
     //strcpy(UDP_Hostname_Buffer, "192.168.13.2");
-    strcpy(UDP_Hostname_Buffer, "192.168.1.122");
+    strcpy(UDP_Hostname_Buffer, "192.168.1.207");
     strcpy(UDP_Port_Buffer, "8080");
     memset(UDP_Receive_Buffer, 0, 484);
     memset(UDP_Send_Buffer, 0, 484);
