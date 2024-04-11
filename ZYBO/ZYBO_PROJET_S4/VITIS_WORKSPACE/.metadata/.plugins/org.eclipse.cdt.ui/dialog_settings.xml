@@ -9,6 +9,17 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="0xffffffff"/>
+			<item value="FifoHandler"/>
+			<item value="enc624j600Driver"/>
+			<item value="enc624j600EventHandler"/>
+			<item value="enc624j600ReceivePacket"/>
+			<item value="nicProcessPacket"/>
+			<item value="ethProcessFrame"/>
+			<item value="arpProcessPacket"/>
+			<item value="arpTick"/>
+			<item value="systime_t"/>
+			<item value="systemTicks"/>
 			<item value="XLLF_INT_"/>
 			<item value="I2S_TRANSFER_CONTROL_REG"/>
 		</list>

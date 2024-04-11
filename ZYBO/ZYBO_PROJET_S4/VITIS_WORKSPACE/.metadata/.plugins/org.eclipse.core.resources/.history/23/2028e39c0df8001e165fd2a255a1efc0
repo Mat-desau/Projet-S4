@@ -123,12 +123,10 @@ int main(){
 
 			if(flagDonnesOiseau & 0x02){
 				xil_printf("Huard \n\r");
-				transmettreOiseau(3);
 			}
 
 			if(flagDonnesOiseau & 0x04){
 				xil_printf("Coq \n\r");
-				transmettreOiseau(2);
 			}
 
 

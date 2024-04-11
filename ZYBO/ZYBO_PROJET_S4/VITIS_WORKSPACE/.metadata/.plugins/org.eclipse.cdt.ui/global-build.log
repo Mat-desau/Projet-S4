@@ -1,3 +1,20 @@
-01:27:27 **** Incremental Build of project design_1_wrapper ****
-buildplatform.bat 54102 design_1_wrapper no_domain_build 
-XSDB Server Channel: tcfchan#40
+Nothing to build in platform 'design_1_wrapper'
+
+12:34:03 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
+make all 
+'Building file: ../src/comm.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I"C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4\src\common" -I"C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4\src" -I"C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4\src\cyclone_tcp" -c -fmessage-length=0 -MT"src/comm.o" -IC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/comm.d" -MT"src/comm.o" -o "src/comm.o" "../src/comm.c"
+'Finished building: ../src/comm.c'
+' '
+'Building target: ZYBO_PROJET_S4.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ZYBO_PROJET_S4.elf"  ./src/cyclone_tcp/std_services/echo.o  ./src/cyclone_tcp/ipv4/arp.o ./src/cyclone_tcp/ipv4/ipv4.o  ./src/cyclone_tcp/drivers/eth/enc624j600_driver.o  ./src/cyclone_tcp/core/ethernet.o ./src/cyclone_tcp/core/ip.o ./src/cyclone_tcp/core/net.o ./src/cyclone_tcp/core/net_mem.o ./src/cyclone_tcp/core/nic.o ./src/cyclone_tcp/core/socket.o ./src/cyclone_tcp/core/udp.o  ./src/cyclone_tcp/ext_int_driver.o ./src/cyclone_tcp/spi_driver.o  ./src/common/cpu_endian.o ./src/common/date_time.o ./src/common/os_port_none.o  ./src/FIFO_FFT_driver.o ./src/comm.o ./src/fft.o ./src/gestionAudio.o ./src/initCodec.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ZYBO_PROJET_S4.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 122832	   1824	269486608	269611264	1011f100	ZYBO_PROJET_S4.elf
+'Finished building: ZYBO_PROJET_S4.elf.size'
+' '

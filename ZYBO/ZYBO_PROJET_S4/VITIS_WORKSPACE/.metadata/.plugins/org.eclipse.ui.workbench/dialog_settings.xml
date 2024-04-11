@@ -8,6 +8,7 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_PATH_VARIABLE_SELECTED_ID" value="true"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_PATH_VARIABLE_NAME_ID" value="Edit Variables..."/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\cbowlieu\APP4\Code_D_trous\SuperMegaFinal_update\Version3\Vitis-workspace\S4e_Depart_Code_Vitis\src\cyclone_tcp\std_services"/>
 			<item value="C:\Users\cbowlieu\ZYBOP4\Code\SuperMegaFinal_update\Version3\S4e_Depart_Code_Vitis\src\common"/>
 			<item value="C:\Users\cbowlieu\ZYBOP4\Code\SuperMegaFinal_update\Version3\S4e_Depart_Code_Vitis\src\cyclone_tcp"/>
 			<item value="C:\Users\cbowlieu\Downloads\example_fft_axi_stream_vitis_export_archive_ide_28_03_2021\FFT_demo_AXIS\src"/>
