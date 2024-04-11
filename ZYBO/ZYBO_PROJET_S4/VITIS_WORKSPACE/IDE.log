@@ -19461,3 +19461,640 @@ con
 ----------------End of Script----------------
 
 13:53:44 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+14:17:53 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+14:19:51 INFO  : Disconnected from the channel tcfchan#18.
+14:19:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+14:19:51 INFO  : 'jtag frequency' command is executed.
+14:19:51 INFO  : Context for 'APU' is selected.
+14:19:51 INFO  : System reset is completed.
+14:19:54 INFO  : 'after 3000' command is executed.
+14:19:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+14:19:55 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+14:19:55 INFO  : Context for 'APU' is selected.
+14:19:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:19:58 INFO  : 'configparams force-mem-access 1' command is executed.
+14:19:58 INFO  : Context for 'APU' is selected.
+14:19:58 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+14:19:58 INFO  : 'ps7_init' command is executed.
+14:19:58 INFO  : 'ps7_post_config' command is executed.
+14:19:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:19:58 INFO  : Context for processor 'microblaze_0' is selected.
+14:19:59 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+14:19:59 INFO  : 'configparams force-mem-access 0' command is executed.
+14:19:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:19:59 INFO  : Context for processor 'microblaze_0' is selected.
+14:19:59 INFO  : 'con' command is executed.
+14:19:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:19:59 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:20:19 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:22:39 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:22:44 INFO  : Disconnected from the channel tcfchan#19.
+15:22:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:22:44 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:22:44 INFO  : 'jtag frequency' command is executed.
+15:22:44 INFO  : Context for 'APU' is selected.
+15:22:44 INFO  : System reset is completed.
+15:22:47 INFO  : 'after 3000' command is executed.
+15:22:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:22:48 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:22:48 INFO  : Context for 'APU' is selected.
+15:22:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:22:51 INFO  : 'configparams force-mem-access 1' command is executed.
+15:22:51 INFO  : Context for 'APU' is selected.
+15:22:51 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:22:51 INFO  : 'ps7_init' command is executed.
+15:22:51 INFO  : 'ps7_post_config' command is executed.
+15:22:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:22:51 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:52 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:22:52 INFO  : 'configparams force-mem-access 0' command is executed.
+15:22:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:22:52 INFO  : Context for processor 'microblaze_0' is selected.
+15:22:52 INFO  : 'con' command is executed.
+15:22:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:22:52 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:24:30 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:24:33 INFO  : Disconnected from the channel tcfchan#20.
+15:24:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:33 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:24:33 INFO  : 'jtag frequency' command is executed.
+15:24:33 INFO  : Context for 'APU' is selected.
+15:24:33 INFO  : System reset is completed.
+15:24:36 INFO  : 'after 3000' command is executed.
+15:24:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:24:37 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:24:37 INFO  : Context for 'APU' is selected.
+15:24:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:24:39 INFO  : 'configparams force-mem-access 1' command is executed.
+15:24:39 INFO  : Context for 'APU' is selected.
+15:24:39 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:24:40 INFO  : 'ps7_init' command is executed.
+15:24:40 INFO  : 'ps7_post_config' command is executed.
+15:24:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:24:40 INFO  : Context for processor 'microblaze_0' is selected.
+15:24:40 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:24:40 INFO  : 'configparams force-mem-access 0' command is executed.
+15:24:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:24:41 INFO  : Context for processor 'microblaze_0' is selected.
+15:24:41 INFO  : 'con' command is executed.
+15:24:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:24:41 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:24:49 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:24:52 INFO  : Disconnected from the channel tcfchan#21.
+15:24:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:24:52 INFO  : 'jtag frequency' command is executed.
+15:24:52 INFO  : Context for 'APU' is selected.
+15:24:52 INFO  : System reset is completed.
+15:24:55 INFO  : 'after 3000' command is executed.
+15:24:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:24:57 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:24:57 INFO  : Context for 'APU' is selected.
+15:24:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:24:59 INFO  : 'configparams force-mem-access 1' command is executed.
+15:24:59 INFO  : Context for 'APU' is selected.
+15:24:59 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:24:59 INFO  : 'ps7_init' command is executed.
+15:25:00 INFO  : 'ps7_post_config' command is executed.
+15:25:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:25:00 INFO  : Context for processor 'microblaze_0' is selected.
+15:25:00 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:25:00 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:00 INFO  : Context for processor 'microblaze_0' is selected.
+15:25:00 INFO  : 'con' command is executed.
+15:25:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:25:00 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:25:08 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:25:10 INFO  : Disconnected from the channel tcfchan#22.
+15:25:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:11 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:25:11 INFO  : 'jtag frequency' command is executed.
+15:25:11 INFO  : Context for 'APU' is selected.
+15:25:11 INFO  : System reset is completed.
+15:25:14 INFO  : 'after 3000' command is executed.
+15:25:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:25:15 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:25:15 INFO  : Context for 'APU' is selected.
+15:25:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:25:17 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:18 INFO  : Context for 'APU' is selected.
+15:25:18 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:25:18 INFO  : 'ps7_init' command is executed.
+15:25:18 INFO  : 'ps7_post_config' command is executed.
+15:25:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:25:18 INFO  : Context for processor 'microblaze_0' is selected.
+15:25:19 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:25:19 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:19 INFO  : Context for processor 'microblaze_0' is selected.
+15:25:19 INFO  : 'con' command is executed.
+15:25:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:25:19 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:26:15 INFO  : Disconnected from the channel tcfchan#23.
+15:26:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:26:15 INFO  : 'jtag frequency' command is executed.
+15:26:15 INFO  : Context for 'APU' is selected.
+15:26:15 INFO  : System reset is completed.
+15:26:18 INFO  : 'after 3000' command is executed.
+15:26:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:26:20 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:26:20 INFO  : Context for 'APU' is selected.
+15:26:22 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:26:22 INFO  : 'configparams force-mem-access 1' command is executed.
+15:26:22 INFO  : Context for 'APU' is selected.
+15:26:22 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:26:23 INFO  : 'ps7_init' command is executed.
+15:26:23 INFO  : 'ps7_post_config' command is executed.
+15:26:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:26:23 INFO  : Context for processor 'microblaze_0' is selected.
+15:26:23 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:26:23 INFO  : 'configparams force-mem-access 0' command is executed.
+15:26:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:26:24 INFO  : Context for processor 'microblaze_0' is selected.
+15:26:24 INFO  : 'con' command is executed.
+15:26:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:26:24 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:27:45 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:31:03 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:31:09 INFO  : Disconnected from the channel tcfchan#24.
+15:31:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:31:09 INFO  : 'jtag frequency' command is executed.
+15:31:09 INFO  : Context for 'APU' is selected.
+15:31:09 INFO  : System reset is completed.
+15:31:12 INFO  : 'after 3000' command is executed.
+15:31:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:31:13 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:31:13 INFO  : Context for 'APU' is selected.
+15:31:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:31:16 INFO  : 'configparams force-mem-access 1' command is executed.
+15:31:16 INFO  : Context for 'APU' is selected.
+15:31:16 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:31:16 INFO  : 'ps7_init' command is executed.
+15:31:16 INFO  : 'ps7_post_config' command is executed.
+15:31:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:31:16 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:17 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:31:17 INFO  : 'configparams force-mem-access 0' command is executed.
+15:31:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:31:17 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:17 INFO  : 'con' command is executed.
+15:31:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:31:17 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:33:04 INFO  : Disconnected from the channel tcfchan#25.
+15:33:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:33:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:33:05 INFO  : 'jtag frequency' command is executed.
+15:33:05 INFO  : Context for 'APU' is selected.
+15:33:05 INFO  : System reset is completed.
+15:33:08 INFO  : 'after 3000' command is executed.
+15:33:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:33:09 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:33:09 INFO  : Context for 'APU' is selected.
+15:33:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:33:12 INFO  : 'configparams force-mem-access 1' command is executed.
+15:33:12 INFO  : Context for 'APU' is selected.
+15:33:12 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:33:12 INFO  : 'ps7_init' command is executed.
+15:33:12 INFO  : 'ps7_post_config' command is executed.
+15:33:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:33:12 INFO  : Context for processor 'microblaze_0' is selected.
+15:33:13 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:33:13 INFO  : 'configparams force-mem-access 0' command is executed.
+15:33:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:33:13 INFO  : Context for processor 'microblaze_0' is selected.
+15:33:13 INFO  : 'con' command is executed.
+15:33:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:33:13 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:33:55 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:33:57 INFO  : Disconnected from the channel tcfchan#26.
+15:33:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:33:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:33:57 INFO  : 'jtag frequency' command is executed.
+15:33:57 INFO  : Context for 'APU' is selected.
+15:33:57 INFO  : System reset is completed.
+15:34:00 INFO  : 'after 3000' command is executed.
+15:34:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:34:02 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:34:02 INFO  : Context for 'APU' is selected.
+15:34:04 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:34:04 INFO  : 'configparams force-mem-access 1' command is executed.
+15:34:04 INFO  : Context for 'APU' is selected.
+15:34:04 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:34:05 INFO  : 'ps7_init' command is executed.
+15:34:05 INFO  : 'ps7_post_config' command is executed.
+15:34:05 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:34:05 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:05 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:34:05 INFO  : 'configparams force-mem-access 0' command is executed.
+15:34:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:34:05 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:05 INFO  : 'con' command is executed.
+15:34:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:34:05 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:36:25 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:36:30 INFO  : Disconnected from the channel tcfchan#27.
+15:36:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:36:30 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:36:30 INFO  : 'jtag frequency' command is executed.
+15:36:30 INFO  : Context for 'APU' is selected.
+15:36:30 INFO  : System reset is completed.
+15:36:33 INFO  : 'after 3000' command is executed.
+15:36:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:36:34 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:36:34 INFO  : Context for 'APU' is selected.
+15:36:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:36:37 INFO  : 'configparams force-mem-access 1' command is executed.
+15:36:37 INFO  : Context for 'APU' is selected.
+15:36:37 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:36:37 INFO  : 'ps7_init' command is executed.
+15:36:37 INFO  : 'ps7_post_config' command is executed.
+15:36:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:36:37 INFO  : Context for processor 'microblaze_0' is selected.
+15:36:38 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:36:38 INFO  : 'configparams force-mem-access 0' command is executed.
+15:36:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:36:38 INFO  : Context for processor 'microblaze_0' is selected.
+15:36:38 INFO  : 'con' command is executed.
+15:36:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:36:38 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:39:34 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:39:44 INFO  : Disconnected from the channel tcfchan#28.
+15:39:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:39:45 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:39:45 INFO  : 'jtag frequency' command is executed.
+15:39:45 INFO  : Context for 'APU' is selected.
+15:39:45 INFO  : System reset is completed.
+15:39:48 INFO  : 'after 3000' command is executed.
+15:39:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:39:49 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:39:49 INFO  : Context for 'APU' is selected.
+15:39:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:39:51 INFO  : 'configparams force-mem-access 1' command is executed.
+15:39:51 INFO  : Context for 'APU' is selected.
+15:39:51 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:39:52 INFO  : 'ps7_init' command is executed.
+15:39:52 INFO  : 'ps7_post_config' command is executed.
+15:39:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:39:52 INFO  : Context for processor 'microblaze_0' is selected.
+15:39:53 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:39:53 INFO  : 'configparams force-mem-access 0' command is executed.
+15:39:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:39:53 INFO  : Context for processor 'microblaze_0' is selected.
+15:39:53 INFO  : 'con' command is executed.
+15:39:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:39:53 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:42:50 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:42:56 INFO  : Disconnected from the channel tcfchan#29.
+15:42:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:42:56 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:42:56 INFO  : 'jtag frequency' command is executed.
+15:42:56 INFO  : Context for 'APU' is selected.
+15:42:56 INFO  : System reset is completed.
+15:42:59 INFO  : 'after 3000' command is executed.
+15:42:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:43:01 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:43:01 INFO  : Context for 'APU' is selected.
+15:43:03 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:43:03 INFO  : 'configparams force-mem-access 1' command is executed.
+15:43:03 INFO  : Context for 'APU' is selected.
+15:43:03 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:43:04 INFO  : 'ps7_init' command is executed.
+15:43:04 INFO  : 'ps7_post_config' command is executed.
+15:43:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:43:04 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:05 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:43:05 INFO  : 'configparams force-mem-access 0' command is executed.
+15:43:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:43:05 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:05 INFO  : 'con' command is executed.
+15:43:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:43:05 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'
+15:45:59 INFO  : Checking for BSP changes to sync application flags for project 'ZYBO_PROJET_S4'...
+15:46:56 INFO  : Disconnected from the channel tcfchan#30.
+15:46:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:46:56 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77C98A' is selected.
+15:46:56 INFO  : 'jtag frequency' command is executed.
+15:46:56 INFO  : Context for 'APU' is selected.
+15:46:56 INFO  : System reset is completed.
+15:46:59 INFO  : 'after 3000' command is executed.
+15:46:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}' command is executed.
+15:47:00 INFO  : Device configured successfully with "C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit"
+15:47:00 INFO  : Context for 'APU' is selected.
+15:47:03 INFO  : Hardware design and registers information is loaded from 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:47:03 INFO  : 'configparams force-mem-access 1' command is executed.
+15:47:03 INFO  : Context for 'APU' is selected.
+15:47:03 INFO  : Sourcing of 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl' is done.
+15:47:03 INFO  : 'ps7_init' command is executed.
+15:47:03 INFO  : 'ps7_post_config' command is executed.
+15:47:03 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:47:03 INFO  : Context for processor 'microblaze_0' is selected.
+15:47:04 INFO  : The application 'C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf' is downloaded to processor 'microblaze_0'.
+15:47:04 INFO  : 'configparams force-mem-access 0' command is executed.
+15:47:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77C98A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77C98A-13722093-0"}
+fpga -file C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/cbowlieu/github/Projet-S4/ZYBO/ZYBO_PROJET_S4/VITIS_WORKSPACE/ZYBO_PROJET_S4/Debug/ZYBO_PROJET_S4.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:47:04 INFO  : Context for processor 'microblaze_0' is selected.
+15:47:04 INFO  : 'con' command is executed.
+15:47:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:47:04 INFO  : Launch script is exported to file 'C:\Users\cbowlieu\github\Projet-S4\ZYBO\ZYBO_PROJET_S4\VITIS_WORKSPACE\ZYBO_PROJET_S4_system\_ide\scripts\systemdebugger_zybo_projet_s4_system_standalone.tcl'

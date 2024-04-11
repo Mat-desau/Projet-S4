@@ -3,7 +3,7 @@
 #include "xparameters.h"
 #include "initCodec.h"
 #include "sleep.h"
-
+#define MODE_MICRO 1
 #define IIC_BASE_ADDRESS	XPAR_IIC_0_BASEADDR
 
 
@@ -53,7 +53,12 @@ u16 donnees[12] =  {
  0b0000011001111001 ,     //      5  R3 Right-channel DAC volume  (defaut / datasheet)
 //       ||               //         R3 disable right ch head phone vol data to left; volume 0dB (defaut / datasheet)
 //		 ||				  //
- 0b0000100000010100, //0b0000100000010000 ,     //      6  R4 Analog audio path                INSEL = LINE
+#if MODE_MICRO
+ 0b0000100000010100,
+#else
+ 0b0000100000010000 ,     //      6  R4 Analog audio path                INSEL = LINE
+#endif
+
 //       ||               //		 R4 D8=0;                          : 0        (def)
 //       ||               //		 R4 D7=0; |                        : 0
 //       ||               //		 R4 D6=0; | mic sidetone gain ctrl : 00 -6dB   (def)

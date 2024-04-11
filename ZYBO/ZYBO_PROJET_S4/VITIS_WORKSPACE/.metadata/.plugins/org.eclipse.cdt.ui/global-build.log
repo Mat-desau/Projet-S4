@@ -1,6 +1,6 @@
 Nothing to build in platform 'design_1_wrapper'
 
-13:53:33 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
+15:45:59 **** Incremental Build of configuration Debug for project ZYBO_PROJET_S4 ****
 make all 
 'Building file: ../src/initCodec.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -33,6 +33,6 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/cbowlieu/github/Projet-S4/ZYBO/ZY
 'Invoking: MicroBlaze Print Size'
 mb-size ZYBO_PROJET_S4.elf  |tee "ZYBO_PROJET_S4.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 123100	   1828	269486616	269611544	1011f218	ZYBO_PROJET_S4.elf
+ 123956	   1828	269486640	269612424	1011f588	ZYBO_PROJET_S4.elf
 'Finished building: ZYBO_PROJET_S4.elf.size'
 ' '

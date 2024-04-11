@@ -209,6 +209,109 @@ void FifoHandler(XLlFifo *InstancePtr)
 * @note		None.
 *
 ******************************************************************************/
+int cnt_bruyant,cnt_coq,cnt_huard,cnt_pasbon = 0;
+char flag_mef_bruyant,flag_mef_coq,flag_mef_huard = 0;
+char etape = 0;
+
+#define SEUIL_BRUYANT 10
+#define SEUIL_HUARD 10
+#define SEUIL_COQ 10
+#define SEUIL_PAS_BON 20
+
+void mef_oiseau(){
+	xil_printf("etape %d\r\n",etape);
+	switch(etape){
+	case 0: {
+		flagDonnesOiseau = 0;
+		cnt_bruyant= 0;
+		cnt_coq = 0;
+		cnt_huard = 0;
+		cnt_pasbon = 0;
+
+
+		if(flag_mef_bruyant || flag_mef_huard || flag_mef_huard){
+			flag_mef_bruyant = 0;
+			flag_mef_huard = 0;
+			flag_mef_huard = 0;
+			etape = 1;
+		}
+		break;
+	}
+
+
+	case 1: {
+			if(flag_mef_bruyant) cnt_bruyant++;
+			if(flag_mef_huard) cnt_huard++;
+			if(flag_mef_coq) cnt_coq++;
+			if(!flag_mef_bruyant && !flag_mef_huard && !flag_mef_coq) cnt_pasbon++;
+
+			flag_mef_bruyant = 0;
+			flag_mef_huard = 0;
+			flag_mef_huard = 0;
+
+			if(cnt_bruyant >= SEUIL_BRUYANT){
+				etape = 2;
+			}
+
+			if(cnt_huard >= SEUIL_HUARD){
+				etape = 4;
+			}
+
+			if(cnt_coq >= SEUIL_COQ){
+				etape = 3;
+			}
+
+			if(cnt_pasbon >= SEUIL_PAS_BON){
+				etape = 0;
+			}
+			break;
+		}
+
+
+
+	case 2: {
+				flagDonnesOiseau = 0x01;
+				etape = 5;
+				break;
+			}
+
+	case 3: {
+				flagDonnesOiseau = 0x04;
+				etape = 5;
+				break;
+			}
+
+	case 4: {
+				flagDonnesOiseau = 0x02;
+				etape = 5;
+				break;
+			}
+
+
+	case 5: {
+				if(!flag_mef_bruyant && !flag_mef_huard && !flag_mef_coq) cnt_pasbon++;
+				flag_mef_bruyant = 0;
+				flag_mef_huard = 0;
+				flag_mef_coq = 0;
+				flagDonnesOiseau = 0;
+
+
+				if(cnt_pasbon >= SEUIL_PAS_BON*2){
+					etape = 0;
+				}
+				break;
+			}
+
+	default: break;
+
+
+	}
+
+
+
+
+}
+
 void FifoRecvHandler(XLlFifo *InstancePtr)
 {
 	unsigned int i;
@@ -238,17 +341,20 @@ void FifoRecvHandler(XLlFifo *InstancePtr)
 			//xil_printf("\t\t\t%d \n\r", imax);
 
 			if((imax >= 300) && (imax < 350)){
-				flagDonnesOiseau |= 0x01;
+				flag_mef_bruyant = 1;
+				//flagDonnesOiseau |= 0x01;
 				//xil_printf("Bruyant \n\r", imax);
 			}
 
 			if((imax >= 90) && (imax < 110)){
-				flagDonnesOiseau |= 0x02;
+				flag_mef_huard = 1;
+				//flagDonnesOiseau |= 0x02;
 				//xil_printf("Huard \n\r", imax);
 			}
 
 			if((imax >= 110) && (imax < 130)){
-				flagDonnesOiseau |= 0x04;
+				flag_mef_coq = 1;
+				//flagDonnesOiseau |= 0x04;
 				//xil_printf("Coq \n\r", imax);
 			}
 
@@ -256,6 +362,8 @@ void FifoRecvHandler(XLlFifo *InstancePtr)
 			//xil_printf("%d %d\n\r", imax,max);
 		}
 
+
+		mef_oiseau();
 
 		//memcpy(BufferMain,ReceiveTempBuffer,ReceiveLength*4);
 		flagDonnes  =1;
