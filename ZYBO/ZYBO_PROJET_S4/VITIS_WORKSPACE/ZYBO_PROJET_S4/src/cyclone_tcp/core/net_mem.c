@@ -145,8 +145,7 @@ void *memPoolAlloc(size_t size)
    //Failed to allocate memory?
    if(!p)
    {
-      xil_printf("fail_alloc");
-	   //Debug message
+      //Debug message
       }
 
    //Return a pointer to the allocated memory block

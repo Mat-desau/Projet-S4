@@ -423,6 +423,7 @@ error_t arpEnqueuePacket(NetInterface *interface,
  *
  * @param[in] interface Underlying network interface
  **/
+
 void arpTick(NetInterface *interface)
 {
    uint_t i;

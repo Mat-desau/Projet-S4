@@ -96,7 +96,7 @@ void initComm(){
 	#endif
 	   netTaskInit();
 
-	   if(socket) socketClose(socket);
+	  /* if(socket) socketClose(socket);
 	   socket = socketOpen(SOCKET_TYPE_DGRAM, SOCKET_IP_PROTO_UDP);
 
 	      //Failed to open socket?
@@ -110,7 +110,7 @@ void initComm(){
 	      //The server listens for incoming datagrams on port 8080
 	      //socketBind(context.socket, &IP_ADDR_ANY, 8080);
 
-
+*/
 
 }
 

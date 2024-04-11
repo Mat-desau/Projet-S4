@@ -54,14 +54,6 @@ void osInitKernel(void)
    systemTicks = 0;
 }
 
-void doTick(){
-	systemTicks++;
-
-	if(systemTicks == 0xffffffff){
-		systemTicks = 0;
-	}
-}
-
 
 /**
  * @brief Start kernel
@@ -344,7 +336,7 @@ void osReleaseMutex(OsMutex *mutex)
  * @brief Retrieve system time
  * @return Number of milliseconds elapsed since the system was last started
  **/
-//MODIF CB
+
 systime_t osGetSystemTime(void)
 {
    systime_t time;

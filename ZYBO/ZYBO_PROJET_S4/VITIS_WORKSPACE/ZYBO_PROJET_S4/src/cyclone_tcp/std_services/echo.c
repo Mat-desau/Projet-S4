@@ -171,7 +171,7 @@ char_t udpReadPacketTask(void)
       if(!error)
       {
          //Debug message
-    	  print("\n\rPAcket received\n\r");
+    	  //print("\n\rPAcket received\n\r");
     	  context.buffer[length] = 0;
     	  print(context.buffer);
     	  return 1;
@@ -185,7 +185,7 @@ char_t udpReadPacketTask(void)
 
 char_t udpSendPacketTask(char * bufferToSend )
 {
-	socketSendTo(context.socket, &ipAddr, port, bufferToSend, 12, NULL, 0);
+	socketSendTo(context.socket, &ipAddr, port, bufferToSend, 1, NULL, 0);
 	return 1;
 }
 

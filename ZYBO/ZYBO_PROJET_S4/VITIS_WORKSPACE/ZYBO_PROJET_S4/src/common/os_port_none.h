@@ -146,7 +146,4 @@ void osFreeMem(void *p);
    }
 #endif
 
-   //CB
-   void doTick();
-
 #endif

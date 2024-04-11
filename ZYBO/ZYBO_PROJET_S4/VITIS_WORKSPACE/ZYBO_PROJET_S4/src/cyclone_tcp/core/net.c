@@ -1063,9 +1063,6 @@ void netTaskInit(void){
 
 }
 
-//MODIF CB 2024-04-11
-int tick = 0;
-
 void netTask(void)
 {
 	   uint_t i;
@@ -1145,7 +1142,7 @@ void netTask(void)
 
       //Get current time
       time = osGetSystemTime();
-      time = tick/10;
+
       //Check current time
       if(timeCompare(time, netTimestamp) >= 0)
       {
@@ -1156,13 +1153,9 @@ void netTask(void)
          //Release exclusive access
          osReleaseMutex(&netMutex);
 
-         //Next event CHANGE CB
-         netTimestamp = NET_TICK_INTERVAL;
-         tick = 0;
+         //Next event
+         netTimestamp = time + NET_TICK_INTERVAL;
       }
-
-      tick++;
-
    }
 }
 

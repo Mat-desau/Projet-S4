@@ -24,6 +24,7 @@
 #include <stdbool.h>
 #include "comm.h"
 #include "common/os_port_none.h"
+#include "cyclone_tcp/std_services/echo.h"
 
 
 #include "FIFO_FFT_driver.h"
@@ -34,7 +35,7 @@
 
 
 #define IIC_BASE_ADDRESS	XPAR_IIC_0_BASEADDR
-
+char dataToSend[1] = {0};
 void AXIS_InterruptHandler(void *CallbackRef)
 {
 	//xil_printf("In interrupt\n\r");
@@ -106,8 +107,11 @@ int main(){
 	init();
 
 	while(1){
-		doTick();
+		//doTick();
 		//uartTask();
+		udpSendPacketTask((char*)dataToSend);
+		dataToSend[0] = 0;
+
 
 		if(flagDonnesOiseau){
 			//xil_printf("d\n\r");
@@ -116,19 +120,19 @@ int main(){
 
 			if(flagDonnesOiseau & 0x01){
 				xil_printf("Bruyant \n\r");
-				transmettreOiseau(1);
+				dataToSend[0] = 1;
 
 
 			}
 
 			if(flagDonnesOiseau & 0x02){
 				xil_printf("Huard \n\r");
-				transmettreOiseau(3);
+				dataToSend[0] = 3;
 			}
 
 			if(flagDonnesOiseau & 0x04){
 				xil_printf("Coq \n\r");
-				transmettreOiseau(2);
+				dataToSend[0] = 2;
 			}
 
 
@@ -143,12 +147,14 @@ int main(){
 						   udpSocketUp = true;
 				   }
 				   else{
-
+					   int packetToRead = udpReadPacketTask();
+					   //xil_printf("bob");
 				}
 			   }
 			   else
 			   {
 				   if(udpSocketUp){
+
 					   udpSocketUp = false;
 				   }
 

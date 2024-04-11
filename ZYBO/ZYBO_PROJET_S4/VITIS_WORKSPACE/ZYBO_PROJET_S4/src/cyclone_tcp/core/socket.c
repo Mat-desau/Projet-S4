@@ -537,7 +537,7 @@ error_t socketSendTo(Socket *socket, const IpAddr *destIpAddr, uint16_t destPort
    if(socket->type == SOCKET_TYPE_DGRAM)
    {
       //Send UDP datagram
-      print("Send");
+      //print("Send");
 	   error = udpSendDatagram(socket, destIpAddr,
          destPort, data, length, written);
    }

@@ -309,7 +309,7 @@ void enc624j600EventHandler(NetInterface *interface)
 
          //Link is up
          interface->linkState = TRUE;
-         xil_printf("link up!");
+
          //Update MAC configuration parameters for proper operation
          enc624j600UpdateMacConfig(interface);
       }

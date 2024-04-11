@@ -979,7 +979,7 @@ error_t ipv4SendPacket(NetInterface *interface, Ipv4PseudoHeader *pseudoHeader,
          //Debug message
          //Dump IP header contents for debugging purpose
          ipv4DumpHeader(packet);
-         print("INP");
+         //print("INP");
          //Enqueue packets waiting for address resolution
          error = arpEnqueuePacket(interface, destIpAddr, buffer, offset);
       }
